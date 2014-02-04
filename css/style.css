@@ -73,31 +73,6 @@ ul.intervals {
 }
 
 
-/* The width depends on the number of intervals. For example 100 / 7 = 14.29% -- then subtract a little bit for room for the borders */
-ul.intervals li {
-    background: #fff url(/images/1x1_eee.gif) repeat-x left 10%;
-    border-right: 1px solid #ccc;
-    color: #999;
-    float: left;
-    font-size: 1.2em;
-    margin: 0;
-    padding: 15px 0;
-    text-align: center;
-    width: 14.17%;
-}
-
-ul.intervals li.first {
-    border-left: 1px solid #ccc;
-} 
-
-#footer {
-   position:fixed;
-   left:0px;
-   bottom:0px;
-   height:30px;
-   width:100%;
-   background:#999;
-}
 
 
 /*
