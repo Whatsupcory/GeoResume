@@ -6,8 +6,8 @@ L.Control.MiniMap = L.Control.extend({
 		zoomLevelFixed: true,
 		zoomAnimation: false,
 		autoToggleDisplay: false,
-		width: 200,
-		height: 200
+		width: 300,
+		height: 300
 	},
 	
 	hideText: 'Hide MiniMap',
@@ -88,7 +88,7 @@ L.Control.MiniMap = L.Control.extend({
 
 	_addToggleButton: function () {
 		this._toggleDisplayButton = this.options.toggleDisplay ? this._createButton(
-				'', this.hideText, 'leaflet-control-minimap-toggle-display', this._container, this._toggleDisplayButtonClicked, this) : undefined;
+				'', this.hideText, 'leaflet-control-minimap-toggle-display', this._container, this._toggleDisplayButtonClicked, this) : defined;
 	},
 
 	_createButton: function (html, title, className, container, fn, context) {
