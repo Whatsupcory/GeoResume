@@ -1,0 +1,309 @@
+<!-- 
+You are welcome to contribute to this project.  Please do not sell this code.                
+-->
+
+
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html dir="ltr" lang="en-US" class="ie6"> <![endif]-->
+<!--[if IE 7 ]> <html dir="ltr" lang="en-US" class="ie7"> <![endif]-->
+<!--[if IE 8 ]> <html dir="ltr" lang="en-US" class="ie8"> <![endif]-->
+<!--[if lte IE 8]> <link href='http://api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.ie.css' rel='stylesheet' >
+<![endif]-->
+<!--[if IE 9 ]> <html dir="ltr" lang="en-US" class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html dir="ltr" lang="en-US"> <!--<![endif]-->
+<html>
+<head>
+  <title>Cory MacVie - Resume 1.0</title>
+  	<meta charset=utf-8 />
+  	<meta name="keywords" content="" />
+  	<meta name="description" content="" />
+ 	<meta content="text/html; charset=utf-8" http-equiv="content-type" />
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
+	<script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.js'></script>
+	<link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.css' rel='stylesheet' />
+    <link media="all" href='css/style.css' rel='stylesheet' /> 
+<style>
+  @import url(http://fonts.googleapis.com/css?family=Open+Sans);
+  body { margin:0; padding:0; }
+  #map { position:absolute; top:0; position: fixed; bottom:0; width:100%; }
+</style>
+</head>
+
+<body>
+
+<div id="map">
+    <script type="text/javascript">
+    var map = L.mapbox.map('map', 'corymacvie.map-npm45cd5', {zoomControl: false});
+
+// disable drag and zoom handlers
+    map.dragging.enabled();
+    map.touchZoom.disable();
+    map.doubleClickZoom.disable();
+    map.scrollWheelZoom.disable();
+    map.setView([40, -135], 4);
+
+// Work Markers 
+    L.mapbox.markerLayer({ type: 'Feature', 
+    geometry: { 'type': 'Point', 'coordinates': [-94.60050908803947, 38.964248024548866] },
+    properties: {
+        'title': 'Geospatial Coordinator',
+        'marker-size': 'large',
+        'marker-color': '#f86767', // Red
+        'marker-symbol': 'commercial' }}).addTo(map);
+    L.mapbox.markerLayer({ type: 'Feature',
+    geometry: { 'type': 'Point', coordinates: [-77.03838555077661, 38.906047471474984] },
+    properties: {
+        'title': 'Graduate Student Intern',
+        'marker-size': 'large',
+        'marker-color': '#f86767', // Red
+        'marker-symbol': 'commercial' }}).addTo(map);
+    L.mapbox.markerLayer({ type: 'Feature',
+    geometry: { 'type': 'Point', coordinates: [-118.15131627590031, 34.14704875632763] },
+    properties: {
+        'title': 'Geospatial Analyst',
+        'marker-size': 'large',
+        'marker-color': '#f86767', // Red
+        'marker-symbol': 'commercial' }}).addTo(map);
+    L.mapbox.markerLayer({ type: 'Feature',
+    geometry: { 'type': 'Point', coordinates: [-118.60329166494263, 34.18997400323588] },
+    properties: {
+        'title': 'Genius (Technician)',
+        'marker-size': 'large',
+        'marker-color': '#f86767', // Red
+        'marker-symbol': 'commercial' }}).addTo(map);
+    L.mapbox.markerLayer({ type: 'Feature',
+    geometry: { 'type': 'Point', coordinates: [-74.09575570022795, 40.30454309389716] },
+    properties: {
+        'title': 'Remote Sensing Coordinator',
+        'marker-size': 'large',
+        'marker-color': '#f86767', // Red
+        'marker-symbol': 'commercial' }}).addTo(map);
+
+// College Markers 
+    L.mapbox.markerLayer({ type: 'Feature',
+    geometry: { 'type': 'Point', coordinates: [-117.26091416622312, 34.05371514158555] },
+    properties: {
+        'title': 'Loma Linda University',
+        'description': 'Masters of Global Health (MPH)',
+        'marker-size': 'large',
+        'marker-color': '#339966', // Green
+        'marker-symbol': 'college' }}).addTo(map);
+    L.mapbox.markerLayer({
+    type: 'Feature',
+    geometry: { 'type': 'Point', coordinates: [-117.42573738098143, 33.92824549720419] }, 
+    properties: {
+        'title': 'California Baptist University',
+        'description': 'Bachelors of Applied Theology',
+        'marker-size': 'large',
+        'marker-color': '#339966', // Green
+        'marker-symbol': 'college' }}).addTo(map);
+
+// Volunteer Markers
+    L.mapbox.markerLayer({ type: 'Feature',
+    geometry: { 'type': 'Point', coordinates: [-238.9856, 14.56232] },
+    properties: {
+        'title': 'Rural Development Program',
+        'description': 'Loma Linda University',
+        'marker-size': 'large',
+        'marker-color': '#3ca0d3', // Blue
+        'marker-symbol': 'hospital' }}).addTo(map);
+    L.mapbox.markerLayer({ type: 'Feature',
+    geometry: { 'type': 'Point', coordinates: [32.650228792987576, -18.987309490031073] }, 
+    properties: {
+        'title': 'Rural Orphanage/Clinic',
+        'description': 'Volunteer',
+        'marker-size': 'large',
+        'marker-color': '#3ca0d3', // Blue
+        'marker-symbol': 'hospital' }}).addTo(map);
+    L.mapbox.markerLayer({ type: 'Feature',
+    geometry: { 'type': 'Point', coordinates: [-89.9602934107422, 29.942804338982693] },
+    properties: {
+        'title': 'Domestic Service Project - New Orleans',
+        'marker-size': 'large',
+        'marker-color': '#3ca0d3', // Blue
+        'marker-symbol': 'hospital' }}).addTo(map);
+    L.mapbox.markerLayer({ type: 'Feature',
+    geometry: { 'type': 'Point', coordinates: [-79.56557381546236, 8.96970416215249] },
+    properties: {
+        'title': 'Crew Staff',
+        'marker-size': 'large',
+        'marker-color': '#3ca0d3', // Blue
+        'marker-symbol': 'hospital' }}).addTo(map);
+
+// Other Markers
+    L.mapbox.markerLayer({ type: 'Feature',
+    geometry: { 'type': 'Point', coordinates: [-85.84074862392727, 10.324805855296699] },
+    properties: {
+        'title': 'Surfing Trip',
+        'marker-size': 'large',
+        'marker-color': '#f1f075', // Yellow
+        'marker-symbol': 'pitch' }}).addTo(map);
+    L.mapbox.markerLayer({ type: 'Feature',
+    geometry: { 'type': 'Point', coordinates: [37.98363136718436, 23.724580444335942] },
+    properties: {
+        'title': 'International Service Project',
+        'marker-size': 'large',
+        'marker-color': '#3ca0d3', // Blue
+        'marker-symbol': 'hospital' }}).addTo(map);
+    L.mapbox.markerLayer({ type: 'Feature',
+    geometry: { 'type': 'Point', coordinates: [-117.05203555476321, 32.522665809508965] },
+    properties: {
+        'title': 'Domestic Service Project',
+        'description': 'Mexico',
+        'marker-size': 'large',
+        'marker-color': '#3ca0d3', // Blue
+        'marker-symbol': 'hospital' }}).addTo(map);
+    L.mapbox.markerLayer({ type: 'Feature',
+    geometry: { 'type': 'Point', coordinates: [-122.45902443945312, 37.76959774425483] },
+    properties: {
+        'title': 'Domestic Service Project',
+        'description': 'San Francisco',
+        'marker-size': 'large',
+        'marker-color': '#3ca0d3', // Blue
+        'marker-symbol': 'hospital' }}).addTo(map);
+
+    </script>
+
+</div>
+<div class="paper1"> <!-- Paper -->
+	<div id="page-wrap">
+        <img src="images/profile.png" alt="Cory MacVie" id="pic" /> <!-- Try color version in next version -->
+        <div id="contact-info">
+            <h1 class="fn">Cory Mac Vie</h1>
+            <p>
+                <strong>Mobile:</strong> <span class="tel">909-435-6551</span><br />
+               	<strong>Twitter:</strong> <a class="twitter" href="https://twitter.com/iLikCartography">@iLikCartography</a><br />
+                <strong>Email:</strong> <a class="email" href="mailto:cory@corymacvie.com">cory@corymacvie.com</a><br />
+                <strong>Addresses:</strong>
+                <span class="kansascity" onclick="map.setView([39.08051, -94.86626],11)">Kansas City, KS</span> &#38; 
+                <span class="calabasas" onclick="map.setView([34.14548, -118.68522],14)">Calabasas, CA</span><br />
+            </p>
+        </div>        
+        <div id="objective">
+            <p>
+                A results-oriented professional with successful web-based project management, Cory has experience resolving complex geospatial problems. He brings a strong knowledge base and understanding of current geospatial technologies. He specializes in designing geospatial products and websites with a simple interface that captivate and engage users. <!-- Need to update -->
+            </p>
+        </div>
+        <div class="clear"></div>
+        
+        <dl>
+
+            <dd class="clear"></dd>
+            
+            <dt>Skills</dt>
+            <dd>
+                <h2>Geospatial Expertise</h2>
+                <ul>
+                    <li>Experience developing aesthetically appealing, informative, story-telling GIS products.</li>
+                    <li>Teaching technical concepts to a wide range of learners from beginners through advance users.</li>
+                    <li>Briefing leadership at Federal, State and local government levels in geospatial products and advancements in the field using communication methods tailored to those audiences.</li>
+                </ul>
+                <h2>Web Design</h2>
+                <ul>
+                    <li>Background creating websites for small businesses utilizing Wordpress, eCommerce, Profolios and personal sites.</li>
+                    <li>Experience in HTML5, CSS3, JavaScript/JQuery</li>
+                    <li>Working knowledge in PHP, Python/Django, PostgreSQL</li>
+                </ul>
+
+                <h2>Public Health</h2>
+                <ul>
+                    <li>Analyzed the social, political, and economical impacts of tobacco policies for the province of Cavite, Philippines and presented results to the Ministry of Health.</li>
+                    <li>Developed a comprehensive analysis of United States’ foreign public health policies influencing the accomplishments of the United Nations Millennium Development Goals.</li>
+                    <li>Researched, planned, and distributed an educational and health services directory for several communities in San Bernardino, CA.</li>
+                </ul>
+            </dd>     
+            <dd class="clear"></dd>    
+            <dt>Experience<br />
+            <img src="images/work.png" alt="Work Logo" id="icon" /></dt>
+            <dd>
+<!-- <script> Possibly Junk
+var latlng = L.latLng(50.5, 30.5);
+
+map.on('click', function(FEMAR7) {
+    alert(FEMAR7.latlng); // e is an event object (MouseEvent in this case)
+});
+
+</script> -->
+
+                <div class="jobs" onclick="map.setView([38.98717,-95.2858],10)">
+                    <h2>FEMA Region 7<span>Geospatial Coordiantor - Kansas City, MO - 2011-Present</span></h2>
+                    <p>Currently the lead technical experts for the region in planning, development and maintenance of operational procedures, capabilities and providing training to support disaster response operations regarding all geospatial support activities. Responsible for managing the response GIS personnel, handling regional remote sensing capabilities, training regional personal and integrating with State GIS counterparts in the Federal response to disasters and regional projects.  Develop operational policies for the geospatial and remote sensing programs of the region. Provide guidance to management in program initiatives like the All Hazard Plan, program planning and response standard operating procedure manuals. </p>   
+                </div>
+                <div class="jobs" onclick="map.setView([34.14932,-118.43742],11)"> 
+                    <h2>FEMA Region 9<span>Geospatial Analyst - Pasadena, CA - 2010-2011</span></h2>
+                    <p>Provided geospatial support during response and recover to regional disasters.   Key team member on Debris Basin Project, a map book and an interactive web based project utlizing critical infrastructure and background information for use in maintaining Debris Basins in Los Angeles County. Worked jointly with other FEMA, Cal EMA and LA County Department of Public Works staff to create a reference that will provide a comprehensive, web-accessible basis for planning and hazard risk management. Briefed key leadership on status of projects. Monitored and reported wildfires status in CA and NV and provided geographic products for regional tracking. Performed and presented spatial analysis and mapping support to State partners.</p> 
+                </div>
+                <div class="jobs" onclick="map.setView([34.19988,-118.90366],11)">
+                    <h2>Apple<span>Genius (Technician) - Canoga Park, CA - 2009-2011</span></h2>
+                    <p>Achieved top sales associate for both computers and mobile devices. Developed and administered training to a wide diversity of public and employees using various education delivery methods, e.g. one-on-one, small and large workshops. Prepared written records and reports. Specialized in maintaining a calm environment while meeting short-term deadlines. Overcame technical challenges with short time frames. Recognized for leadership in customer service. Exceeded managerial performance goals. Surpassed certifications requirements needed for the position.</p>   
+                </div>
+                <div class="jobs" onclick="map.setView([38.92309,-77.64175],10)">     
+    				<h2>RESULTS Educational Fund<span>Intern - Washington, DC - 2008-2009</span></h2>
+                    <p>Educated members of Congress regarding proposed public health legislation resulting in the increased funding of $10.4 billion as part of the Farm Bill, primarily for emergency food assistance, and passage of legislation that will provided $50 billion in funds for AIDS, malaria and TB programs. Established and managed meetings and conference calls with elected officials and staff. Organized and managed diverse groups to achieve mutual goals. Organized and delivered infectious disease educational events throughout the community. Wrote press releases on topics such as infectious diseases, microfinance growth, education, and the Head Start program. Gained media support for public health related legislative issues. Prepared and delivered briefings to national headquarters.</p>
+                </div>
+            <dd class="clear"></dd>          
+            <dt>Education<br />
+            <img src="images/college.png" alt="Work Logo" id="icon" /></dt>
+            <dd>
+                <div class="education" onclick="map.setView([33.92214, -117.49792],13)">
+                    <h2>Loma Linda University<span>Loma Linda, CA - 2007-2009</span><br /></h2>
+                    <p><strong>Major:</strong> Masters in Global Health (MPH)<br />
+                       <strong>Minor:</strong> Humanitarian Assistance Certificate</p>
+                </div>
+                <div class="education" onclick="map.setView([34.05493, -117.34171],13)">
+                    <h2>California Baptist University<span>Riverside, CA - 2002-2006</span><br /></h2>
+                    <p><strong>Major:</strong> Bachelors of Applied Theology<br />
+                       <strong>Activities:</strong> Founder and director of the University’s student Domestic Service Projects</p>
+                </div>
+            </dd>           
+            <dd class="clear"></dd>
+            
+            <dt>Humanitarian<br />Experience<br />
+            <img src="images/volunteer.png" alt="Work Logo" id="icon" /></dt>
+            <dd>
+                <div class="humanitarian" onclick="map.setView([13.32548,-246.46729],6)">
+                    <h2>Public Policy Analysis<span>Silang, Philippines - July 2008 – Aug 2008</span></h2>
+                        <p>This project was an international collaboration with the Philippine regional government of Silang. Conducted a compliance evaluation of local adherence with a new ordinance.  Led team in quantitative community survey by engaging local community members and key decision makers.  Devised innovative solutions to complex logistical problems related to rural community locations.  Delivered and presented detailed results report and recommendations to government officials within three week deadline.</p>
+                </div>
+                <div class="humanitarian" onclick="map.setView([-17.01477,12.7002],5)">
+                    <h2>Rural Orphanage/Clinic<span>Mutare, Zimbabwe - June 2007 – August 2007
+                    </span></h2>
+                        <p>Assisted in managing all aspects of the orphanage operation such as scheduling large number of staff and volunteers, improved technical operations, and strengthened logistical support. Organized and delivered transportation for local TB and HIV/AIDS patients for treatments under limited resources.  Partnered with local government clinic to provide medical treatment to rural residences.  Provided necessary food and supplies for the orphanage and community members during nationwide economic collapse.  Developed innovative solutions to secure resources during government price control and closure of commercial farms.</p>
+                </div>
+                <div class="humanitarian" onclick="map.setView([30.00965, -91.1618],9)">
+                    <h2>Domestic Service Project Director<span>North America - 2003 – 2006</span></h2>
+                        <p>Organized and managed four spring/winter break service and recovery projects for teams of college students.  Established relationships with local community members, homeowners, voluntary agencies, and local officials.  Coordinated with local government entities and NGOs to identify optimal relief location and distribution sites around the city.  Trained and led dozens of students to post-Katrina New Orleans clean-up; New Orleans Christmas toy-drive and distribution, San Francisco homeless food distribution, and Mexico orphanage volunteering.  Raised funds for each project on average $10,000 for each trip. Produced and distributed post-Katrina documentary.</p> 
+                </div>
+                <div class="humanitarian" onclick="map.setView([9.31899, -88.65967],6)">
+
+                    <h2>Crew Staff<span>North/Central America - Jan 2001 – Dec 2001</span></h2>
+                        <p>Performed all navigation, mechanical, engineering, and communication responsibilities. Developed written preventative maintenance schedule for future crews. Secured supplies in each port. Fostered partnerships with local community leaders, local governments, and religious institutions. Fund-raised tens of thousands of dollars by speaking at various institutions and churches.</p>   
+            </dd>          
+        </dl>    
+        <div class="clear"></div>
+ 
+
+<!--
+    <div class="timeline">
+        <ul class="events">
+            <li style="width: 85.5%; left: 14.2%;">Web Development <em>(2004 - 2009)</em></li>
+            <li style="width: 42.75%; left: 0;">3D Modeling and Rendering <em>(2003 - 2006)</em></li>
+            <li style="width: 99.5%; left: 0;">Drawing &amp; Illustration <em>(2003 - 2009)</em></li>
+        </ul> <!-- end .events -->
+<!--
+        <ul class="intervals">
+            <li class="first">2003</li>
+            <li>2004</li>
+            <li>2005</li>
+            <li>2006</li>
+            <li>2007</li>
+            <li>2008</li>
+            <li class="last">2009</li>
+        </ul> <!-- //.intervals -->
+<!-- </div> <!-- //.timeline -->
+    </div> <!-- //page-wrap -->
+</div> <!-- //paper1 -->
+
+<footer></footer>
+</body>
+</html>
