@@ -22,6 +22,7 @@ You are welcome to contribute to this project.  Please do not sell this code.
 	<script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.js'></script>
 	<link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.css' rel='stylesheet' />
     <link media="all" href='css/style.css' rel='stylesheet' /> 
+
 <style>
   @import url(http://fonts.googleapis.com/css?family=Open+Sans);
   body { margin:0; padding:0; }
@@ -31,9 +32,17 @@ You are welcome to contribute to this project.  Please do not sell this code.
 
 <body>
 
+<link rel="stylesheet" href="css/Control.MiniMap.css" />
+<script src="js/Control.MiniMap.js"></script>
+
+
 <div id="map">
     <script type="text/javascript">
-    var map = L.mapbox.map('map', 'corymacvie.map-npm45cd5', {zoomControl: false});
+    var map = L.mapbox.map('map', 'corymacvie.map-npm45cd5', {zoomControl: false})
+        .on('ready', function() {
+        new L.Control.MiniMap(L.mapbox.tileLayer('corymacvie.map-zt0leptm'))
+          .addTo(map);
+      });
 
 // disable drag and zoom handlers
     map.dragging.enabled();
@@ -175,8 +184,8 @@ You are welcome to contribute to this project.  Please do not sell this code.
                	<strong>Twitter:</strong> <a class="twitter" href="https://twitter.com/iLikCartography">@iLikCartography</a><br />
                 <strong>Email:</strong> <a class="email" href="mailto:cory@corymacvie.com">cory@corymacvie.com</a><br />
                 <strong>Addresses:</strong>
-                <span class="kansascity" onclick="map.setView([39.08051, -94.86626],11)">Kansas City, KS</span> &#38; 
-                <span class="calabasas" onclick="map.setView([34.14548, -118.68522],14)">Calabasas, CA</span><br />
+                <span class="calabasas" onclick="map.setView([34.14548, -118.68522],14)">Calabasas, CA</span> &#38; 
+                <span class="kansascity" onclick="map.setView([39.08051, -94.86626],11)">Kansas City, KS</span><br />
             </p>
         </div>        
         <div id="objective">
@@ -278,7 +287,11 @@ map.on('click', function(FEMAR7) {
 
                     <h2>Crew Staff<span>North/Central America - Jan 2001 – Dec 2001</span></h2>
                         <p>Performed all navigation, mechanical, engineering, and communication responsibilities. Developed written preventative maintenance schedule for future crews. Secured supplies in each port. Fostered partnerships with local community leaders, local governments, and religious institutions. Fund-raised tens of thousands of dollars by speaking at various institutions and churches.</p>   
-            </dd>          
+            </dd>      
+            <dd class="clear"></dd>
+            <dt>More Info<br />
+            <img src="images/heart.png" alt="Work Logo" id="icon" /></dt>
+            <dd>    
         </dl>    
         <div class="clear"></div>
  
