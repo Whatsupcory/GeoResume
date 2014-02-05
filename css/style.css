@@ -22,6 +22,8 @@ dt { font-style: italic; font-weight: bold; font-size: 18px; text-align: center;
 dd { width: 625px; float: left; padding: 0 20px; }
 dd.clear { float: none; margin: 0; height: 15px; }
 .line { margin: 0 0 16px; padding: 0 0 16px 0}
+.references { float: left; padding: 0 0 16px 0; }
+
 /* Color Change */
 .jobs:hover { color: #f86767; cursor:pointer; }
 .education:hover { color: #339966; cursor:pointer; }
@@ -29,7 +31,7 @@ dd.clear { float: none; margin: 0; height: 15px; }
 .kansascity:hover { color: blue; cursor:pointer; }
 .calabasas:hover { color: blue; cursor:pointer; }
 
-/* Timeline */ /*
+/* Timeline - still need to finish */ /*
 .footer {
 	position: fixed;
 	left: 0px;
