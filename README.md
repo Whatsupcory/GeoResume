@@ -9,3 +9,9 @@ the map will zoom to those locations.  The site will also have a way to display 
 Also there needs to be a pop out business card with vcard capability. 
 
 I plan on writing this myself, but if you could teach me a few things then you are welcome to help.
+
+Development Plan:
+- Add quote bubbles (DONE)
+- Add portfolio popouts in JQuery
+- Pan Map slower
+- Create business card pullout
