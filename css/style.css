@@ -89,13 +89,15 @@ dd.clear {
 .line { 
     margin: 0 0 16px; 
     padding: 0 0 16px 0}
+
+/* Quote Bubbles */
 .decoded { 
     width: 52px;
     height: 52px;
-    border-top-left-radius:2em;
-    border-top-right-radius:2em;
-    border-bottom-right-radius:2em;
-    border-bottom-left-radius:2em; }
+    border-top-left-radius:1em;
+    border-top-right-radius:1em;
+    border-bottom-right-radius:1em;
+    border-bottom-left-radius:1em; }
 
 /* Color Change */
 .jobs:hover { 
