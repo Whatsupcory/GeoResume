@@ -89,18 +89,34 @@ dd.clear {
 .line { 
     margin: 0 0 16px; 
     padding: 0 0 16px 0}
+a#github { 
+	float: right; 
+	background: #999; 
+	color: white; 
+	margin: 16px 0 0 16px; 
+	padding: 4px 14px 4px 14px;  
+	border-top-left-radius:0.5em;
+    border-top-right-radius:0.5em;
+    border-bottom-right-radius:0.5em;
+    border-bottom-left-radius:0.5em; 
+	box-shadow: 3px 3px 3px #888}
+a#github:hover { 
+	background: #222; 
+	box-shadow: 3px 3px 3px #3ca0d3}
 a#pdf { 
 	float: right; 
 	background: #999; 
 	color: white; 
 	margin: 16px 0 0 16px; 
-	padding: 6px 14px 6px 14px;  
+	padding: 4px 14px 4px 14px;  
 	border-top-left-radius:0.5em;
     border-top-right-radius:0.5em;
     border-bottom-right-radius:0.5em;
-    border-bottom-left-radius:0.5em; }
+    border-bottom-left-radius:0.5em; 
+	box-shadow: 3px 3px 3px #888}
 a#pdf:hover { 
-	background: #222; }
+	background: #222; 
+	box-shadow: 3px 3px 3px #f86767}
 #logo {
 	width: 20px;
 	height: 20px;
