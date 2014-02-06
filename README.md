@@ -12,6 +12,7 @@ I plan on writing this myself, but if you could teach me a few things then you a
 
 Development Plan:
 - Add quote bubbles (DONE)
+- Download PDF Button (DONE)
 - Add portfolio popouts in JQuery
 - Pan Map slower
 - Create business card pullout
