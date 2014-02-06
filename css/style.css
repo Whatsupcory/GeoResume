@@ -1,39 +1,122 @@
 
 /* Paper sheet formatting */
-.paper1 { position: relative; width: 900px; height: 80%; border-radius: 4px; background-color: #ffffff; margin: 20px; overflow: scroll; box-shadow: 0 0 15px #777777; }
+.paper1 { 
+    position: relative; 
+    width: 900px; 
+    height: 80%; 
+    border-radius: 4px; 
+    background-color: #ffffff; 
+    margin: 20px; 
+    overflow: scroll; 
+    box-shadow: 0 0 15px #777777; }
 
 /* Resume Format */
-* { margin: 0; padding: 0; font-family: 'Open Sans', sans-serif; }
-body { font: 16px Helvetica, Sans-Serif; line-height: 24px; }
-.clear { clear: both; }
-#page-wrap { width: 800px; margin: 40px auto 60px; }
-#pic { float: right; margin: -40px 0 0 0; }
-#icon { padding: 10px; display: block; margin-left: auto; margin-right: auto; }
-h1 { margin: 0 0 16px 0; padding: 0 0 16px 0; font-size: 42px; font-weight: bold; letter-spacing: -2px; border-bottom: 1px solid #666; }
-h2 { font-size: 20px; margin: 0 0 6px 0; position: relative; }
-h2 span { position: absolute; bottom: 0; right: 0; font-style: italic; font-family: Georgia, Serif; font-size: 16px; color: #999; font-weight: normal; }
-p { margin: 0 0 16px 0; }
-a { color: black;  text-decoration: none; border-bottom: 0px; }
-a:hover { border-bottom-style: solid; color: blue; }
-ul { margin: 0 0 32px 17px; }
-#objective { width: 500px; float: left; }
-#objective p { font-family: Georgia, Serif; font-style: italic; color: #999; }
-dt { font-style: italic; font-weight: bold; font-size: 18px; text-align: center; padding: 0 26px 0 0; width: 100px; float: left; height: 100px; border-right: 1px solid #999;  }
-dd { width: 625px; float: left; padding: 0 20px; }
-dd.clear { float: none; margin: 0; height: 15px; }
-.line { margin: 0 0 16px; padding: 0 0 16px 0}
-.references { float: left; padding: 0 0 16px 0; }
+* { 
+    margin: 0; 
+    padding: 0; 
+    font-family: 'Open Sans', sans-serif; }
+body { 
+    font: 16px 'Open Sans', Sans-Serif; 
+    line-height: 24px; }
+.clear { 
+    clear: both; }
+#page-wrap { 
+    width: 800px; 
+    margin: 40px auto 60px; }
+#pic { 
+    float: right; 
+    margin: -40px 0 0 0; }
+#icon { 
+    padding: 10px; 
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto; }
+h1 { 
+    margin: 0 0 16px 0; 
+    padding: 0 0 16px 0; 
+    font-size: 42px; 
+    font-weight: bold; 
+    letter-spacing: -2px; 
+    border-bottom: 1px solid #666; }
+h2 { 
+    font-size: 20px; 
+    margin: 0 0 6px 0; 
+    position: relative; }
+h2 span { 
+    position: absolute; 
+    bottom: 0; right: 0; 
+    font-style: italic; 
+    font-family: Georgia, Serif; 
+    font-size: 16px; 
+    color: #999;
+    font-weight: normal; }
+p { 
+    margin: 0 0 16px 0; }
+a { 
+    color: black;  
+    text-decoration: none; 
+    border-bottom: 0px; }
+a:hover { 
+    border-bottom-style: solid; 
+    color: blue; }
+ul { 
+    margin: 0 0 32px 17px; }
+#objective { 
+    width: 500px; 
+    float: left; }
+#objective p { 
+    font-family: Georgia, Serif; 
+    font-style: italic; 
+    color: #999; }
+dt { 
+    font-style: italic; 
+    font-weight: bold; 
+    font-size: 18px; 
+    text-align: center; 
+    padding: 0 26px 0 0; 
+    width: 100px; 
+    float: left; 
+    height: 100px; 
+    border-right: 1px solid #999; }
+dd { 
+    width: 625px; 
+    float: left; 
+    padding: 0 20px; }
+dd.clear { 
+    float: none; 
+    margin: 0; 
+    height: 15px; }
+.line { 
+    margin: 0 0 16px; 
+    padding: 0 0 16px 0}
+.decoded { 
+    width: 52px;
+    height: 52px;
+    border-top-left-radius:2em;
+    border-top-right-radius:2em;
+    border-bottom-right-radius:2em;
+    border-bottom-left-radius:2em; }
 
 /* Color Change */
-.jobs:hover { color: #f86767; cursor:pointer; }
-.education:hover { color: #339966; cursor:pointer; }
-.humanitarian:hover { color: #3ca0d3; cursor:pointer; }
-.kansascity:hover { color: blue; cursor:pointer; }
-.calabasas:hover { color: blue; cursor:pointer; }
+.jobs:hover { 
+    color: #f86767; 
+    cursor:pointer; }
+.education:hover { 
+    color: #339966; 
+    cursor:pointer; }
+.humanitarian:hover { 
+    color: #3ca0d3; 
+    cursor:pointer; }
+.kansascity:hover { 
+    color: blue; 
+    cursor:pointer; }
+.calabasas:hover { 
+    color: blue; 
+    cursor:pointer; }
 
 /* Timeline - still need to finish */ /*
 .footer {
-	position: fixed;
+	position: fixed;  
 	left: 0px;
 	bottom: 0px;
 	height: 100px;
