@@ -124,14 +124,14 @@ a#pdf:hover {
 
 /* Quote Bubbles */
 .decoded { 
-    width: 52px;
-    height: 52px;
+    width: 42px;
+    height: 42px;
     border: 1px black;
     border-top-left-radius:2em;
     border-top-right-radius:2em;
     border-bottom-right-radius:2em;
     border-bottom-left-radius:2em;
-    box-shadow: 3px 3px 3px #777 
+    box-shadow: 2px 2px 2px #666; 
 }
 
 /* Color Change */

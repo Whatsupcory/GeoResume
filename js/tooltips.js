@@ -20,8 +20,8 @@
       var linkPosition = $el.position();
 
       $tooltip.css({
-        top: linkPosition.top - $tooltip.outerHeight() - 15,
-        left: linkPosition.left - ($tooltip.width()/2)
+        top: linkPosition.top - $tooltip.outerHeight() - 5,
+        left: linkPosition.left - ($tooltip.width()/1)
       });
 
       $el
@@ -40,7 +40,7 @@
 
         $tooltip.css({
           top: linkPosition.top - $tooltip.outerHeight() - 15,
-          left: linkPosition.left - ($tooltip.width()/2.5)
+          left: linkPosition.left - ($tooltip.width()/2.3)
         });
 
         // Adding class handles animation through CSS
