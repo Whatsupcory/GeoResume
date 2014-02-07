@@ -101,7 +101,8 @@ a#github {
     border-bottom-left-radius:0.5em; 
 	box-shadow: 3px 3px 3px #888}
 a#github:hover { 
-	background: #333; 
+	color: #3ca0d3;
+    background: #333; 
 	box-shadow: 3px 3px 3px #3ca0d3}
 a#pdf { 
 	float: right; 
@@ -115,6 +116,7 @@ a#pdf {
     border-bottom-left-radius:0.5em; 
 	box-shadow: 3px 3px 3px #888}
 a#pdf:hover { 
+    color: #f86767;
 	background: #333; 
 	box-shadow: 3px 3px 3px #f86767}
 #logo {
@@ -123,6 +125,7 @@ a#pdf:hover {
 }
 
 /* Quote Bubbles */
+<<<<<<< HEAD
 .decoded { 
     width: 42px;
     height: 42px;
@@ -133,6 +136,16 @@ a#pdf:hover {
     border-bottom-left-radius:2em;
     box-shadow: 2px 2px 2px #666; 
 }
+=======
+.decoded {
+    width: 52px;
+    height: 52px;
+    border-top-left-radius:1em;
+    border-top-right-radius:1em;
+    border-bottom-right-radius:1em;
+    border-bottom-left-radius:1em;
+    box-shadow: 1px 1px 1px 1px #999; }
+>>>>>>> 25d3fa393e111b134090b66edd611ea6b0d08218
 
 /* Color Change */
 .jobs:hover { 
