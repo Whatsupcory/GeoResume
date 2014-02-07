@@ -126,10 +126,13 @@ a#pdf:hover {
 .decoded { 
     width: 52px;
     height: 52px;
-    border-top-left-radius:1em;
-    border-top-right-radius:1em;
-    border-bottom-right-radius:1em;
-    border-bottom-left-radius:1em; }
+    border: 1px black;
+    border-top-left-radius:2em;
+    border-top-right-radius:2em;
+    border-bottom-right-radius:2em;
+    border-bottom-left-radius:2em;
+    box-shadow: 3px 3px 3px #777 
+}
 
 /* Color Change */
 .jobs:hover { 
