@@ -89,65 +89,75 @@ dd.clear {
 .line { 
     margin: 0 0 16px; 
     padding: 0 0 16px 0}
+
+/* Download & Link Buttons */
+
 a#github { 
 	float: right; 
 	background: #777; 
 	color: white; 
 	margin: 16px 0 0 16px; 
 	padding: 4px 14px 4px 14px;  
-	border-top-left-radius:0.5em;
-    border-top-right-radius:0.5em;
-    border-bottom-right-radius:0.5em;
-    border-bottom-left-radius:0.5em; 
-	box-shadow: 3px 3px 3px #888}
+    border-radius: 10px; 
+	box-shadow: 2px 2px 2px #888}
 a#github:hover { 
 	color: #3ca0d3;
     background: #333; 
-	box-shadow: 3px 3px 3px #3ca0d3}
+	box-shadow: 2px 2px 2px #3ca0d3}
 a#pdf { 
 	float: right; 
 	background: #777; 
 	color: white; 
 	margin: 16px 0 0 16px; 
 	padding: 4px 14px 4px 14px;  
-	border-top-left-radius:0.5em;
-    border-top-right-radius:0.5em;
-    border-bottom-right-radius:0.5em;
-    border-bottom-left-radius:0.5em; 
-	box-shadow: 3px 3px 3px #888}
+    border-radius: 10px;
+	box-shadow: 2px 2px 2px #888}
 a#pdf:hover { 
     color: #f86767;
 	background: #333; 
-	box-shadow: 3px 3px 3px #f86767}
+	box-shadow: 2px 2px 2px #f86767}
 #logo {
 	width: 20px;
 	height: 20px;
 }
+.details {
+    padding:0px 0px 40px 0px;
+}
+.portfolio {
+    display:inline;
+    position: absolute;
+    right: 80px;
+}
+
+/* Portfolio Thumbnails */
+.thumbnail { 
+    width: 45px;
+    height: 45px;
+    margin: 0.5px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px #666;
+    cursor: zoom-in;
+}
+.thumbnail:hover{
+    box-shadow: 2px 2px 2px #111;
+}
+.thumbnail:active {
+    box-shadow: 1px 1px 1px #999;
+}
 
 /* Quote Bubbles */
-<<<<<<< HEAD
-.decoded { 
-    width: 42px;
-    height: 42px;
-    border: 1px black;
-    border-top-left-radius:2em;
-    border-top-right-radius:2em;
-    border-bottom-right-radius:2em;
-    border-bottom-left-radius:2em;
+.decoded {
+    width: 45px;
+    height: 45px;
+    margin: 0.5px;
+    border-radius: 20px;
     box-shadow: 2px 2px 2px #666; 
 }
-=======
-.decoded {
-    width: 52px;
-    height: 52px;
-    border-top-left-radius:1em;
-    border-top-right-radius:1em;
-    border-bottom-right-radius:1em;
-    border-bottom-left-radius:1em;
-    box-shadow: 1px 1px 1px 1px #999; }
->>>>>>> 25d3fa393e111b134090b66edd611ea6b0d08218
+.decoded:hover {
+    box-shadow: 2px 2px 2px #111;
+}
 
-/* Color Change */
+/* Text Color Change */
 .jobs:hover { 
     color: #f86767; 
     cursor:pointer; }

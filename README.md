@@ -10,9 +10,13 @@ Also there needs to be a pop out business card with vcard capability.
 
 I plan on writing this myself, but if you could teach me a few things then you are welcome to help.
 
-Development Plan:
-- Add quote bubbles (DONE)
-- Download PDF Button (DONE)
+Notable Updates:
+
+- Add quote bubbles to references
+- Download PDF &  GitHub button
+
+Road Map:
+
 - Add portfolio popouts in JQuery
 - Pan Map slower
 - Create business card pullout
