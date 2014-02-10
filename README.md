@@ -14,9 +14,9 @@ Notable Updates:
 
 - Add quote bubbles to references
 - Download PDF &  GitHub button
+- Portfolio popouts in JQuery
 
 Road Map:
 
-- Add portfolio popouts in JQuery
 - Pan Map slower
 - Create business card pullout
