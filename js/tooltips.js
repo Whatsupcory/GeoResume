@@ -20,7 +20,7 @@
       var linkPosition = $el.position();
 
       $tooltip.css({
-        top: linkPosition.top - $tooltip.outerHeight() - 20,
+        top: linkPosition.top - $tooltip.outerHeight() - 1,
         left: linkPosition.left - ($tooltip.width()/2.3)
       });
 

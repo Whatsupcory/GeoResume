@@ -173,19 +173,19 @@ a#pdf:hover {
 /* Text Color Change */
 .jobs:hover { 
     color: #f86767; 
-    cursor:pointer; }
+    cursor: zoom-in; }
 .education:hover { 
     color: #339966; 
-    cursor:pointer; }
+    cursor: zoom-in; }
 .humanitarian:hover { 
     color: #3ca0d3; 
-    cursor:pointer; }
+    cursor: zoom-in; }
 .kansascity:hover { 
     color: blue; 
-    cursor:pointer; }
+    cursor: pointer; }
 .calabasas:hover { 
     color: blue; 
-    cursor:pointer; }
+    cursor: pointer; }
 
 /* Timeline - still need to finish */ /*
 .footer {
