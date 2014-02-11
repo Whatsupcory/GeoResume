@@ -1,6 +1,6 @@
 <!-- =========================================================
 You are welcome to contribute to this "GeoResume" project.  
-https://github.com/Whatsupcory/GeoResume.
+https://github.com/Whatsupcory/GeoResume
 
 Copyright (c) 2014, Cory MacVie, cory@corymacvie.com
 All rights reserved. 
@@ -57,7 +57,6 @@ included in all copies or substantial portions of the Software.
       #map { position:absolute; top:0; position: fixed; bottom:0; width:100%; }
     </style>
 
-
 </head>
 <body>
 <div id="map"> 
@@ -67,19 +66,17 @@ included in all copies or substantial portions of the Software.
         new L.Control.MiniMap(L.mapbox.tileLayer('corymacvie.map-zt0leptm'))
           .addTo(map);
       });  
-    </script> 
-    <script>
+    
 // disable drag and zoom handlers
     map.dragging.enabled();
     map.touchZoom.disable();
     map.doubleClickZoom.disable();
     map.scrollWheelZoom.disable();
-    map.setView([40, -135], 4);
-
+    map.setView([40, -135], 4);  // Default map view.  You need to offset it to fit on the screen. 
 
 // Work Markers 
     L.mapbox.markerLayer({ type: 'Feature', 
-    geometry: { 'type': 'Point', 'coordinates': [-94.60050908803947, 38.964248024548866] },
+    geometry: { 'type': 'Point', 'coordinates': [-94.60050908803947, 38.964248024548866] },  //Need to again offset each coordinate to fit with the resume in the window.  
     properties: {
         'title': 'Geospatial Coordinator',
         'marker-size': 'large',
@@ -198,10 +195,7 @@ included in all copies or substantial portions of the Software.
         'marker-symbol': 'hospital' }}).addTo(map);
 
     </script> 
-
-
 </div>
-
 <div class="paper1"> <!-- Paper -->
 	<div id="page-wrap">
          <img src="images/profile_color2.png" alt="Cory MacVie" id="pic" />  
@@ -220,15 +214,12 @@ included in all copies or substantial portions of the Software.
         </div>        
         <div id="objective">
             <p>
-                Always seeking opportunities to develop new systems that improve lives meanwhile never settling for the status quo.  Possess tenacity for solving difficult problems while not compromising on quality or service.  Never compromise my personal integrity on a job.  Daily seek higher levels of understanding in multiple subjects.
+                Always seeking opportunities to develop new systems that improve the lives of others all while never settling for the status quo. Possess tenacity for solving difficult problems while never compromising on quality or service. Strive for the highest level of personal integrity on all jobs. Daily seek higher levels of understanding in multiple subjects. 
             </p>
         </div>
         <div class="clear"></div>
-        
         <dl>
-
             <dd class="clear"></dd>
-            
             <dt>Skills</dt>
             <dd>
                 <h2>Geospatial Expertise</h2>
@@ -380,7 +371,6 @@ included in all copies or substantial portions of the Software.
             </dd>      
         <dd class="clear"></dd>    
             <dt>Other<br />
-                
             </dt>
             <dd>
                 <h2>Links &#38; Articles</h2>
@@ -392,14 +382,12 @@ included in all copies or substantial portions of the Software.
                     <p>
                     <a id="pdf" href="Resume_CoryMacVie.pdf" target="_blank">
                     <img src="images/pdf_icon.png" id="logo" /> Download</a>
-                    <a id="github" href="http://github.com/Whatsupcory/GeoResume"  target="_blank">
+                    <a id="github" href="http://github.com/Whatsupcory/GeoResume" target="_blank">
                     <img src="images/github-logo.png" id="logo" /> GitHub</a>
                     </p>
-
             </dd>
-
         <dd class="clear"></dd>
-<!--
+<!--  This section is not finished.  
     <div class="timeline">
         <ul class="events">
             <li style="width: 85.5%; left: 14.2%;">Web Development <em>(2004 - 2009)</em></li>
@@ -419,6 +407,40 @@ included in all copies or substantial portions of the Software.
 <!-- </div> <!-- //.timeline -->
     </div> <!-- //page-wrap -->
 </div> <!-- //paper1 -->
+
+<!-- Google Analytics. Use your own code. -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-26756917-1', 'corymacvie.com');
+  ga('send', 'pageview');
+
+</script>
+<!-- end Google Analytic code -->
+
+<!-- begin olark code --> 
+<script data-cfasync="false" type='text/javascript'>/*<![CDATA[*/window.olark||(function(c){var f=window,d=document,l=f.location.protocol=="https:"?"https:":"http:",z=c.name,r="load";var nt=function(){
+f[z]=function(){
+(a.s=a.s||[]).push(arguments)};var a=f[z]._={
+},q=c.methods.length;while(q--){(function(n){f[z][n]=function(){
+f[z]("call",n,arguments)}})(c.methods[q])}a.l=c.loader;a.i=nt;a.p={
+0:+new Date};a.P=function(u){
+a.p[u]=new Date-a.p[0]};function s(){
+a.P(r);f[z](r)}f.addEventListener?f.addEventListener(r,s,false):f.attachEvent("on"+r,s);var ld=function(){function p(hd){
+hd="head";return["<",hd,"></",hd,"><",i,' onl' + 'oad="var d=',g,";d.getElementsByTagName('head')[0].",j,"(d.",h,"('script')).",k,"='",l,"//",a.l,"'",'"',"></",i,">"].join("")}var i="body",m=d[i];if(!m){
+return setTimeout(ld,100)}a.P(1);var j="appendChild",h="createElement",k="src",n=d[h]("div"),v=n[j](d[h](z)),b=d[h]("iframe"),g="document",e="domain",o;n.style.display="none";m.insertBefore(n,m.firstChild).id=z;b.frameBorder="0";b.id=z+"-loader";if(/MSIE[ ]+6/.test(navigator.userAgent)){
+b.src="javascript:false"}b.allowTransparency="true";v[j](b);try{
+b.contentWindow[g].open()}catch(w){
+c[e]=d[e];o="javascript:var d="+g+".open();d.domain='"+d.domain+"';";b[k]=o+"void(0);"}try{
+var t=b.contentWindow[g];t.write(p());t.close()}catch(x){
+b[k]=o+'d.write("'+p().replace(/"/g,String.fromCharCode(92)+'"')+'");d.close();'}a.P(2)};ld()};nt()})({
+loader: "static.olark.com/jsclient/loader0.js",name:"olark",methods:["configure","extend","declare","identify"]});
+/* custom configuration goes here (www.olark.com/documentation) */
+olark.identify('8544-877-10-1453');/*]]>*/</script><noscript><a href="https://www.olark.com/site/8544-877-10-1453/contact" title="Contact us" target="_blank">Questions? Feedback?</a> powered by <a href="http://www.olark.com?welcome" title="Olark live chat software">Olark live chat software</a></noscript>
+<!-- end olark code -->
 
 </body>
 </html>
