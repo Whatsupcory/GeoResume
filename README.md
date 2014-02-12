@@ -1,4 +1,4 @@
-Demo on CoryMacVie.com
+Demo at <a href="http://www.corymacvie.com">CoryMacVie.com</a>
 ==============
 
 Interactive Resume
