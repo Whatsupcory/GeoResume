@@ -1,7 +1,9 @@
-Demo at <a href="http://www.corymacvie.com">CoryMacVie.com</a>
+GeoResume
 ==============
 
 Interactive Resume
+
+Demo at <a href="http://www.corymacvie.com">CoryMacVie.com</a>
 
 Developing a new type of interactive resume. I hope to display a resume on the left hand side hovering over a world map.
 The world map will have pins that corresponds to job positions.  As a site user scrolls over different job positions in
@@ -13,7 +15,7 @@ I plan on writing this myself, but if you could teach me a few things then you a
 Notable Updates:
 
 - Add quote bubbles to references
-- Download PDF &  GitHub button
+- Download PDF & GitHub button
 
 Road Map:
 
