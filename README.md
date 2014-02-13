@@ -16,15 +16,15 @@ I plan on writing this myself, but if you could teach me a few things or have id
 
 Active files: // install these files and personalize the information in index.html
 
-<p>HTML</p>
+HTML <br />
 Index.html  // Please signup and use your own mapbox account for the base map.
 
-<p>CSS</p>
+CSS <br />
 style.css  // Customize to your desired preference. 
 tooltip.css // Styles the pop up bubbles on mini references.
 control.MiniMap.css // Styles the index map in bottom right corner.  Please use your own mapbox account.
 
-<p>JavaScript</p>
+JavaScript<br />
 tooltips.js  // Controls the pop up bubbles on mini references.
 control.minimap.js  // Controls index map.
 
