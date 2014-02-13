@@ -27,6 +27,10 @@ CSS <br />
 JavaScript<br />
 <strong>tooltips.js</strong>  // Controls the pop up bubbles on mini references.<br />
 <strong>control.minimap.js</strong>  // Controls index map.<br />
+<br />
+Images Folder<br />
+<strong>college.png</strong>
+<strong>github-logo.png</strong> Please include this link for others.
 
 
 
