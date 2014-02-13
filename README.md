@@ -12,28 +12,30 @@ Also there needs to be a pop out business card with vcard capability.
 
 I plan on writing this myself, but if you could teach me a few things or have ideas on how to improve it then you are welcome to help.  All is welcome. 
 
-<h3>INSTALL INSTRUCTIONS:</h3>
+<h3>SETUP INSTRUCTIONS:</h3>
 
-Active files: // install these files and personalize the information in index.html<br />
+Install these files and personalize the information in index.html<br />
 <br />
-HTML <br />
-<strong>index.html</strong>  // Please signup and use your own mapbox.com account for the base map.<br />
+<strong>HTML</strong> <br />
+index.html // Please signup and use your own mapbox.com account for the base map.<br />
 <br />
-CSS <br />
-<strong>style.css</strong>  // Customize to your desired preference. <br />
-<strong>tooltip.css</strong> // Styles the pop up bubbles on mini references.<br />
-<strong>control.MiniMap.css</strong> // Styles the index map in bottom right corner.  Please use your own mapbox account.<br />
+<strong>CSS</strong> // Create CSS folder<br />
+style.css  // Customize to your desired preference. <br />
+tooltip.css // Styles the pop up bubbles on mini references.<br />
+control.MiniMap.css // Styles the index map in bottom right corner.  Please use your own mapbox account.<br />
 <br />
-JavaScript<br />
-<strong>tooltips.js</strong>  // Controls the pop up bubbles on mini references.<br />
-<strong>control.minimap.js</strong>  // Controls index map.<br />
+<strong>JavaScript</strong> // Create JS Folder<br />
+tooltips.js  // Controls the pop up bubbles on mini references.<br />
+control.minimap.js // Controls index map.<br />
 <br />
-Images Folder<br />
-<strong>college.png</strong>
-<strong>github-logo.png</strong> Please include this link for others.
-
-
-
+<strong>Images</strong> // Create JS Folder<br /> 
+college.png<br />
+work.png<br />
+volunteer.png<br />
+pdf_icon.png<br />
+paperclip_sm.png<br />
+github-logo.png Please include this link for others. <br />
+<br />
 <h3>NOTABLE UPDATES:</h3>
 
 - Add quote bubbles to mini references
