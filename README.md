@@ -22,11 +22,11 @@ index.html // Please signup and use your own mapbox.com account for the base map
 <strong>CSS</strong> // Create CSS folder<br />
 style.css  // Customize to your desired preference. <br />
 tooltip.css // Styles the pop up bubbles on mini references.<br />
-control.MiniMap.css // Styles the index map in bottom right corner.  Please use your own mapbox account.<br />
+control.MiniMap.css // Styles the mini map in bottom right corner.  Please use your own mapbox account.<br />
 <br />
 <strong>JavaScript</strong> // Create JS Folder<br />
 tooltips.js  // Controls the pop up bubbles on mini references.<br />
-control.minimap.js // Controls index map.<br />
+control.minimap.js // Controls mini map.<br />
 <br />
 <strong>Images</strong> // Create JS Folder<br /> 
 college.png<br />
@@ -34,8 +34,9 @@ work.png<br />
 volunteer.png<br />
 pdf_icon.png<br />
 paperclip_sm.png<br />
-github-logo.png Please include this link for others. <br />
-<br />
+headshot2.jpg // Replace this with your own personal image. Make it professional. <br />
+github-logo.png // Please include this link for others. <br />
+
 <h3>NOTABLE UPDATES:</h3>
 
 - Add quote bubbles to mini references
