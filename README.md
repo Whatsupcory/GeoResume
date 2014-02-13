@@ -17,7 +17,7 @@ I plan on writing this myself, but if you could teach me a few things or have id
 Active files: // install these files and personalize the information in index.html<br />
 <br />
 HTML <br />
-Index.html  // Please signup and use your own mapbox account for the base map.<br />
+<strong>Index.html</strong>  // Please signup and use your own mapbox account for the base map.<br />
 <br />
 CSS <br />
 <strong>style.css</strong>  // Customize to your desired preference. <br />
@@ -25,8 +25,8 @@ CSS <br />
 <strong>control.MiniMap.css</strong> // Styles the index map in bottom right corner.  Please use your own mapbox account.<br />
 <br />
 JavaScript<br />
-tooltips.js  // Controls the pop up bubbles on mini references.<br />
-control.minimap.js  // Controls index map.<br />
+<strong>tooltips.js</strong>  // Controls the pop up bubbles on mini references.<br />
+<strong>control.minimap.js</strong>  // Controls index map.<br />
 
 
 
