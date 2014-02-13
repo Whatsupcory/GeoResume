@@ -10,15 +10,32 @@ The world map will have pins that corresponds to job positions.  As a site user 
 the map will zoom to those locations.  The site will also have a way to display portfolio of work from each position. 
 Also there needs to be a pop out business card with vcard capability. 
 
-I plan on writing this myself, but if you could teach me a few things then you are welcome to help.
+I plan on writing this myself, but if you could teach me a few things or have ideas on how to improve it then you are welcome to help.  All is welcome. 
 
-Notable Updates:
+INSTALL INSTRUCTIONS:
 
-- Add quote bubbles to references
-- Download PDF & GitHub button
+Active files: // install these files and personalize the information in index.html
 
-Road Map:
+<u>HTML</u>
+Index.html  // Please signup and use your own mapbox account for the base map.
 
-- Portfolio popouts in JQuery
+<u>CSS</u>
+style.css  // Customize to your desired preference. 
+tooltip.css // Styles the pop up bubbles on mini references.
+control.MiniMap.css // Styles the index map in bottom right corner.  Please use your own mapbox account.
+
+<u>JavaScript</u>
+tooltips.js  // Controls the pop up bubbles on mini references.
+control.minimap.js  // Controls index map.
+
+
+
+NOTABLE UPDATES:
+
+- Add quote bubbles to mini references
+- Download PDF & GitHub buttons
+
+ROAD MAP:
+
 - Pan Map slower
 - Create business card pullout
