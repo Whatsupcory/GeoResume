@@ -12,30 +12,30 @@ Also there needs to be a pop out business card with vcard capability.
 
 I plan on writing this myself, but if you could teach me a few things or have ideas on how to improve it then you are welcome to help.  All is welcome. 
 
-INSTALL INSTRUCTIONS:
+<h3>INSTALL INSTRUCTIONS:</h3>
 
 Active files: // install these files and personalize the information in index.html
 
-<h3>HTML</h3>
+HTML
 Index.html  // Please signup and use your own mapbox account for the base map.
 
-<u>CSS</u>
+CSS
 style.css  // Customize to your desired preference. 
 tooltip.css // Styles the pop up bubbles on mini references.
 control.MiniMap.css // Styles the index map in bottom right corner.  Please use your own mapbox account.
 
-<u>JavaScript</u>
+JavaScript
 tooltips.js  // Controls the pop up bubbles on mini references.
 control.minimap.js  // Controls index map.
 
 
 
-NOTABLE UPDATES:
+<h3>NOTABLE UPDATES:</h3>
 
 - Add quote bubbles to mini references
 - Download PDF & GitHub buttons
 
-ROAD MAP:
+<h3>ROAD MAP:</h3>
 
 - Pan Map slower
 - Create business card pullout
