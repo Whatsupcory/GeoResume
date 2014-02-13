@@ -17,7 +17,7 @@ I plan on writing this myself, but if you could teach me a few things or have id
 Active files: // install these files and personalize the information in index.html<br />
 <br />
 HTML <br />
-<strong>Index.html</strong>  // Please signup and use your own mapbox account for the base map.<br />
+<strong>index.html</strong>  // Please signup and use your own mapbox.com account for the base map.<br />
 <br />
 CSS <br />
 <strong>style.css</strong>  // Customize to your desired preference. <br />
