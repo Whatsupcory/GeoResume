@@ -25,7 +25,7 @@ body {
     margin: 40px auto 60px; }
 #pic { 
     float: right; 
-    margin: -40px 0 0 0; }
+    margin: -40px 0 0 0; 
 #icon { 
     padding: 10px; 
     display: block; 
@@ -90,18 +90,31 @@ dd.clear {
     margin: 0 0 16px; 
     padding: 0 0 16px 0}
 
-/* #profilephoto {
+/* Paperclip & Resume Photo */
+
+#profilephoto {
     position: absolute;
     top: 10px;
-    right: -70px; }
+    right: 80px; }
 img#profile {
-    width: 60%;
+    width: 190px;
     height: auto;
-    transform:rotate(-3deg);
-    -ms-transform:rotate(-3deg); /* IE 9 */
-/*     -webkit-transform:rotate(-3deg); /* Safari and Chrome */
-/*     -webkit-box-shadow: 2px 2px 2px #7C7C7C;
-    box-shadow: 2px 2px 2px #7C7C7C; }  */
+    transform:rotate(-4deg);
+    -ms-transform:rotate(-4deg); /* IE 9 */
+    -webkit-transform:rotate(-4deg); /* Safari and Chrome */
+    -webkit-box-shadow: 2px 2px 2px #7C7C7C;
+    box-shadow: 2px 2px 2px #7C7C7C; }  
+#overlay {
+    z-index: 10;
+    position: absolute;
+    transform:rotate(4deg);
+    -ms-transform:rotate(4deg); /* IE 9 */
+    -webkit-transform:rotate(4deg); /* Safari and Chrome */
+    top: -1px;
+    right: 85px; }
+img#paperclip {
+    width: 40px;
+    height: auto; }  
 
 /* Download & Link Buttons */
 

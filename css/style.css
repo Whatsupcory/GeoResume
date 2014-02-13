@@ -23,9 +23,6 @@ body {
 #page-wrap { 
     width: 800px; 
     margin: 40px auto 60px; }
-#pic { 
-    float: right; 
-    margin: -40px 0 0 0; }
 #icon { 
     padding: 10px; 
     display: block; 
@@ -89,6 +86,32 @@ dd.clear {
 .line { 
     margin: 0 0 16px; 
     padding: 0 0 16px 0}
+
+/* Paperclip & Resume Photo */
+
+#profilephoto {
+    z-index: 9;
+    position: absolute;
+    top: 10px;
+    right: 80px; }
+img#profile {
+    width: 200px;
+    height: auto;
+    transform:rotate(-3deg);
+    -ms-transform:rotate(-3deg); /* IE 9 */
+    -webkit-transform:rotate(-3deg); /* Safari and Chrome */
+    box-shadow: 0px 0.5px 2px #7C7C7C; }  
+#overlay {
+    z-index: 10;
+    position: absolute;
+    transform:rotate(4deg);
+    -ms-transform:rotate(4deg); /* IE 9 */
+    -webkit-transform:rotate(4deg); /* Safari and Chrome */
+    top: -1px;
+    right: 85px; }
+img#paperclip {
+    width: 40px;
+    height: auto; }  
 
 /* Download & Link Buttons */
 

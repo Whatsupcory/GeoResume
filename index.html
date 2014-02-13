@@ -65,8 +65,8 @@ included in all copies or substantial portions of the Software.
 </head>
 <body>
 <div id="map"> 
-   <script type="text/javascript">   
-    var map = L.mapbox.map('map', 'corymacvie.map-npm45cd5', {zoomControl: false}) // Use your own Mapbox base map. There is a free account.  This is a paid account. 
+    <script type="text/javascript">   
+    var map = L.mapbox.map('map', 'corymacvie.map-npm45cd5', {zoomControl: false}) // Use your own Mapbox.com base map. There is a free account.  This is a paid account. 
         .on('ready', function() {
         new L.Control.MiniMap(L.mapbox.tileLayer('corymacvie.map-zt0leptm'))
           .addTo(map);
@@ -197,15 +197,16 @@ included in all copies or substantial portions of the Software.
         'description': 'San Francisco',
         'marker-size': 'large',
         'marker-color': '#3ca0d3', // Blue
-        'marker-symbol': 'hospital' }}).addTo(map);
+        'marker-symbol': 'hospital' }}).addTo(map); 
 
     </script> 
 </div>
 <div class="paper1"> <!-- Paper -->
 	<div id="page-wrap">
-         <img src="images/profile_color2.png" id="pic" />  
         <div id="contact-info">
             <h1 class="fn">Cory Mac Vie</h1>
+            <div id="profilephoto"><img src="images/headshot2.jpg" id="profile" /></div>
+            <div id="overlay"><img src="images/paperclip_sm.png" id="paperclip" /></div> 
             <p>
                 <strong>Mobile:</strong> <span class="tel">909-435-6551</span><br />
                	<strong>Twitter:</strong> <a class="twitter" href="https://twitter.com/iLikCartography" target="_blank">@iLikCartography</a><br />
