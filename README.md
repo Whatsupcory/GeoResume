@@ -16,7 +16,7 @@ INSTALL INSTRUCTIONS:
 
 Active files: // install these files and personalize the information in index.html
 
-<h1>HTML</h1>
+<h3>HTML</h3>
 Index.html  // Please signup and use your own mapbox account for the base map.
 
 <u>CSS</u>
