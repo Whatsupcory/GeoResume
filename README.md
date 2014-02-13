@@ -20,9 +20,9 @@ HTML <br />
 Index.html  // Please signup and use your own mapbox account for the base map.<br />
 <br />
 CSS <br />
-style.css  // Customize to your desired preference. <br />
-tooltip.css // Styles the pop up bubbles on mini references.<br />
-control.MiniMap.css // Styles the index map in bottom right corner.  Please use your own mapbox account.<br />
+<strong>style.css</strong>  // Customize to your desired preference. <br />
+<strong>tooltip.css</strong> // Styles the pop up bubbles on mini references.<br />
+<strong>control.MiniMap.css</strong> // Styles the index map in bottom right corner.  Please use your own mapbox account.<br />
 <br />
 JavaScript<br />
 tooltips.js  // Controls the pop up bubbles on mini references.<br />
