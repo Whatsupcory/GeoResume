@@ -90,6 +90,19 @@ dd.clear {
     margin: 0 0 16px; 
     padding: 0 0 16px 0}
 
+/* #profilephoto {
+    position: absolute;
+    top: 10px;
+    right: -70px; }
+img#profile {
+    width: 60%;
+    height: auto;
+    transform:rotate(-3deg);
+    -ms-transform:rotate(-3deg); /* IE 9 */
+/*     -webkit-transform:rotate(-3deg); /* Safari and Chrome */
+/*     -webkit-box-shadow: 2px 2px 2px #7C7C7C;
+    box-shadow: 2px 2px 2px #7C7C7C; }  */
+
 /* Download & Link Buttons */
 
 a#github { 
@@ -173,4 +186,47 @@ a#pdf:hover {
 .calabasas:hover { 
     color: blue; 
     cursor: pointer; }
+
+/* Timeline - still need to finish */ /*
+.footer {
+	position: fixed;  
+	left: 0px;
+	bottom: 0px;
+	height: 100px;
+	width: 100%;
+	background: #ffffff;
+}
+
+ul.events {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 0 20px 0;
+}
+
+ul.events li {
+    -webkit-border-radius: 11px;
+    -moz-border-radius: 11px;
+    border-radius: 11px;
+    background: #eee;
+    border: 1px solid #ddd;
+    color: #707070;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 6px;
+    padding: 3px 0;
+    position: relative;
+    text-align: center;
+}
+
+ul.events li em {
+    color: #aaa;
+    font-weight: normal;
+    font-size: 0.9em;
+}
+
+ul.intervals {
+    list-style-type: none;
+    padding: 0;
+    display: block;
+}
 
