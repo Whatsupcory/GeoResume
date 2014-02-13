@@ -39,3 +39,4 @@ control.minimap.js  // Controls index map.<br />
 
 - Pan Map slower
 - Create business card pullout
+- Your ideas?
