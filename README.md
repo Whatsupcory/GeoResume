@@ -18,6 +18,8 @@ Install these files and personalize the information in index.html<br />
 <br />
 <strong>HTML</strong> <br />
 index.html // Please signup and use your own mapbox.com account for the base map.<br />
+Resume_CoryMacVie.pdf // Export your own PDF from the docx provided.<br />
+Resume_CoryMacVie.docx // Provided to style your resume like the website.<br />
 <br />
 <strong>CSS</strong> // Create CSS folder<br />
 style.css  // Customize to your desired preference. <br />
