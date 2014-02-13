@@ -39,6 +39,11 @@ paperclip_sm.png<br />
 headshot2.jpg // Replace this with your own personal image. Make it professional. <br />
 github-logo.png // Please include this link for others. <br />
 
+<strong>Tips</strong> <br />
+- When setting "map.setView" in the html, off set the lat/long so they land right of the resume page. Make sure the zoom level is where you want it to be.  Use testing.html to show you center coordinates on the page. Again use your own basemap from mapbox.
+- When creating markers on your map, first lay them in mapbox.com to find the lat/long (they are arranged in reverse order long/lat). 
+
+
 <h3>NOTABLE UPDATES:</h3>
 
 - Add quote bubbles to mini references
