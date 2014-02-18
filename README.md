@@ -5,7 +5,7 @@ Interactive Resume
 
 Demo at <a href="http://www.corymacvie.com">CoryMacVie.com</a>
 
-<strong>Phase 1</strong> - <em>Done</em><br />
+<strong>Phase 1</strong> - <em>Completed</em><br />
 Develop a new type of interactive resume. Display a resume on the left hand side hovering over a world map.
 The world map will have pins that corresponds to job positions.  As a site user scrolls over different job positions in
 the map will zoom to those locations.  The site will also have a way to display portfolio of work from each position. 
