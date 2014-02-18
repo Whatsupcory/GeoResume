@@ -12,7 +12,7 @@ the map will zoom to those locations.  The site will also have a way to display 
 Also there needs to be a pop out business card with vcard capability. 
 
 <strong>Phase 2</strong> - <em>In Progress</em><br />
-Develop a back end for the site that allows users to create their own subdomain (different domain) and pull their own LinkedIn profile information and create their own georesume. 
+Develop a python backend for the site that allows users to create their own subdomain (different domain) and import their LinkedIn job profile information and create their own interactive resume. 
 
 <strong>Notice</strong><br />
 I plan on writing this myself, but if you could teach me a few things or have ideas on how to improve it then you are welcome to help.
