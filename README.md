@@ -5,12 +5,17 @@ Interactive Resume
 
 Demo at <a href="http://www.corymacvie.com">CoryMacVie.com</a>
 
-Developing a new type of interactive resume. I hope to display a resume on the left hand side hovering over a world map.
+<strong>Phase 1</strong> - <em>Done</em><br />
+Develop a new type of interactive resume. Display a resume on the left hand side hovering over a world map.
 The world map will have pins that corresponds to job positions.  As a site user scrolls over different job positions in
 the map will zoom to those locations.  The site will also have a way to display portfolio of work from each position. 
 Also there needs to be a pop out business card with vcard capability. 
 
-I plan on writing this myself, but if you could teach me a few things or have ideas on how to improve it then you are welcome to help.  All is welcome. 
+<strong>Phase 2</strong> - <em>In Progress</em><br />
+Develop a back end for the site that allows users to create their own subdomain (different domain) and pull their own LinkedIn profile information and create their own georesume. 
+
+<strong>Notice</strong><br />
+I plan on writing this myself, but if you could teach me a few things or have ideas on how to improve it then you are welcome to help.
 
 ==============
 
