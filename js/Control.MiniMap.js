@@ -6,8 +6,8 @@ L.Control.MiniMap = L.Control.extend({
 		zoomLevelFixed: false,
 		zoomAnimation: false,
 		autoToggleDisplay: false,
-		width: 150,
-		height: 150
+		width: 170,
+		height: 170
 	},
 	
 	hideText: 'Hide MiniMap',
