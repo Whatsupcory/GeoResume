@@ -43,7 +43,7 @@ work.png<br />
 volunteer.png<br />
 pdf_icon.png<br />
 paperclip_sm.png<br />
-headshot2.jpg // Replace this with your own personal image. Make it professional. <br />
+headshot1.jpg // Replace this with your own personal image. Make it professional. <br />
 github-logo.png // Please include this link for others. <br />
 
 <strong>Tips</strong> <br />
