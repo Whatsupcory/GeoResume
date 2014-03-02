@@ -52,7 +52,6 @@ included in all copies or substantial portions of the Software.
         <link rel='stylesheet' href='css/tooltips.css' type="text/css" /> <!-- JQuery sBubble Plugin -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js" type="text/javascript"></script> <!-- JQuery sBubble Plugin -->
     <script src="js/tooltips.js"></script> <!-- JQuery sBubble Plugin -->
-
     <script>
         $(function() {
             $("#page-wrap a[title]").tooltips();
@@ -63,12 +62,9 @@ included in all copies or substantial portions of the Software.
       body { margin:0; padding:0; }
       #map { position:absolute; top:0; position: fixed; bottom:0; width:100%; }
     </style>
-
-    
 </head>
 <body>
-
-<div id="map">
+<div id="map"> 
     <script type="text/javascript">   
     var map = L.mapbox.map('map', 'corymacvie.map-npm45cd5', {zoomControl: false}) // Use your own Mapbox.com base map. There is a free account.  This is a paid account. 
         .on('ready', function() {
@@ -77,13 +73,11 @@ included in all copies or substantial portions of the Software.
       });  
     
 // disable drag and zoom handlers
-
     map.dragging.enabled();
     map.touchZoom.disable();
     map.doubleClickZoom.disable();
     map.scrollWheelZoom.disable();
     map.setView([40, -135], 4);  // Default map view.  You need to offset it to fit on the screen. 
-
 
 // Work Markers 
     L.mapbox.markerLayer({ type: 'Feature', 
@@ -205,21 +199,13 @@ included in all copies or substantial portions of the Software.
         'marker-color': '#3ca0d3', // Blue
         'marker-symbol': 'hospital' }}).addTo(map); 
 
-    </script>
-<<<<<<< HEAD
-     
-=======
->>>>>>> FETCH_HEAD
+    </script> 
 </div>
 <div class="paper1"> <!-- Paper -->
 	<div id="page-wrap">
         <div id="contact-info">
             <h1 class="fn">Cory Mac Vie</h1>
-<<<<<<< HEAD
             <div id="profilephoto"><a href="http://instagram.com/whatsupcory#"><img src="images/headshot1.jpg" id="profile" hover="images/headshot.jpg" /></a></div>
-=======
-            <a href="http://instagram.com/whatsupcory"><div id="profilephoto"><img src="images/headshot2.jpg" id="profile" /></div></a>
->>>>>>> FETCH_HEAD
             <div id="overlay"><img src="images/paperclip_sm.png" id="paperclip" /></div> 
             <p>
                 <strong>Mobile:</strong> <span class="tel">909-435-6551</span><br />
@@ -232,11 +218,7 @@ included in all copies or substantial portions of the Software.
         </div>        
         <div id="objective">
             <p>
-<<<<<<< HEAD
                 Always seeking opportunities to develop new systems that improve the lives of others while never settling for the status quo. Possess tenacity for solving difficult problems while focusing on quality and service. Strives for the highest level of personal integrity on all jobs. Daily seeks higher levels of understanding in multiple subjects.
-=======
-                Always seeking opportunities to develop new systems that improve the lives of others while never settling for the status quo. Possess tenacity for solving difficult problems while focusing on quality and service. Strives for the highest level of personal integrity on all jobs. Daily seeks higher levels of understanding in multiple subjects. 
->>>>>>> FETCH_HEAD
             </p>
         </div>
         <div class="clear"></div>
@@ -279,11 +261,7 @@ included in all copies or substantial portions of the Software.
                     Planning Section to better analyize data and <br />
                     information. I appreciate Cory's ability to look<br />
                     outside the box for answers to tough questions.</strong><br />
-<<<<<<< HEAD
                     - Stacy Robarge-Silkiner"><img class="decoded" src="http://m.c.lnkd.licdn.com/mpr/mpr/shrink_80_80/p/4/000/163/3f1/0318dd4.jpg"></img></a>
-=======
-                    - Stacy Robarge-Silkiner" target="_blank"><img class="decoded" src="http://m.c.lnkd.licdn.com/mpr/mpr/shrink_80_80/p/4/000/163/3f1/0318dd4.jpg"></img></a>
->>>>>>> FETCH_HEAD
                     <div class="portfolio">
                         <a href="images/portfolio/IMG_0321.jpg" target="_blank"><img src="images/portfolio/IMG_0321_thumb.jpg" alt="" class="thumbnail" /></a>
                         <a href="images/portfolio/Joplin_RedCross_DA_11092011.jpg" target="_blank"><img src="images/portfolio/Joplin_RedCross_DA_11092011_thumb.jpg" alt="" class="thumbnail" /></a>
@@ -311,13 +289,7 @@ included in all copies or substantial portions of the Software.
                     finds ways to implement new technologies<br />
                     and to create a better common operating<br />
                     picture.</strong><br />
-                    - Jonathan Colwell" target="_blank"><img class="decoded" src="http://i.imgur.com/FlPrqvTs.jpg"></img></a>
-                    <a href="#" title="
-                    <strong>Cory's ability to communicate orally and<br />
-                    in writing proved to be valuable when<br />
-                    presenting his ideas and discussing the<br />
-                    outcomes of his project development.</strong><br />
-                    - Khaalis Jackson" target="_blank"><img class="decoded" src="http://graph.facebook.com/khaalis.jackson/picture"></img></a></div>
+                    - Jonathan Colwell" ><img class="decoded" src="http://i.imgur.com/FlPrqvTs.jpg"></img></a></div>
                 </div>
                 <div class="jobs" onclick="map.setView([34.19988,-118.90366],11)">
                     <h2>Apple<span>Genius (Technician) - Canoga Park, CA - 2009-2011</span></h2>
@@ -326,7 +298,11 @@ included in all copies or substantial portions of the Software.
                     <strong>Cory is possibly the most intelligent,<br />
                     innovative and motivated person I've<br />
                     ever worked with.</strong><br />
-                    - Ron Green" target="_blank"><img class="decoded" src="http://m.c.lnkd.licdn.com/media/p/5/005/039/252/3e50604.jpg"></img></a></div>
+                    - Ron Green" ><img class="decoded" src="http://m.c.lnkd.licdn.com/media/p/5/005/039/252/3e50604.jpg"></img></a></div>
+                </div>
+                <div class="jobs" onclick="map.setView([38.92309,-77.64175],10)">     
+    				<h2>RESULTS Educational Fund<span>Intern - Washington, DC - 2008-2009</span></h2>
+                    <p>Educated members of Congress regarding proposed public health legislation resulting in the increased funding of $10.4 billion as part of the Farm Bill, primarily for emergency food assistance, and passage of legislation that will provided $50 billion in funds for AIDS, malaria and TB programs. Established and managed meetings and conference calls with elected officials and staff. Organized and managed diverse groups to achieve mutual goals. Organized and delivered infectious disease educational events throughout the community. Wrote press releases on topics such as infectious diseases, microfinance growth, education, and the Head Start program. Gained media support for public health related legislative issues. Prepared and delivered briefings to national headquarters.</p>
                 </div>
             <dd class="clear"></dd>          
             <dt>Education<br />
@@ -345,24 +321,20 @@ included in all copies or substantial portions of the Software.
                         you a very honest assessment of what he<br />
                         is willing to take on. I have truly enjoyed <br /> 
                         working with him.</strong><br />
-                        - Donn Gaede, DrPH, CPH" target="_blank"><img class="decoded" src="http://graph.facebook.com/donn.gaede/picture"></img></a>
+                        - Donn Gaede, DrPH, CPH" ><img class="decoded" src="http://graph.facebook.com/donn.gaede/picture"></img></a>
                     <a href="http://www.linkedin.com/pub/yemi-adeoye/4/333/587" title="
                         <strong>Cory is a dynamic, seasoned public health<br />
                         expert who is well rounded in knowledge and<br />
                         works competently in diversified environments.</strong><br />
-                        - Dr. Yemi Adeoye, MPH" target="_blank"><img class="decoded" src="http://m.c.lnkd.licdn.com/mpr/mpr/shrink_200_200/p/5/000/1b2/01d/02a03c7.jpg"></img></a>
+                        - Dr. Yemi Adeoye, MPH" ><img class="decoded" src="http://m.c.lnkd.licdn.com/mpr/mpr/shrink_200_200/p/5/000/1b2/01d/02a03c7.jpg"></img></a>
                     <a href="http://www.linkedin.com/pub/alane-bristow/4/3b4/918" title="
                         <strong>Cory was always an invaluable group member,<br />
                         taking the initiative and showing great leadership<br />
                         and interpersonal skills.</strong><br />
-<<<<<<< HEAD
                         - Alane Bristow, MPH" ><img class="decoded" src="http://graph.facebook.com/alanebristow/picture"></img></a>
                         <div class="portfolio">
                         <a href="images/portfolio/MuhammadYunus.jpg" target="_blank"><img src="images/portfolio/MuhammadYunus_thumb.jpg" alt="" class="thumbnail" /></a>
                         </div>
-=======
-                        - Alane Bristow, MPH" target="_blank"><img class="decoded" src="http://graph.facebook.com/alanebristow/picture"></img></a>
->>>>>>> FETCH_HEAD
                     </div>
                 </div>
                 <div class="education" onclick="map.setView([33.92214, -117.49792],13)">
@@ -387,7 +359,7 @@ included in all copies or substantial portions of the Software.
                         you can rest assured he will complete it<br />
                         in a timely fashion and that it will be done<br />
                         well.</strong><br />
-                        - Dr. Sara Graham" target="_blank">
+                        - Dr. Sara Graham">
                         <img class="decoded" src="http://m.c.lnkd.licdn.com/mpr/mpr/shrink_200_200/p/7/005/024/019/073e134.jpg"></img></a>
                         <div class="portfolio">
                         <a href="images/portfolio/Philippines2.jpg" target="_blank"><img src="images/portfolio/Philippines2_thumb.jpg" alt="" class="thumbnail" /></a>
