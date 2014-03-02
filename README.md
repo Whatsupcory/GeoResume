@@ -56,10 +56,9 @@ github-logo.png // Please include this link for others. <br />
 <h3>NOTABLE UPDATES:</h3>
 
 - Add quote bubbles to mini references
-- Download PDF & GitHub buttons
+- Download PDF, vCard & GitHub buttons
 
 <h3>ROAD MAP:</h3>
 
 - Pan Map slower
-- Create business card pullout
-- Your ideas?
+- Add Foursquare history to the map
