@@ -2,7 +2,7 @@ GeoResume
 ==============
 
 Interactive Resume <br />
-<em>(Original resume format was created by Chris Coyier at <a href="http://css-tricks.com/one-page-resume-site/" target="_blank">CSS-Tricks</a>.</em>
+<em>(Original resume format was created by Chris Coyier at <a href="http://css-tricks.com/one-page-resume-site/" target="_blank">CSS-Tricks</a>.)</em>
 
 Demo at <a href="http://www.corymacvie.com" target="_blank">CoryMacVie.com</a>
 
