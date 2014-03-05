@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'/>
+<!--[if lt IE 9]>
+<script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script src='js/underscore-min.js'></script>
+<script src='https://api.tiles.mapbox.com/mapbox.js/v0.6.7/mapbox.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox.js/v0.6.7/mapbox.css' rel='stylesheet' />
+<style>
+body {
+  margin:0px;
+  padding:0px;
+  font:normal 15px/20px Arial,sans-serif;
+  background:#fff;
+  }
+
+article {
+  width:33.3333%;
+  min-width:320px;
+  position:relative;
+  padding-top:40px;
+  padding-bottom:33.3333%;
+  }
+section {
+  padding:40px;
+  margin-left:40px;
+  position:relative;
+  transition:background 500ms, color 500ms;
+  -moz-transition:background 500ms, color 500ms;
+  -webkit-transition:background 500ms, color 500ms;
+  }
+section,
+section a {
+  color:#888;
+  color:rgba(128,128,128,0);
+  text-decoration:none;
+  text-shadow:rgba(64,64,64,1) 0px 0px 4px;
+  }
+section.active {
+  background:#222;
+  color:#eee;
+  }
+section.active a { color:#eee; }
+section.active small { color:#aaa; }
+h1 { font-size:2em; line-height:1em; }
+h2 { font-size:1.3333em; }
+h3 { font-size:1em;}
+h1,h2 { margin:0px 0px 10px; }
+p { margin:0px; }
+
+.scroll {
+  position:absolute;
+  right:0px; bottom:0px;
+  font-size:10px;
+  text-transform:uppercase;
+  padding:5px 10px;
+  }
+.colophon {
+  display:block;
+  margin-top:10px;
+  }
+
+.cover:before {
+  content:'';
+  display:block;
+  width:120px; height:120px;
+  margin:0px auto 20px;
+  }
+.cover.active:before { 
+  background:url(images/headshot2.jpg) 0px 0px no-repeat;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  }
+#pane {
+  position:fixed;
+  top:0px;
+  bottom:0px;
+  right:0px;
+  width:66.6666%;
+  }
+#map  {
+  position:absolute;
+  top:0px;
+  bottom:0px;
+  width:200%;
+  left:-50%;
+  transition:opacity 250ms;
+  -moz-transition:opacity 250ms;
+  -webkit-transition:opacity 250ms;
+  }
+
+/* Distinguish the "cover page" visually other sections. */
+body.section-0 #map { opacity:0.5; }
+</style>
+</head>
+<body class='section-0'>
+
+<div id='pane'><div id='map'></div></div>
+
+<article>
+  <section id='cover' class='cover active'>
+    <h1>A journey through my career</h1>
+    <p>// a geospatial guide</p>
+    <small class='scroll'>Scroll ▼</small>
+  </section>
+    <section id='ship'>
+    <h2>Ship Life</h2>
+    <h3>Jan 2001 - Nov 2001</h3>
+    <p>Following high school and a few college courses I wanted to get out and see the world.  I joined the twelve member crew of the White Holly and was tasked with bringing a ship from Virginia to the Marshall Islands. It was going to be a medical christian missionary ship for islanders.  The journey taught me leadership, discipline and dedication.</p>
+  </section>
+  <section id='calbaptist'>
+    <h2>California Baptist University</h2>
+    <h3>2002 - 2006</h3>
+    <p>After a year of extreme discipline I was prepared to get a degree. Now with a new curiosity about religions, I enrolled in seminary.   I felt ministry would be my calling.   After serving in the ministry for a short while I decide the pulpit wasn’t where my interest and talent lay. </p>
+  </section>
+  <section id='neworleans'>
+    <h2>Domestic Service Projects</h2>
+    <h3>2003 - 2006</h3>
+    <p>While I was in seminary I wanted to do something useful with my spring and winter breaks so I began organizing domestic service trips.  I organized and lead multiple teams of students to different cities to do service for others. One such trip was helping residents rebuild their lives after Hurricane Katrina.</p>
+  </section>
+  <section id='greece'>
+    <h2>International Service Project</h2>
+    <h3>August 2004</h3>
+    <p>November 1895. London is shrouded in fog and Sherlock Holmes and Watson pass time restlessly awaiting a new case. "The London criminal is certainly a dull fellow," Sherlock bemoans. "There have been numerous petty thefts," Watson offers in response. Just then a telegram arrives from Sherlock's brother Mycroft with a mysterious case.</p>
+  </section>
+  <section id='zimbabwe'>
+    <h2>Rural Orphanage</h2>
+    <h3>June 2007 – Aug 2007</h3>
+    <p>November 1895. London is shrouded in fog and Sherlock Holmes and Watson pass time restlessly awaiting a new case. "The London criminal is certainly a dull fellow," Sherlock bemoans. "There have been numerous petty thefts," Watson offers in response. Just then a telegram arrives from Sherlock's brother Mycroft with a mysterious case.</p>
+  </section>
+  <section id='lomalinda'>
+    <h2>Loma Linda University</h2>
+    <h3>2007 - 2009</h3>
+    <p>Arthur Cadogan West was found dead, head crushed in on train tracks at Aldgate Station at.</p>
+  </section>
+  <section id='philippines'>
+    <h2>Rural Development Program</h2>
+    <h3>July 2008 – Aug 2008</h3>
+    <p>Holmes and Watson's investigations take them across London. Sherlock deduces that West was murdered elsewhere, then moved to Aldgate Station to create the illusion that he was crushed on the tracks by a train. On their way to Woolwich Sherlock dispatches a telegram to Mycroft at London Bridge: "Send list of all foreign spies known to be in England, with full address."</p>
+  </section>
+  <section id='results'>
+    <h2>RESULTS Educational Fund</h2>
+    <h3>2008 - 2009</h3>
+    <p>While investigating at Woolwich Arsenal Sherlock learns that West did not have the three keys&mdash;door, office, and safe&mdash;necessary to steal the papers. The train station clerk mentions seeing an agitated West boarding the 8:15 train to London Bridge. Sherlock suspects West of following someone who had access to the Woolwich chief's keyring with all three keys.</p>
+  </section>
+  <section id='apple'>
+    <h2>Apple Retail</h2>
+    <h3>2009 - 2011</h3>
+    <p>While investigating at Woolwich Arsenal Sherlock learns that West did not have the three keys&mdash;door, office, and safe&mdash;necessary to steal the papers. The train station clerk mentions seeing an agitated West boarding the 8:15 train to London Bridge. Sherlock suspects West of following someone who had access to the Woolwich chief's keyring with all three keys.</p>
+  </section>
+  <section id='femar9'>
+    <h2>FEMA Region 9</h2>
+    <h3>2010 - 2011</h3>
+    <p>While investigating at Woolwich Arsenal Sherlock learns that West did not have the three keys&mdash;door, office, and safe&mdash;necessary to steal the papers. The train station clerk mentions seeing an agitated West boarding the 8:15 train to London Bridge. Sherlock suspects West of following someone who had access to the Woolwich chief's keyring with all three keys.</p>
+  </section>
+  <section id='femar7'>
+    <h2>FEMA Region 7</h2>
+    <h3>2011 - Present</h3>
+    <p>While investigating at Woolwich Arsenal Sherlock learns that West did not have the three keys&mdash;door, office, and safe&mdash;necessary to steal the papers. The train station clerk mentions seeing an agitated West boarding the 8:15 train to London Bridge. Sherlock suspects West of following someone who had access to the Woolwich chief's keyring with all three keys.</p>
+  </section>
+</article>
+
+<script>
+
+
+var geojson = [
+  { "geometry": { "type": "Point", "coordinates": [-115.56557381546236, 38.96970416215249] },
+    "properties": { "id": "cover", "zoom": 7 } },
+
+  { "geometry": { "type": "Point", "coordinates": [-79.56557381546236, 8.96970416215249] },
+    "properties": { "id": "ship", "zoom": 7 } },
+
+  { "geometry": { "type": "Point", "coordinates": [-117.42573738098143, 33.92824549720419] },
+    "properties": { "id": "calbaptist", "zoom": 7 } },
+
+  { "geometry": { "type": "Point", "coordinates": [-89.9602934107422, 29.942804338982693] },
+    "properties": { "id": "neworleans", "zoom": 7 } },
+
+  { "geometry": { "type": "Point", "coordinates": [23.724580444335942, 37.98363136718436] },
+    "properties": { "id": "greece", "zoom": 7 } },
+
+  { "geometry": { "type": "Point", "coordinates": [32.650228792987576, -18.987309490031073] },
+    "properties": { "id": "zimbabwe", "zoom": 7 } },  
+
+  { "geometry": { "type": "Point", "coordinates": [-117.26091416622312, 34.05371514158555] },
+    "properties": { "id": "lomalinda", "zoom": 7 } },
+
+  { "geometry": { "type": "Point", "coordinates": [-77.03838555077661, 38.906047471474984] },
+    "properties": { "id": "results", "zoom": 7 } },
+
+  { "geometry": { "type": "Point", "coordinates": [-238.9856, 14.56232] },
+    "properties": { "id": "philippines", "zoom": 7 } },
+
+  { "geometry": { "type": "Point", "coordinates": [-118.60329166494263, 34.18997400323588] },
+    "properties": { "id": "apple", "zoom": 7 } },
+
+  { "geometry": { "type": "Point", "coordinates": [-118.15131627590031, 34.14704875632763] },
+    "properties": { "id": "femar9", "zoom": 7 } },
+
+  { "geometry": { "type": "Point", "coordinates": [-94.60050908803947, 38.964248024548866] },
+    "properties": { "id": "femar7", "zoom": 7 } }
+];
+
+var tiles = mapbox.layer().tilejson({
+  tiles: [ "http://a.tiles.mapbox.com/v3/corymacvie.map-zt0leptm/{z}/{x}/{y}.png" ]
+});
+var spots = mapbox.markers.layer()
+  // Load up markers from geojson data.
+  .features(geojson)
+  // Define a new factory function. Takes geojson input and returns a
+  // DOM element that represents the point.
+  .factory(function(f) {
+    var el = document.createElement('div');
+    el.className = 'spot spot-' + f.properties.id;
+    return el;
+  });
+
+// Creates the map with tile and marker layers and
+// no input handlers (mouse drag, scrollwheel, etc).
+var map = mapbox.map('map', [tiles, spots], null, []);
+
+
+// Array of story section elements.
+var sections = document.getElementsByTagName('section');
+
+// Array of marker elements with order matching section elements.
+var markers = _(sections).map(function(section) {
+  return _(spots.markers()).find(function(m) {
+    return m.data.properties.id === section.id;
+  });
+});
+
+// Helper to set the active section.
+var setActive = function(index, ease) {
+  // Set active class on sections, markers.
+  _(sections).each(function(s) { s.className = s.className.replace(' active', '') });
+  _(markers).each(function(m) { m.element.className = m.element.className.replace(' active', '') });
+  sections[index].className += ' active';
+  markers[index].element.className += ' active';
+
+  // Set a body class for the active section.
+  document.body.className = 'section-' + index;
+
+  // Ease map to active marker.
+  if (!ease) {
+    map.centerzoom(markers[index].location, markers[index].data.properties.zoom||14);
+  } else {
+    map.ease.location(markers[index].location).zoom(markers[index].data.properties.zoom||14).optimal(0.5, 1.00);
+  }
+
+  return true;
+};
+
+// Bind to scroll events to find the active section.
+window.onscroll = _(function() {
+  // IE 8
+  if (window.pageYOffset === undefined) {
+    var y = document.documentElement.scrollTop;
+    var h = document.documentElement.clientHeight;
+  } else {
+    var y = window.pageYOffset;
+    var h = window.innerHeight;
+  }
+
+  // If scrolled to the very top of the page set the first section active.
+  if (y === 0) return setActive(0, true);
+
+  // Otherwise, conditionally determine the extent to which page must be
+  // scrolled for each section. The first section that matches the current
+  // scroll position wins and exits the loop early.
+  var memo = 0;
+  var buffer = (h * 0.3333);
+  var active = _(sections).any(function(el, index) {
+    memo += el.offsetHeight;
+    return y < (memo-buffer) ? setActive(index, true) : false;
+  });
+
+  // If no section was set active the user has scrolled past the last section.
+  // Set the last section active.
+  if (!active) setActive(sections.length - 1, true);
+}).debounce(10);
+
+// Set map to first section.
+setActive(0, false);
+
+
+
+</script>
+
+</body>
+</html>
