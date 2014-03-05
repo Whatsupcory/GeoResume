@@ -1,9 +1,10 @@
 GeoResume
 ==============
 
-Interactive Resume
+Interactive Resume <br />
+<em>(Original resume format was created by Chris Coyier at <a href="http://css-tricks.com/one-page-resume-site/" target="_blank">CSS-Tricks</a>.)</em>
 
-Demo at <a href="http://www.corymacvie.com">CoryMacVie.com</a>
+Demo at <a href="http://www.corymacvie.com" target="_blank">CoryMacVie.com</a>
 
 <strong>Phase 1</strong> - <em>Completed</em><br />
 Develop a new type of interactive resume. Display a resume on the left hand side hovering over a world map.
@@ -12,7 +13,7 @@ the map will zoom to those locations.  The site will also have a way to display 
 Also there needs to be a pop out business card with vcard capability. 
 
 <strong>Phase 2</strong> - <em>In Progress</em><br />
-Develop a python backend for the site that allows users to create their own subdomain (different domain) and import their LinkedIn job profile information and create their own interactive resume. 
+Develop a php backend for the site that allows users to create their own subdomain (different domain) and import their LinkedIn job profile information and create their own interactive resume. 
 
 <strong>Notice</strong><br />
 I plan on writing this myself, but if you could teach me a few things or have ideas on how to improve it then you are welcome to help.
@@ -43,7 +44,7 @@ work.png<br />
 volunteer.png<br />
 pdf_icon.png<br />
 paperclip_sm.png<br />
-headshot2.jpg // Replace this with your own personal image. Make it professional. <br />
+headshot1.jpg // Replace this with your own personal image. Make it professional. <br />
 github-logo.png // Please include this link for others. <br />
 
 <strong>Tips</strong> <br />
@@ -56,10 +57,9 @@ github-logo.png // Please include this link for others. <br />
 <h3>NOTABLE UPDATES:</h3>
 
 - Add quote bubbles to mini references
-- Download PDF & GitHub buttons
+- Download PDF, vCard & GitHub buttons
 
 <h3>ROAD MAP:</h3>
 
 - Pan Map slower
-- Create business card pullout
-- Your ideas?
+- Add Foursquare history to the map
