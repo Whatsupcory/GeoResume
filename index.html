@@ -88,7 +88,7 @@ included in all copies or substantial portions of the Software.
     map.touchZoom.disable();
     map.doubleClickZoom.disable();
     map.scrollWheelZoom.disable();
-    map.setView([40, -150], 4);  // Default map view.  You need to offset it to fit on the screen. 
+    map.setView([33.87042, -178.59375], 3);  // Default map view.  You need to offset it to fit on the screen. 
 
 // Work Markers 
     L.mapbox.markerLayer({ type: 'Feature', 
@@ -210,9 +210,9 @@ included in all copies or substantial portions of the Software.
         'marker-color': '#3ca0d3', // Blue
         'marker-symbol': 'hospital' }}).addTo(map); 
 
-//    map.on('click', function(e) {
-//    alert(e.latlng); // e is an event object (MouseEvent in this case)
-//    });
+ //   map.on('click', function(e) {
+ //  alert(e.latlng); // e is an event object (MouseEvent in this case)
+ //  });
 
     </script> 
 </div>
@@ -233,7 +233,7 @@ included in all copies or substantial portions of the Software.
         </div>        
         <div id="objective">
             <p>
-                Always seeking opportunities to develop new systems that improve the lives of others while never settling for the status quo. Possess tenacity for solving difficult problems while focusing on quality and service. Strives for the highest level of personal integrity on all jobs. Daily seeks higher levels of understanding in multiple subjects.
+                Always seeking opportunities to develop new systems that improve the lives of others while never settling for the status quo. Possess tenacity for solving difficult problems while focusing on quality and service. Strives for the highest level of personal integrity on all jobs. Daily seeks higher levels of understanding in multiple subjects. Live by checklists and calendars, seven days a week.
             </p>
         </div>
         <div class="clear"></div>
@@ -286,7 +286,7 @@ included in all copies or substantial portions of the Software.
                     outside the box for answers to tough questions.</strong><br />
                     - Stacy Robarge-Silkiner"><img class="decoded" src="http://m.c.lnkd.licdn.com/mpr/mpr/shrink_80_80/p/4/000/163/3f1/0318dd4.jpg"></img></a>
                     <div class="portfolio">
-                        <a href="images/portfolio/IMG_0321.jpg" target="_blank"><img src="images/portfolio/IMG_0321_thumb.jpg" alt="" class="thumbnail" /></a>
+                        <!--<a href="images/portfolio/IMG_0321.jpg" target="_blank">--><img src="images/portfolio/IMG_0321_thumb.jpg" alt="" class="thumbnail" /><!--</a>-->
                         <a href="images/portfolio/Joplin_RedCross_DA_11092011.jpg" target="_blank"><img src="images/portfolio/Joplin_RedCross_DA_11092011_thumb.jpg" alt="" class="thumbnail" /></a>
                         <a href="images/portfolio/GE_Critical_Infrastructure_KC.jpg" target="_blank"><img src="images/portfolio/GE_Critical_Infrastructure_KC_thumb.jpg" alt="" class="thumbnail" /></a>
                         <a href="images/portfolio/capflight.jpg" target="_blank"><img src="images/portfolio/capflight_thumb.gif" alt="" class="thumbnail" /></a>
@@ -371,7 +371,7 @@ included in all copies or substantial portions of the Software.
                 <img src="images/volunteer.png" alt="Work Logo" id="icon" />
             </dt>
             <dd>
-                <div class="humanitarian" onmouseover="map.setView([13.32548,-246.46729],6)">
+                <div class="service" onmouseover="map.setView([13.32548,-246.46729],6)">
                     <h2>Public Policy Analysis<span>Silang, Philippines - July 2008 – Aug 2008</span></h2>
                         <p>This project was an international collaboration with the Philippine regional government of Silang. Conducted a compliance evaluation of local adherence with a new ordinance.  Led team in quantitative community survey by engaging local community members and key decision makers.  Devised innovative solutions to complex logistical problems related to rural community locations.  Delivered and presented detailed results report and recommendations to government officials within three-week deadline.</p>
                     <div class="details">
@@ -390,17 +390,17 @@ included in all copies or substantial portions of the Software.
                         </div>
                     </div>
                 </div>
-                <div class="humanitarian" onmouseover="map.setView([-17.01477,12.7002],5)">
+                <div class="service" onmouseover="map.setView([-17.01477,12.7002],5)">
                     <h2>Rural Orphanage/Clinic<span>Mutare, Zimbabwe - June 2007 – August 2007
                     </span></h2>
                         <p>Assisted in managing all aspects of the orphanage operation, improved technical operations, and strengthened logistical support. Organized and delivered transportation for local TB and HIV/AIDS patients for treatments under limited resources.  Partnered with local government clinic to provide medical treatment to rural residences.  Provided necessary food and supplies for the orphanage and community members during nationwide economic collapse.  Developed innovative solutions to secure resources during government price control and closure of commercial farms.</p>
                         <!--<p><img class="decoded" src="http://graph.facebook.com/liz.stapf/picture" alt="http://graph.facebook.com/liz.stapf/picture"></img></p>-->
                 </div>
-                <div class="humanitarian" onmouseover="map.setView([30.00965, -91.1618],9)">
+                <div class="service" onmouseover="map.setView([30.00965, -91.1618],9)">
                     <h2>Domestic Service Project Director<span>North America - 2003 – 2006</span></h2>
                         <p>Organized and managed four spring/winter break service and recovery projects for teams of college students.  Established relationships with local community members, homeowners, voluntary agencies, and local officials.  Coordinated with local government entities and NGOs to identify optimal relief location and distribution sites around the city.  Trained and led dozens of students to post-Katrina New Orleans clean-up; New Orleans Christmas toy-drive and distribution, San Francisco homeless food distribution, and Mexico orphanage volunteering.  Raised funds for each project on average $10,000 for each trip. Produced and distributed post-Katrina documentary.</p> 
                 </div>
-                <div class="humanitarian" onmouseover="map.setView([9.31899, -88.65967],6)">
+                <div class="service" onmouseover="map.setView([9.31899, -88.65967],6)">
                     <h2>Ship Mate<span class="date">North/Central America - Jan 2001 – Dec 2001</span></h2>
                         <p>Performed all navigation, mechanical, engineering, and communication responsibilities. Developed written preventative maintenance schedule for future crews. Secured supplies in each port. Fostered partnerships with local community leaders, local governments, and religious institutions. Fund-raised tens of thousands of dollars by speaking at various institutions and churches.</p>   
                     <div class="details">
@@ -420,14 +420,10 @@ included in all copies or substantial portions of the Software.
                     <div><a href="http://www.llu.edu/assets/news/today/documents/2012/201206June8TODAY.pdf" target="_blank">Graduate makes maps to help disaster victims recover - <strong>LLU Today</strong></a></div>
                     <p></p>
                     <p>
-                    <a id="pdf" href="Resume_CoryMacVie.pdf" target="_blank">
-                    <img src="images/pdf_icon.png" id="logo" /> Download</a>
-                    <a id="vcard" href="images/vCard.vcf" target="_blank">
-                    <img src="images/vcard_icon.png" id="logo" /> Contact</a>
-                    <a id="github" href="http://github.com/Whatsupcory/GeoResume" target="_blank">
-                    <img src="images/github-logo.png" id="logo1" /> GitHub</a>
-                    <!-- <a id="story" href="story.html" target="_blank">
-                    <img src="images/clock_yellow.png" id="logo1" /> Timeline</a> -->
+                    <a id="pdf" href="Resume_CoryMacVie.pdf" target="_blank">Download PDF</a>
+                    <a id="vcard" href="images/vCard.vcf" target="_blank">Contact Info</a>
+                    <a id="github" href="http://github.com/Whatsupcory/GeoResume" target="_blank">GitHub</a> 
+                    <!--<a id="story" href="story.html" target="_blank">Timeline</a>-->
                     </p>
             </dd>
         <dd class="clear"></dd>

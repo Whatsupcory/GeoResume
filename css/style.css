@@ -8,7 +8,8 @@
     background-color: #fff;
     box-shadow: inset 0 0 0 .1em hsla(0,0%,0%,.1), inset 0 0 1em hsla(0,0%,0%,.05),0 .1em .25em hsla(0,0%,0%,.5);
     margin: 20px; 
-    overflow: scroll; }
+    overflow: scroll; 
+    cursor: default; }
 
 /* Resume Format */
 * { 
@@ -52,7 +53,10 @@ p {
 a { 
     color: black;  
     text-decoration: none; 
-    border-bottom: 0px; }
+    border-bottom: 0px; 
+    -webkit-transition: all 0.4s ease; 
+    -moz-transition: all 0.4s ease;
+}
 a:hover { 
     border-bottom-style: solid; 
     color: blue; }
@@ -100,7 +104,22 @@ img#profile {
     transform:rotate(-3deg);
     -ms-transform:rotate(-3deg); /* IE 9 */
     -webkit-transform:rotate(-3deg); /* Safari and Chrome */
-    box-shadow: 0px 0.5px 2px #7C7C7C; }  
+    box-shadow: 0px 0.5px 2px #7C7C7C; 
+    filter: grayscale(0%); 
+    -webkit-filter: grayscale(0%); 
+    -moz-filter: grayscale(0%); 
+    -ms-filter: grayscale(0%); 
+    -o-filter: grayscale(0%);
+    -webkit-transition: all 0.6s ease; 
+    -moz-transition: all 0.6s ease;
+}
+img#profile:hover {
+    filter: grayscale(100%); 
+    -webkit-filter: grayscale(100%); 
+    -moz-filter: grayscale(100%); 
+    -ms-filter: grayscale(100%); 
+    -o-filter: grayscale(100%);
+}  
 #overlay {
     z-index: 10;
     position: absolute;
@@ -117,69 +136,58 @@ img#paperclip {
 
 a#github { 
 	float: right; 
-	background: #666; 
+	background: #999; 
 	color: white; 
 	margin: 16px 0 0 16px; 
 	padding: 4px 14px 4px 14px;  
     border-radius: 10px; 
     opacity:0.7;
     filter:alpha(opacity=70); /* For IE8 and earlier */
+    -webkit-transition: all 0.4s ease; 
+    -moz-transition: all 0.4s ease;
 }
 a#github:hover { 
 	color: #73bae6;
-    background: #555; 
+    background: #444; 
     opacity:1.0;
     filter:alpha(opacity=100); /* For IE8 and earlier */
 }
 a#vcard { 
     float: right; 
-    background: #666; 
+    background: #999; 
     color: white; 
     margin: 16px 0 0 16px; 
     padding: 4px 14px 4px 14px;  
     border-radius: 10px;
     opacity:0.7;
     filter:alpha(opacity=70); /* For IE8 and earlier */
+    -webkit-transition: all 0.4s ease; 
+    -moz-transition: all 0.4s ease;
 }
 a#vcard:hover { 
     color: #43f037;
-    background: #555; 
-    opacity:1.0;
-    filter:alpha(opacity=100); /* For IE8 and earlier */
+    background: #444; 
+    opacity: 1.0;
+    filter: alpha(opacity=100); 
 }
 a#pdf { 
 	float: right; 
-	background: #666; 
+	background: #999; 
 	color: white; 
 	margin: 16px 0 0 16px; 
 	padding: 4px 14px 4px 14px;  
     border-radius: 10px;
     opacity:0.7;
-    filter:alpha(opacity=70); /* For IE8 and earlier */
+    filter:alpha(opacity=70); 
+    -webkit-transition: all 0.4s ease; 
+    -moz-transition: all 0.4s ease;
 }
 a#pdf:hover { 
     color: #f04f4f;
-	background: #555; 
+	background: #444; 
     opacity:1.0;
-    filter:alpha(opacity=100); /* For IE8 and earlier */
-    }
-a#story { 
-    float: right; 
-    background: #666; 
-    color: white; 
-    margin: 16px 0 0 16px; 
-    padding: 4px 14px 4px 14px;  
-    border-radius: 10px;
-    opacity:0.7;
-    filter:alpha(opacity=70); /* For IE8 and earlier */
-}
-a#story:hover { 
-    color: #faad14;
-    background: #555; 
-    opacity:1.0;
-    filter:alpha(opacity=100); /* For IE8 and earlier */
-    }
-    
+    filter:alpha(opacity=100);
+} 
 #logo {
 	width: 16px;
 	height: 16px;
@@ -207,45 +215,92 @@ a#story:hover {
     cursor: zoom-in;
     opacity:0.4;
     filter:alpha(opacity=60); /* For IE8 and earlier */
+    filter: grayscale(100%); 
+    -webkit-filter: grayscale(100%); 
+    -moz-filter: grayscale(100%); 
+    -ms-filter: grayscale(100%); 
+    -o-filter: grayscale(100%);
+    -webkit-transition: all 0.5s ease; 
+    -moz-transition: all 0.5s ease;
 }
 .thumbnail:hover{
     opacity:1.0;
     filter:alpha(opacity=100); /* For IE8 and earlier */
+    filter: grayscale(0%); 
+    -webkit-filter: grayscale(0%); 
+    -moz-filter: grayscale(0%); 
+    -ms-filter: grayscale(0%); 
+    -o-filter: grayscale(0%);
 }
-.thumbnail:active {
-    box-shadow: 1px 1px 1px #999;
+
+.thumbnail:focus {
+  outline: none;
+  -webkit-transform: rotate(-3deg) scale(2.5); -moz-transform: rotate(-3deg) scale(2.5);
+   -webkit-box-shadow: 0 3px 10px #666; -moz-box-shadow: 0 3px 10px #666;
+  z-index: 9999;
 }
 
 /* Quote Bubbles */
-.decoded {
+img.decoded {
     width: 45px;
     height: 45px;
     margin: 0.5px;
     border: 0px none;
     border-radius: 50%;
-    /* box-shadow: 2px 2px 2px #666; */
-    opacity:0.4;
-    filter:alpha(opacity=60); /* For IE8 and earlier */
+    opacity:0.4; 
+    /* filter:alpha(opacity=60); /* For IE8 and earlier */
+    filter: grayscale(100%); 
+    -webkit-filter: grayscale(100%); 
+    -moz-filter: grayscale(100%); 
+    -ms-filter: grayscale(100%); 
+    -o-filter: grayscale(100%);
+    -webkit-transition: all 0.5s ease; 
+    -moz-transition: all 0.5s ease;
 }
-.decoded:hover {
+img.decoded:hover {
+    filter: grayscale(0%); 
+    -webkit-filter: grayscale(0%); 
+    -moz-filter: grayscale(0%); 
+    -ms-filter: grayscale(0%); 
+    -o-filter: grayscale(0%);
     opacity:1.0;
-    filter:alpha(opacity=100); /* For IE8 and earlier */
+    /* filter: alpha(opacity=100); /* For IE8 and earlier */
+}
+.jobs {
+    -webkit-transition: all 0.6s ease; 
+    -moz-transition: all 0.6s ease;
+}
+.education{
+    -webkit-transition: all 0.6s ease; 
+    -moz-transition: all 0.6s ease;
+}
+.service{
+    -webkit-transition: all 0.6s ease; 
+    -moz-transition: all 0.6s ease;
+}
+.kansascity {
+    -webkit-transition: all 0.4s ease; 
+    -moz-transition: all 0.4s ease;
+}
+.calabasas {
+    -webkit-transition: all 0.4s ease; 
+    -moz-transition: all 0.4s ease;
 }
 
 /* Text Color Change */
 .jobs:hover { 
     color: #f86767; 
-    cursor: zoom-in; }
+}
 .education:hover { 
     color: #339966; 
-    cursor: zoom-in; }
-.humanitarian:hover { 
+}
+.service:hover { 
     color: #3ca0d3; 
-    cursor: zoom-in; }
+}
 .kansascity:hover { 
     color: blue; 
-    cursor: pointer; }
+}
 .calabasas:hover { 
     color: blue; 
-    cursor: pointer; }
+}
 
