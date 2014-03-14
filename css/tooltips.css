@@ -13,10 +13,10 @@
   border-radius: 20px;
   margin-top: 20px;
   text-align: left;
-  font: 15px 'Open Sans', Sans-Serif;
+  font: 16px 'Open Sans', sans-serif;
   font-stretch: condensed;
   text-decoration: none;
-  box-shadow: 0 0 7px black;
+  box-shadow: 0 1px 7px #777;
 }
 .arrow {
   width: 70px;

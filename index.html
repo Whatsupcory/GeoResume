@@ -34,7 +34,7 @@ included in all copies or substantial portions of the Software.
 <head>
   <title>Cory MacVie - GeoResume</title>
    <meta charset=utf-8 />
-   <meta name="keywords" content="Resume, GIS, mapping, interactive, cory, macvie" />
+   <meta name="keywords" content="Resume, GIS, mapping, geospatial, interactive, cory, macvie" />
    <meta name="description" content="An interactive resume for people who want more from a resume." />
     <meta property="og:title" content="GeoResume" />
     <meta property="og:image" content="images/metatag.png" />
@@ -53,7 +53,185 @@ included in all copies or substantial portions of the Software.
     <link rel='stylesheet' href='css/tooltips.css' type="text/css" /> <!-- JQuery sBubble Plugin -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js" type="text/javascript"></script> <!-- JQuery sBubble Plugin -->
     <script src="js/tooltips.js"></script> <!-- JQuery sBubble Plugin -->
+    <link rel="stylesheet" href="fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <script type="text/javascript" src="fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+   
+<script type="text/javascript">
+        $(document).ready(function() {
+            /*
+             *  Simple image gallery. Uses default settings
+             */
 
+            $('.fancybox').fancybox();
+
+            /*
+             *  Different effects
+             */
+
+            // Change title type, overlay closing speed
+            $(".fancybox-effects-a").fancybox({
+                helpers: {
+                    title : {
+                        type : 'outside'
+                    },
+                    overlay : {
+                        speedOut : 0
+                    }
+                }
+            });
+
+            // Disable opening and closing animations, change title type
+            $(".fancybox-effects-b").fancybox({
+                openEffect  : 'none',
+                closeEffect : 'none',
+
+                helpers : {
+                    title : {
+                        type : 'over'
+                    }
+                }
+            });
+
+            // Set custom style, close if clicked, change title type and overlay color
+            $(".fancybox-effects-c").fancybox({
+                wrapCSS    : 'fancybox-custom',
+                closeClick : true,
+
+                openEffect : 'none',
+
+                helpers : {
+                    title : {
+                        type : 'inside'
+                    },
+                    overlay : {
+                        css : {
+                            'background' : 'rgba(238,238,238,0.85)'
+                        }
+                    }
+                }
+            });
+
+            // Remove padding, set opening and closing animations, close if clicked and disable overlay
+            $(".fancybox-effects-d").fancybox({
+                padding: 0,
+
+                openEffect : 'elastic',
+                openSpeed  : 150,
+
+                closeEffect : 'elastic',
+                closeSpeed  : 150,
+
+                closeClick : true,
+
+                helpers : {
+                    overlay : null
+                }
+            });
+
+            /*
+             *  Button helper. Disable animations, hide close button, change title type and content
+             */
+
+            $('.fancybox-buttons').fancybox({
+                openEffect  : 'none',
+                closeEffect : 'none',
+
+                prevEffect : 'none',
+                nextEffect : 'none',
+
+                closeBtn  : false,
+
+                helpers : {
+                    title : {
+                        type : 'inside'
+                    },
+                    buttons : {}
+                },
+
+                afterLoad : function() {
+                    this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+                }
+            });
+
+
+            /*
+             *  Thumbnail helper. Disable animations, hide close button, arrows and slide to next gallery item if clicked
+             */
+
+            $('.fancybox-thumbs').fancybox({
+                prevEffect : 'none',
+                nextEffect : 'none',
+
+                closeBtn  : false,
+                arrows    : false,
+                nextClick : true,
+
+                helpers : {
+                    thumbs : {
+                        width  : 50,
+                        height : 50
+                    }
+                }
+            });
+
+            /*
+             *  Media helper. Group items, disable animations, hide arrows, enable media and button helpers.
+            */
+            $('.fancybox-media')
+                .attr('rel', 'media-gallery')
+                .fancybox({
+                    openEffect : 'none',
+                    closeEffect : 'none',
+                    prevEffect : 'none',
+                    nextEffect : 'none',
+
+                    arrows : false,
+                    helpers : {
+                        media : {},
+                        buttons : {}
+                    }
+                });
+
+            /*
+             *  Open manually
+             */
+
+            $("#fancybox-manual-a").click(function() {
+                $.fancybox.open('1_b.jpg');
+            });
+
+            $("#fancybox-manual-b").click(function() {
+                $.fancybox.open({
+                    href : 'iframe.html',
+                    type : 'iframe',
+                    padding : 5
+                });
+            });
+
+            $("#fancybox-manual-c").click(function() {
+                $.fancybox.open([
+                    {
+                        href : '1_b.jpg',
+                        title : 'My title'
+                    }, {
+                        href : '2_b.jpg',
+                        title : '2nd title'
+                    }, {
+                        href : '3_b.jpg'
+                    }
+                ], {
+                    helpers : {
+                        thumbs : {
+                            width: 75,
+                            height: 50
+                        }
+                    }
+                });
+            });
+
+
+        });
+    </script>
     <script>
         $(function() {
             $("#page-wrap a[title]").tooltips();
@@ -210,8 +388,8 @@ included in all copies or substantial portions of the Software.
         'marker-color': '#3ca0d3', // Blue
         'marker-symbol': 'hospital' }}).addTo(map); 
 
- //   map.on('click', function(e) {
- //  alert(e.latlng); // e is an event object (MouseEvent in this case)
+ //  map.on('click', function(e) {
+ //     alert(e.latlng); // e is an event object (MouseEvent in this case)
  //  });
 
     </script> 
@@ -233,7 +411,7 @@ included in all copies or substantial portions of the Software.
         </div>        
         <div id="objective">
             <p>
-                Always seeking opportunities to develop new systems that improve the lives of others while never settling for the status quo. Possess tenacity for solving difficult problems while focusing on quality and service. Strives for the highest level of personal integrity on all jobs. Daily seeks higher levels of understanding in multiple subjects. Live by checklists and calendars, seven days a week.
+                Always seeking opportunities to develop new systems that improve the lives of others. Possess tenacity for solving difficult problems while focusing on quality and service. Strives for the highest level of personal integrity on all jobs. Daily seeks higher levels of understanding in multiple subjects. Live by checklists and calendars, seven days a week.
             </p>
         </div>
         <div class="clear"></div>
@@ -244,9 +422,9 @@ included in all copies or substantial portions of the Software.
                 <h2>Geospatial Expertise</h2>
                 <ul>
                     <li>Experience developing aesthetically appealing, informative, story-telling GIS products.</li>
-                    <li>Teaching technical concepts to a wide range of learners from beginners through advance users.</li>
+                    <li>Teaching geospatial concepts to a wide range of learners from beginners through advance users.</li>
                     <li>Briefing leadership at Federal, State and local government levels in geospatial products and advancements in the field using communication methods tailored to those audiences.</li>
-                    <li>Five years of extensive use on multiple GIS platforms, including desktop, server, online and mobile environments.</li>
+                    <li>Five years of extensive use on multiple GIS platforms, including desktop, server, web and mobile environments.</li>
                 </ul>
                 <h2>Web Development</h2>
                 <ul>
@@ -269,59 +447,65 @@ included in all copies or substantial portions of the Software.
             <dd>
                 <div class="jobs" onmouseover="map.setView([38.98717,-95.2858],10)">
                     <h2>FEMA Region 7<span>Geospatial Coordinator - Kansas City, MO - 2011-Present</span></h2>
-                    <p>Currently the lead technical expert for the region in planning, development and maintenance of operational procedures, capabilities and providing training to support disaster response operations regarding all geospatial support activities. Responsible for managing the response GIS personnel, handling regional remote sensing capabilities, training regional personal and integrating with State GIS counterparts in the Federal response to disasters and regional projects.  Develop operational policies for the geospatial and remote sensing programs of the region. Provide guidance to management in program initiatives like the All Hazard Plan, program planning and response standard operating procedure manuals. </p>
+                    <p>Currently the lead tech for the region in planning, development and maintenance of operational procedures, capabilities and providing training to support disaster response operations regarding all geospatial support activities. Responsible for managing the response GIS personnel, handling regional remote sensing capabilities, training regional personal and integrating with State GIS counterparts in the Federal response to disasters and regional projects.  Develop operational policies for the geospatial and remote sensing programs of the region. Provide guidance to management in program initiatives such as the All Hazard Plan, program planning and response standard operating procedure manuals. </p>
                 <div class="details">
-                    <a href="http://www.linkedin.com/pub/chris-hartnett/13/ab0/642" title="
-                    <strong>His attention to detail and willingness to go<br /> 
-                    above and beyond was second to none. His talent <br />
-                    and understanding of the GIS needs of the State <br />
-                    facilitated the development of many viable<br />
-                    products still in use today.</strong><br />
-                    - Chris Hartnett" target="_blank"><img class="decoded" src="http://m.c.lnkd.licdn.com/mpr/mpr/shrink_60_60/p/1/005/007/33c/0abbc66.jpg"></img></a>
-                    <a href="http://www.linkedin.com/pub/stacy-robarge-silkiner/11/806/2b0" title="
-                    <strong>Cory was always willing to try new things and<br />
+                    <a href="http://www.linkedin.com/pub/chris-hartnett/13/ab0/642" title="&#34;His attention to detail and willingness to go above<br /> 
+                    and beyond was second to none. His talent and<br />
+                    understanding of the GIS needs of the State <br />
+                    facilitated the development of many viable products<br />
+                    still in use today.&#34;<br />
+                    &#45; Chris Hartnett" target="_blank"><img class="decoded" src="http://m.c.lnkd.licdn.com/mpr/mpr/shrink_60_60/p/1/005/007/33c/0abbc66.jpg"></img></a>
+                    <a href="http://www.linkedin.com/pub/stacy-robarge-silkiner/11/806/2b0" title="&#34;Cory was always willing to try new things and<br />
                     find innovative ideas that would allow the <br />
                     Planning Section to better analyize data and <br />
                     information. I appreciate Cory's ability to look<br />
-                    outside the box for answers to tough questions.</strong><br />
-                    - Stacy Robarge-Silkiner"><img class="decoded" src="http://m.c.lnkd.licdn.com/mpr/mpr/shrink_80_80/p/4/000/163/3f1/0318dd4.jpg"></img></a>
+                    outside the box for answers to tough questions.&#34;<br />
+                    &#45; Stacy Robarge-Silkiner"><img class="decoded" src="http://m.c.lnkd.licdn.com/mpr/mpr/shrink_80_80/p/4/000/163/3f1/0318dd4.jpg"></img></a>
                     <div class="portfolio">
-                        <!--<a href="images/portfolio/IMG_0321.jpg" target="_blank">--><img src="images/portfolio/IMG_0321_thumb.jpg" alt="" class="thumbnail" /><!--</a>-->
-                        <a href="images/portfolio/Joplin_RedCross_DA_11092011.jpg" target="_blank"><img src="images/portfolio/Joplin_RedCross_DA_11092011_thumb.jpg" alt="" class="thumbnail" /></a>
-                        <a href="images/portfolio/GE_Critical_Infrastructure_KC.jpg" target="_blank"><img src="images/portfolio/GE_Critical_Infrastructure_KC_thumb.jpg" alt="" class="thumbnail" /></a>
-                        <a href="images/portfolio/capflight.jpg" target="_blank"><img src="images/portfolio/capflight_thumb.gif" alt="" class="thumbnail" /></a>
-                        <a href="images/portfolio/Mantoloking_ScreenShot_ESRI.jpg" target="_blank"><img src="images/portfolio/Mantoloking_ScreenShot_ESRI_thumb.jpg" alt="" class="thumbnail" /></a>
-                        <a href="images/portfolio/SeasideHeights_ScreenShot_ESRI.jpg" target="_blank"><img src="images/portfolio/SeasideHeights_ScreenShot_ESRI_thumb.jpg" alt="" class="thumbnail" /></a>
-                        <a href="images/portfolio/BreezyPoint_ScreenShot_ESRI.jpg" target="_blank"><img src="images/portfolio/BreezyPoint_ScreenShot_ESRI_thumb.jpg" alt="" class="thumbnail" /></a>
-                        <a href="images/portfolio/Extent_Levee_20110616.jpg" target="_blank"><img src="images/portfolio/Extent_Levee_20110616_thumb.jpg" alt="" class="thumbnail" /></a>
+                        <a class="fancybox-effects-c" rel="gallery1" href="images/portfolio/IMG_0321.jpg" data-fancybox-title="Three days after Superstorm Sandy. Updating Deputy Administrator Serino on aerial imagery collection progress and damage assessment.">
+                            <img src="images/portfolio/IMG_0321_thumb.jpg" alt="" class="thumbnail" /></a>
+                        <a class="fancybox-effects-c" rel="gallery1" href="images/portfolio/Joplin_RedCross_DA_11092011.jpg" data-fancybox-title="Red Cross Shelters and Joplin Damage Assessment">
+                            <img src="images/portfolio/Joplin_RedCross_DA_11092011_thumb.jpg" alt="" class="thumbnail" /></a>
+                        <a class="fancybox-effects-c" rel="gallery1" href="images/portfolio/GE_Critical_Infrastructure_KC.jpg" data-fancybox-title="A Google Earth viewer built for situational awareness. Incorporates real-time ground and aerial imgery from the field.">
+                            <img src="images/portfolio/GE_Critical_Infrastructure_KC_thumb.jpg" alt="" class="thumbnail" /></a>
+                        <a class="fancybox-effects-c" rel="gallery1" href="images/portfolio/capflight.jpg" data-fancybox-title="A Google Earth viewer built for situational awareness. Shows daily aerial imgery and flight path.">
+                            <img src="images/portfolio/capflight_thumb.gif" alt="" class="thumbnail" /></a>
+                        <a class="fancybox-effects-c" rel="gallery1" href="images/portfolio/Mantoloking_ScreenShot_ESRI.jpg" data-fancybox-title="The Check Your Home website, designed for the public to view before and after imagery (close-up) of any structure affected by Superstorm Sandy.">
+                            <img src="images/portfolio/Mantoloking_ScreenShot_ESRI_thumb.jpg" alt="" class="thumbnail" /></a>
+                        <a class="fancybox-effects-c" rel="gallery1" href="images/portfolio/SeasideHeights_ScreenShot_ESRI.jpg" data-fancybox-title="The Check Your Home website, designed to view before and after imagery of any structure affected by Superstorm Sandy.">
+                            <img src="images/portfolio/SeasideHeights_ScreenShot_ESRI_thumb.jpg" alt="" class="thumbnail" /></a>
+                        <a class="fancybox-effects-c" rel="gallery1" href="images/portfolio/BreezyPoint_ScreenShot_ESRI.jpg" data-fancybox-title="The Check Your Home website. Select any of the 160,000 aerial images collected. Entire site built and deployed in about 24 hours.">
+                            <img src="images/portfolio/BreezyPoint_ScreenShot_ESRI_thumb.jpg" alt="" class="thumbnail" /></a>
+                        <a class="fancybox-effects-c" rel="gallery1" href="images/portfolio/Extent_Levee_20110616.jpg" data-fancybox-title="One of hundreds of static products I've created. This one highlights the levee breaching and treatening Hamburg, IA.">
+                            <img src="images/portfolio/Extent_Levee_20110616_thumb.jpg" alt="" class="thumbnail" /></a>
+                        </a>
                     </div>
                 </div>
             </div>
                 <div class="jobs" onmouseover="map.setView([34.15557, -118.44154],11)"> 
                     <h2>FEMA Region 9<span>Geospatial Analyst - Pasadena, CA - 2010-2011</span></h2>
-                    <p>Provided geospatial support during response and recovery to regional disasters.   Key team member on Debris Basin Project, a map book and an interactive web based project utilizing critical infrastructure and background information for use in maintaining Debris Basins in Los Angeles County. Worked jointly with other FEMA, Cal EMA and LA County Department of Public Works staff to create a reference that will provide a comprehensive, web-accessible basis for planning and hazard risk management. Briefed key leadership on status of projects. Monitored and reported wildfires status in CA and NV and provided geographic products for regional tracking. Performed and presented spatial analysis and mapping support to State partners.</p> 
+                    <p>Provided geospatial support during response and recovery to regional disasters.   Key team member on Debris Basin Project, a map book and an interactive web based project utilizing critical infrastructure and background information for use in maintaining Debris Basins in Los Angeles County. Worked jointly with other FEMA, Cal EMA and LA County Department of Public Works staff to create a reference that will provide a comprehensive, web-accessible basis for planning and hazard risk management. Briefed leadership on status of projects. Monitored and reported wildfires status in CA and NV and provided geographic products for regional tracking. Performed and presented spatial analysis and mapping support to State partners.</p> 
                 <div class="details">
-                    <a href="#" title="
-                    <strong>Cory's ability to communicate orally and<br />
+                    <a href="#" title="&#34;Cory's ability to communicate verbally and<br />
                     in writing proved to be valuable when<br />
                     presenting his ideas and discussing the<br />
-                    outcomes of his project development.</strong><br />
-                    - Khaalis Jackson" ><img class="decoded" src="http://graph.facebook.com/khaalis.jackson/picture"></img></a>
+                    outcomes of his project development.&#34;</strong><br />
+                    &#45; Khaalis Jackson" ><img class="decoded" src="http://graph.facebook.com/khaalis.jackson/picture"></img></a>
                     <a href="http://www.linkedin.com/pub/jonathan-colwell/37/22a/751" title="
-                    <strong>He is a quick and competent learner who<br />
+                    &#34;He is a quick and competent learner who<br />
                     finds ways to implement new technologies<br />
                     and to create a better common operating<br />
-                    picture.</strong><br />
-                    - Jonathan Colwell" ><img class="decoded" src="http://i.imgur.com/FlPrqvTs.jpg"></img></a></div>
+                    picture.&#34;<br />
+                    &#45; Jonathan Colwell" ><img class="decoded" src="http://i.imgur.com/FlPrqvTs.jpg"></img></a></div>
                 </div>
                 <div class="jobs" onmouseover="map.setView([34.19193, -118.89473],11)">
                     <h2>Apple<span>Genius (Technician) - Canoga Park, CA - 2009-2011</span></h2>
                     <p>Achieved top sales associate for both computers and mobile devices. Developed and administered training to a wide diversity of public and employees using various education delivery methods, e.g. one-on-one, small and large workshops. Prepared written records and reports. Specialized in maintaining a calm environment while meeting short-term deadlines. Overcame technical challenges with short time frames. Recognized for leadership in customer service. Exceeded managerial performance goals. Surpassed certifications requirements needed for the position.</p>
                 <div class="details"><a href="http://www.linkedin.com/pub/ron-green/2/9a9/101" title="
-                    <strong>Cory is possibly the most intelligent,<br />
+                    &#34;Cory is possibly the most intelligent,<br />
                     innovative and motivated person I've<br />
-                    ever worked with.</strong><br />
-                    - Ron Green" ><img class="decoded" src="http://m.c.lnkd.licdn.com/media/p/5/005/039/252/3e50604.jpg"></img></a></div>
+                    ever worked with.&#34;<br />
+                    &#45; Ron Green" ><img class="decoded" src="http://m.c.lnkd.licdn.com/media/p/5/005/039/252/3e50604.jpg"></img></a></div>
                 </div>
                 <!-- <div class="jobs" onclick="map.setView([38.92309,-77.64175],10)">     
     				<h2>RESULTS Educational Fund<span>Intern - Washington, DC - 2008-2009</span></h2>
@@ -334,29 +518,29 @@ included in all copies or substantial portions of the Software.
             <dd>
                 <div class="education" onmouseover="map.setView([34.06489, -117.40196],12)">
                     <h2>Loma Linda University<span>Loma Linda, CA - 2007-2009</span><br /></h2>
-                    <p><strong>Major:</strong> Masters in Global Health (MPH)<br />
+                    <p><strong>Major:</strong> Masters of Public Health (MPH)<br />
                        <strong>Minor:</strong> Humanitarian Assistance Certificate<br />
                        <strong>Focus:</strong> Microcredit</p>
                 <div class="details">
-                    <a href="http://www.linkedin.com/pub/donn-gaede-drph-cph/6/3b5/115" title="
-                        <strong>He is bright, articulate and creative. He<br />
+                    <a href="http://www.linkedin.com/pub/donn-gaede-drph-cph/6/3b5/115" title="&#34;He is bright, articulate and creative. He<br />
                         is also very honest and open and will give<br />
                         you a very honest assessment of what he<br />
                         is willing to take on. I have truly enjoyed <br /> 
-                        working with him.</strong><br />
-                        - Donn Gaede, DrPH, CPH" ><img class="decoded" src="http://graph.facebook.com/donn.gaede/picture"></img></a>
+                        working with him.&#34;<br />
+                        &#45; Donn Gaede, DrPH, CPH" ><img class="decoded" src="http://graph.facebook.com/donn.gaede/picture"></img></a>
                     <a href="http://www.linkedin.com/pub/yemi-adeoye/4/333/587" title="
-                        <strong>Cory is a dynamic, seasoned public health<br />
+                        &#34;Cory is a dynamic, seasoned public health<br />
                         expert who is well rounded in knowledge and<br />
-                        works competently in diversified environments.</strong><br />
-                        - Dr. Yemi Adeoye, MPH" ><img class="decoded" src="http://m.c.lnkd.licdn.com/mpr/mpr/shrink_200_200/p/5/000/1b2/01d/02a03c7.jpg"></img></a>
+                        works competently in diversified environments.&#34;<br />
+                        &#45; Dr. Yemi Adeoye, MPH" ><img class="decoded" src="http://m.c.lnkd.licdn.com/mpr/mpr/shrink_200_200/p/5/000/1b2/01d/02a03c7.jpg"></img></a>
                     <a href="http://www.linkedin.com/pub/alane-bristow/4/3b4/918" title="
-                        <strong>Cory was always an invaluable group member,<br />
+                        &#34;Cory was always an invaluable group member,<br />
                         taking the initiative and showing great leadership<br />
-                        and interpersonal skills.</strong><br />
-                        - Alane Bristow, MPH" ><img class="decoded" src="http://graph.facebook.com/alanebristow/picture"></img></a>
+                        and interpersonal skills.&#34;<br />
+                        &#45; Alane Bristow, MPH" ><img class="decoded" src="http://graph.facebook.com/alanebristow/picture"></img></a>
                         <div class="portfolio">
-                        <a href="images/portfolio/MuhammadYunus.jpg" target="_blank"><img src="images/portfolio/MuhammadYunus_thumb.jpg" alt="" class="thumbnail" /></a>
+                    <a class="fancybox-effects-c" rel="gallery2" href="images/portfolio/MuhammadYunus.jpg" data-fancybox-title="Muhammad Yunus, Father of Microcredit, 2006 Nobel Peace Prize laureate">
+                        <img src="images/portfolio/MuhammadYunus_thumb.jpg" alt="" class="thumbnail" /></a>
                         </div>
                     </div>
                 </div>
@@ -364,29 +548,38 @@ included in all copies or substantial portions of the Software.
                     <h2>California Baptist University<span>Riverside, CA - 2002-2006</span><br /></h2>
                     <p><strong>Major:</strong> Bachelors of Applied Theology<br />
                        <strong>Activities:</strong> Founder and director of the University’s student Domestic Service Projects</p>
+                    <div class="details">
+                        <img class="decoded" src="images/portfolio/blank.gif"></img>
+                        <div class="portfolio">
+                        <a class="fancybox-effects-c" rel="gallery3" href="images/portfolio/greece.jpg" data-fancybox-title="Traveled to Athens, Greece with friends for an International Service Project during the 2004 Summer Games.">
+                            <img src="images/portfolio/greece_thumb.jpg" alt="" class="thumbnail" /></a>
+                        </div>
+                    </div>
                 </div>
             </dd>           
             <dd class="clear"></dd>
             <dt>Service<br />
-                <img src="images/volunteer.png" alt="Work Logo" id="icon" />
+                <img src="images/volunteer.png" id="icon" />
             </dt>
             <dd>
                 <div class="service" onmouseover="map.setView([13.32548,-246.46729],6)">
                     <h2>Public Policy Analysis<span>Silang, Philippines - July 2008 – Aug 2008</span></h2>
-                        <p>This project was an international collaboration with the Philippine regional government of Silang. Conducted a compliance evaluation of local adherence with a new ordinance.  Led team in quantitative community survey by engaging local community members and key decision makers.  Devised innovative solutions to complex logistical problems related to rural community locations.  Delivered and presented detailed results report and recommendations to government officials within three-week deadline.</p>
+                        <p>This project was an international collaboration with the Philippine regional government of Silang. Conducted a compliance evaluation of local adherence with a new ordinance.  Led team in quantitative community survey by engaging local community members and decision makers.  Devised innovative solutions to complex logistical problems related to rural community locations.  Delivered and presented detailed results report and recommendations to government officials within three-week deadline.</p>
                     <div class="details">
                         <a href="http://www.linkedin.com/in/srgraham" title="
-                        <strong>Cory is a fast learner with an innovative<br />
+                        &#34;Cory is a fast learner with an innovative<br />
                         mind and natural networking ability that <br />
                         puts ideas into action. When given a task,<br />
                         you can rest assured he will complete it<br />
                         in a timely fashion and that it will be done<br />
-                        well.</strong><br />
-                        - Dr. Sara Graham">
+                        well.&#34;<br />
+                        &#45; Dr. Sara Graham">
                         <img class="decoded" src="http://m.c.lnkd.licdn.com/mpr/mpr/shrink_200_200/p/7/005/024/019/073e134.jpg"></img></a>
                         <div class="portfolio">
-                        <a href="images/portfolio/Philippines2.jpg" target="_blank"><img src="images/portfolio/Philippines2_thumb.jpg" alt="" class="thumbnail" /></a>
-                        <a href="images/portfolio/Philippines1.jpg" target="_blank"><img src="images/portfolio/Philippines1_thumb.jpg" alt="" class="thumbnail" /></a>
+                        <a class="fancybox-effects-c" rel="gallery4" href="images/portfolio/Philippines2.jpg" data-fancybox-title="Conducting survey in an impoverished community.">
+                            <img src="images/portfolio/Philippines2_thumb.jpg" alt="" class="thumbnail" /></a>
+                        <a class="fancybox-effects-c" rel="gallery4" href="images/portfolio/Philippines1.jpg" data-fancybox-title="A few team members and professor.">
+                            <img src="images/portfolio/Philippines1_thumb.jpg" alt="" class="thumbnail" /></a>
                         </div>
                     </div>
                 </div>
@@ -399,15 +592,27 @@ included in all copies or substantial portions of the Software.
                 <div class="service" onmouseover="map.setView([30.00965, -91.1618],9)">
                     <h2>Domestic Service Project Director<span>North America - 2003 – 2006</span></h2>
                         <p>Organized and managed four spring/winter break service and recovery projects for teams of college students.  Established relationships with local community members, homeowners, voluntary agencies, and local officials.  Coordinated with local government entities and NGOs to identify optimal relief location and distribution sites around the city.  Trained and led dozens of students to post-Katrina New Orleans clean-up; New Orleans Christmas toy-drive and distribution, San Francisco homeless food distribution, and Mexico orphanage volunteering.  Raised funds for each project on average $10,000 for each trip. Produced and distributed post-Katrina documentary.</p> 
-                </div>
-                <div class="service" onmouseover="map.setView([9.31899, -88.65967],6)">
-                    <h2>Ship Mate<span class="date">North/Central America - Jan 2001 – Dec 2001</span></h2>
-                        <p>Performed all navigation, mechanical, engineering, and communication responsibilities. Developed written preventative maintenance schedule for future crews. Secured supplies in each port. Fostered partnerships with local community leaders, local governments, and religious institutions. Fund-raised tens of thousands of dollars by speaking at various institutions and churches.</p>   
                     <div class="details">
+                        <img class="decoded" src="images/portfolio/blank.gif"></img>
                         <div class="portfolio">
-                        <a href="images/portfolio/whiteholly.jpg" target="_blank"><img src="images/portfolio/whiteholly_thumb.jpg" alt="" class="thumbnail" /></a>
+                        <a class="fancybox-effects-c" rel="gallery5" href="images/portfolio/neworleans1.jpg" data-fancybox-title="Our team getting ready to hit the streets with the Red Cross to help distribute food.">
+                            <img src="images/portfolio/neworleans1_thumb.jpg" alt="" class="thumbnail" /></a>
+                        <a class="fancybox-effects-c" rel="gallery5" href="images/portfolio/neworleans2.jpg" data-fancybox-title="Our team gutting a home flooded by Hurricane Katrina. Home owner became our best friend during the trip.">
+                            <img src="images/portfolio/neworleans2_thumb.jpg" alt="" class="thumbnail" /></a>
                         </div>
                     </div>
+                </div>
+                <div class="service" onmouseover="map.setView([9.31899, -88.65967],6)">
+                    <h2>Crew Member<span class="date">North/Central America - Jan 2001 – Dec 2001</span></h2>
+                        <p>Performed all navigation, mechanical, engineering, and communication responsibilities. Developed written preventative maintenance schedule for future crews. Secured supplies in each port. Fostered partnerships with local community leaders, local governments, and religious institutions. Fund-raised tens of thousands of dollars by speaking at various institutions and churches.</p>   
+                    <div class="details">
+                        <img class="decoded" src="images/portfolio/blank.gif"></img>
+                        <div class="portfolio">
+                        <a class="fancybox-effects-c" rel="gallery6" href="images/portfolio/whiteholly.jpg" data-fancybox-title="Our fearless crew getting ready to cast off.">
+                            <img src="images/portfolio/whiteholly_thumb.jpg" alt="" class="thumbnail" /></a>
+                        </div>
+                    </div>
+                </div>
             </dd>      
         <dd class="clear"></dd>    
             <dt>Other<br />
@@ -415,8 +620,7 @@ included in all copies or substantial portions of the Software.
             <dd>
                 <h2>Links &#38; Articles</h2>
                     <div><a href="http://www.esri.com/esri-news/arcnews/spring13articles/providing-information-as-a-resource-responding-to-superstorm-sandy" target="_blank">Providing Information as a Resource - Responding to Superstorm Sandy - <strong>ArcNews</strong></a></div>
-                    <div><a href="http://kansascity.startupweekend.org/" target="_blank">Kansas City Startup Weekend</a></div>
-                    <div><a href="http://www.siliconprairienews.com/2012/04/a-photo-recap-of-the-spn-meetup-with-startup-weekend-kansas-city" target="_blank">Meetup with Startup Weekend Kansas City - <strong>Silicon Prairie News</strong></a></div>
+                    <div><a href="http://kansascity.startupweekend.org/" target="_blank">Kansas City Startup Weekend Organizer</a></div>
                     <div><a href="http://www.llu.edu/assets/news/today/documents/2012/201206June8TODAY.pdf" target="_blank">Graduate makes maps to help disaster victims recover - <strong>LLU Today</strong></a></div>
                     <p></p>
                     <p>
