@@ -91,6 +91,9 @@ dd.clear {
 .line { 
     margin: 0 0 16px; 
     padding: 0 0 16px 0}
+.links {
+    padding-right: 30px;
+}
 
 /* Paperclip & Resume Photo */
 
@@ -141,7 +144,7 @@ a#github {
 	color: white; 
 	margin: 16px 0 0 16px; 
 	padding: 4px 14px 4px 14px;  
-    border-radius: 10px; 
+    border-radius: 6px; 
     opacity:0.7;
     filter:alpha(opacity=70); /* For IE8 and earlier */
     -webkit-transition: all 0.4s ease; 
@@ -162,7 +165,7 @@ a#vcard {
     color: white; 
     margin: 16px 0 0 16px; 
     padding: 4px 14px 4px 14px;  
-    border-radius: 10px;
+    border-radius: 6px;
     opacity:0.7;
     filter:alpha(opacity=70); /* For IE8 and earlier */
     -webkit-transition: all 0.4s ease; 
@@ -183,7 +186,7 @@ a#pdf {
 	color: white; 
 	margin: 16px 0 0 16px; 
 	padding: 4px 14px 4px 14px;  
-    border-radius: 10px;
+    border-radius: 6px;
     opacity:0.7;
     filter:alpha(opacity=70); 
     -webkit-transition: all 0.4s ease; 
@@ -222,10 +225,10 @@ a#pdf:hover {
     width: 45px;
     height: 45px;
     margin: 0.5px;
-    border-radius: 10px;
+    border-radius: 6px;
     cursor: -webkit-zoom-in; cursor: -moz-zoom-in;
-    opacity: 0.4;
-    filter: alpha(opacity=60); /* For IE8 and earlier */
+    opacity: 0.5;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
     filter: grayscale(100%); 
     -webkit-filter: grayscale(100%); 
     -moz-filter: grayscale(100%); 

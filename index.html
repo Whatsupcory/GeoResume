@@ -56,7 +56,8 @@ included in all copies or substantial portions of the Software.
     <link rel="stylesheet" href="fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
     <script type="text/javascript" src="fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
    
-<script type="text/javascript">
+   <!-- Script controls fancybox image expanded box. -->
+<script type="text/javascript"> 
         $(document).ready(function() {
             /*
              *  Simple image gallery. Uses default settings
@@ -250,7 +251,7 @@ included in all copies or substantial portions of the Software.
     var map = L.mapbox.map('map');
     var stamenLayer = L.tileLayer('http://a.tile.stamen.com/toner/{z}/{x}/{y}.png', {
     attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.'
-    }).addTo(map);
+    }).addTo(map); // Unlimited free use base map.  But you can't customize this map like you can mapbox. 
    // map.setView([0, 0], 5);
 
    // var map = L.mapbox.map('map', 'corymacvie.map-npm45cd5', {zoomControl: false}) // Use your own Mapbox.com base map. There is a free account.  This is a paid account. 
@@ -421,16 +422,16 @@ included in all copies or substantial portions of the Software.
             <dd>
                 <h2>Geospatial Expertise</h2>
                 <ul>
-                    <li>Experience developing aesthetically appealing, informative, story-telling GIS products.</li>
+                    <li>Experience developing aesthetically appealing, informative, story-telling geospatial products and platforms.</li>
                     <li>Teaching geospatial concepts to a wide range of learners from beginners through advance users.</li>
-                    <li>Briefing leadership at Federal, State and local government levels in geospatial products and advancements in the field using communication methods tailored to those audiences.</li>
+                    <li>Briefing leadership at Federal, State and local government levels on geospatial products and systems.</li>
                     <li>Five years of extensive use on multiple GIS platforms, including desktop, server, web and mobile environments.</li>
                 </ul>
                 <h2>Web Development</h2>
                 <ul>
-                    <li>Background creating websites for small businesses utilizing Wordpress, eCommerce, Portfolios and personal promotional sites.</li>
+                    <li>Background creating websites for small businesses utilizing Wordpress, Joomla, Wiki, eCommerce, SharePoint, Portfolios and personal promotional sites.</li>
                     <li>Four years of experience in HTML5, CSS3, JavaScript/JQuery</li>
-                    <li>Working knowledge in PHP, Python/Django, MySQL, PostgreSQL</li>
+                    <li>Working knowledge in PHP, Python/Django, MySQL, PostgreSQL, SQL Server, ASP.NET</li>
                 </ul>
                 <!-- 
                 <h2>Public Health</h2>
@@ -447,7 +448,7 @@ included in all copies or substantial portions of the Software.
             <dd>
                 <div class="jobs" onmouseover="map.setView([38.98717,-95.2858],10)">
                     <h2>FEMA Region 7<span>Geospatial Coordinator - Kansas City, MO - 2011-Present</span></h2>
-                    <p>Currently the lead tech for the region in planning, development and maintenance of operational procedures, capabilities and providing training to support disaster response operations regarding all geospatial support activities. Responsible for managing the response GIS personnel, handling regional remote sensing capabilities, training regional personal and integrating with State GIS counterparts in the Federal response to disasters and regional projects.  Develop operational policies for the geospatial and remote sensing programs of the region. Provide guidance to management in program initiatives such as the All Hazard Plan, program planning and response standard operating procedure manuals. </p>
+                    <p>Currently the lead tech for the region in management and development of geospatial systems. Responsible for developing platforms that analysis collected data and give users tools to make better decisions. Provide training to support response operations regarding all geospatial support activities. Responsible for managing the response GIS personnel, handling regional remote sensing capabilities, training regional personal and integrating with State GIS counterparts in the Federal response to disasters and regional projects. Develop operational policies for the geospatial and remote sensing programs of the region. Provide guidance to management in program initiatives such as the All Hazard Plan, program planning and response standard operating procedure manuals.</p>
                 <div class="details">
                     <a href="http://www.linkedin.com/pub/chris-hartnett/13/ab0/642" title="&#34;His attention to detail and willingness to go above<br /> 
                     and beyond was second to none. His talent and<br />
@@ -468,7 +469,7 @@ included in all copies or substantial portions of the Software.
                             <img src="images/portfolio/Joplin_RedCross_DA_11092011_thumb.jpg" alt="" class="thumbnail" /></a>
                         <a class="fancybox-effects-c" rel="gallery1" href="images/portfolio/GE_Critical_Infrastructure_KC.jpg" data-fancybox-title="A Google Earth viewer built for situational awareness. Incorporates real-time ground and aerial imgery from the field.">
                             <img src="images/portfolio/GE_Critical_Infrastructure_KC_thumb.jpg" alt="" class="thumbnail" /></a>
-                        <a class="fancybox-effects-c" rel="gallery1" href="images/portfolio/capflight.jpg" data-fancybox-title="A Google Earth viewer built for situational awareness. Shows daily aerial imgery and flight path.">
+                        <a class="fancybox-effects-c" rel="gallery1" href="images/portfolio/capflight.jpg" data-fancybox-title="A Google Earth viewer built for situational awareness. Shows daily aerial imgery and flight path. Also shows status of levees affected.">
                             <img src="images/portfolio/capflight_thumb.gif" alt="" class="thumbnail" /></a>
                         <a class="fancybox-effects-c" rel="gallery1" href="images/portfolio/Mantoloking_ScreenShot_ESRI.jpg" data-fancybox-title="The Check Your Home website, designed for the public to view before and after imagery (close-up) of any structure affected by Superstorm Sandy.">
                             <img src="images/portfolio/Mantoloking_ScreenShot_ESRI_thumb.jpg" alt="" class="thumbnail" /></a>
@@ -606,14 +607,52 @@ included in all copies or substantial portions of the Software.
                     <h2>Crew Member<span class="date">North/Central America - Jan 2001 – Dec 2001</span></h2>
                         <p>Performed all navigation, mechanical, engineering, and communication responsibilities. Developed written preventative maintenance schedule for future crews. Secured supplies in each port. Fostered partnerships with local community leaders, local governments, and religious institutions. Fund-raised tens of thousands of dollars by speaking at various institutions and churches.</p>   
                     <div class="details">
-                        <img class="decoded" src="images/portfolio/blank.gif"></img>
+                        <a href="www.linkedin.com/in/joeygravell" title="
+                        &#34;Cory is the epitome of the creative and <br />
+                        positive person that makes going to work<br />
+                        enjoyable and productive.&#34;<br />
+                        &#45; Joey Gravell">
+                        <img class="decoded" src="http://m.c.lnkd.licdn.com/mpr/mpr/shrink_200_200/p/1/000/029/23a/041fa87.jpg"></img></a>
                         <div class="portfolio">
                         <a class="fancybox-effects-c" rel="gallery6" href="images/portfolio/whiteholly.jpg" data-fancybox-title="Our fearless crew getting ready to cast off.">
                             <img src="images/portfolio/whiteholly_thumb.jpg" alt="" class="thumbnail" /></a>
                         </div>
                     </div>
                 </div>
-            </dd>      
+            </dd>     
+        <dd class="clear"></dd>
+            <dt>Recently<br/>Read<br /></dt>
+            <dd>
+            <div>
+                <style type="text/css" media="screen">
+                        .gr_grid_book_container {
+                          /* customize book cover container div here */
+                          float: left;
+                          width: 39px;
+                          height: 60px;
+                          padding: 5px 6.5px;
+                          overflow: hidden;
+                                filter: grayscale(100%); 
+                                -webkit-filter: grayscale(100%); 
+                                -moz-filter: grayscale(100%); 
+                                -ms-filter: grayscale(100%); 
+                                -o-filter: grayscale(100%);
+                                -webkit-transition: all 0.4s ease; 
+                                -moz-transition: all 0.4s ease;
+                                opacity:0.5;
+                                filter:alpha(opacity=50); }
+                        .gr_grid_book_container:hover {
+                                filter: grayscale(0%); 
+                                -webkit-filter: grayscale(0%); 
+                                -moz-filter: grayscale(0%); 
+                                -ms-filter: grayscale(0%); 
+                                -o-filter: grayscale(0%);
+                                opacity: 1.0;
+                                filter: alpha(opacity=100); }
+                </style>
+                    <script src="https://www.goodreads.com/review/grid_widget/6857196.Cory's%20bookshelf:%20read?cover_size=small&hide_link=true&hide_title=true&num_books=36&order=d&shelf=read&sort=date_read&widget_id=1394851349" type="text/javascript" charset="utf-8"></script>
+            </div>
+        </dd> 
         <dd class="clear"></dd>    
             <dt>Other<br />
             </dt>
@@ -622,8 +661,10 @@ included in all copies or substantial portions of the Software.
                     <div><a href="http://www.esri.com/esri-news/arcnews/spring13articles/providing-information-as-a-resource-responding-to-superstorm-sandy" target="_blank">Providing Information as a Resource - Responding to Superstorm Sandy - <strong>ArcNews</strong></a></div>
                     <div><a href="http://kansascity.startupweekend.org/" target="_blank">Kansas City Startup Weekend Organizer</a></div>
                     <div><a href="http://www.llu.edu/assets/news/today/documents/2012/201206June8TODAY.pdf" target="_blank">Graduate makes maps to help disaster victims recover - <strong>LLU Today</strong></a></div>
+            </dd> 
+        <dd class="clear"></dd>
                     <p></p>
-                    <p>
+                    <p class="links">
                     <a id="pdf" href="Resume_CoryMacVie.pdf" target="_blank">Download PDF</a>
                     <a id="vcard" href="images/vCard.vcf" target="_blank">Contact Info</a>
                     <a id="github" href="http://github.com/Whatsupcory/GeoResume" target="_blank">GitHub</a> 
