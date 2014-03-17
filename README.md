@@ -56,10 +56,13 @@ github-logo.png // Please include this link for others. <br />
 
 <h3>NOTABLE UPDATES:</h3>
 
-- Add quote bubbles to mini references
+- Added quote bubbles to mini references
 - Download PDF, vCard & GitHub buttons
+- Added Jquery Fancybox image viewer
+- Code embeded for Mapbox or Stamen
 
 <h3>ROAD MAP:</h3>
 
-- Pan Map slower
+- Linkedin integration for easy creation of new resume
+- Pan Map slower?
 - Add Foursquare history to the map
