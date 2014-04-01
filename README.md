@@ -4,7 +4,7 @@ GeoResume
 Interactive Resume <br />
 <em>(Original resume format was created by Chris Coyier at <a href="http://css-tricks.com/one-page-resume-site/" target="_blank">CSS-Tricks</a>.)</em>
 
-Demo at <a href="http://www.corymacvie.com" target="_blank">CoryMacVie.com</a>
+Demo at <a href="http://whatsupcory.github.io/GeoResume/" target="_blank">http://whatsupcory.github.io/GeoResume/</a>
 
 <strong>Phase 1</strong> - <em>Completed</em><br />
 Develop a new type of interactive resume. Display a resume on the left hand side hovering over a world map.
