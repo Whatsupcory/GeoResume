@@ -55,6 +55,25 @@ included in all copies or substantial portions of the Software.
     <script src="js/tooltips.js"></script> <!-- JQuery sBubble Plugin -->
     <link rel="stylesheet" href="fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
     <script type="text/javascript" src="fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+            <script type="text/javascript">
+    //<![CDATA[
+      (function() {
+        var shr = document.createElement('script');
+        shr.setAttribute('data-cfasync', 'false');
+        shr.src = '//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js';
+        shr.type = 'text/javascript'; shr.async = 'true';
+        shr.onload = shr.onreadystatechange = function() {
+          var rs = this.readyState;
+          if (rs && rs != 'complete' && rs != 'loaded') return;
+          var site_id = 'a74552c037878b73ff8894488fbcb71f';
+          try { Shareaholic.init(site_id); } catch (e) {}
+        };
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(shr, s);
+      })();
+    //]]>
+    </script>
    
    <!-- Script controls fancybox image expanded box. -->
 <script type="text/javascript"> 
@@ -243,9 +262,15 @@ included in all copies or substantial portions of the Software.
       body { margin:0; padding:0; }
       #map { position:absolute; top:0; position: fixed; bottom:0; width:100%; }
     </style>
+
+
+
+
 </head>
 <body>
+
 <div id="map"> 
+
     <script type="text/javascript"> 
 
     var map = L.mapbox.map('map');
@@ -267,7 +292,7 @@ included in all copies or substantial portions of the Software.
     map.touchZoom.disable();
     map.doubleClickZoom.disable();
     map.scrollWheelZoom.disable();
-    map.setView([33.87042, -178.59375], 3);  // Default map view.  You need to offset it to fit on the screen. 
+    map.setView([33.87042, -178.59375], 3);  // Default map view.  You need to offset it to fit on the screen. Use the function below to find the center x/y.
 
 // Work Markers 
     L.mapbox.markerLayer({ type: 'Feature', 
@@ -388,26 +413,41 @@ included in all copies or substantial portions of the Software.
         'marker-size': 'large',
         'marker-color': '#3ca0d3', // Blue
         'marker-symbol': 'hospital' }}).addTo(map); 
+    L.mapbox.markerLayer({ type: 'Feature',
+    geometry: { 'type': 'Point', coordinates: [-94.62833, 39.02559] },
+    properties: {
+        'title': 'Where I call home',
+        'marker-size': 'large',
+        'marker-color': '#888', // Blue
+        'marker-symbol': 'building' }}).addTo(map); 
+    L.mapbox.markerLayer({ type: 'Feature',
+    geometry: { 'type': 'Point', coordinates: [-118.61904, 34.14506] },
+    properties: {
+        'title': 'Where I call home',
+        'marker-size': 'large',
+        'marker-color': '#888', // Blue
+        'marker-symbol': 'building' }}).addTo(map); 
 
- //  map.on('click', function(e) {
- //     alert(e.latlng); // e is an event object (MouseEvent in this case)
- //  });
+  // map.on('click', function(e) {
+  //  alert(e.latlng); // e is an event object (MouseEvent in this case)
+  // });
 
     </script> 
+
 </div>
 <div class="paper1"> <!-- Paper -->
 	<div id="page-wrap">
         <div id="contact-info">
-            <h1 class="fn">Cory Mac Vie</h1>
+            <h1>Cory Mac Vie</h1>
             <div id="profilephoto"><a href="http://instagram.com/whatsupcory#" target="_blank"><img src="images/headshot1.jpg" id="profile" /></a></div>
-            <div id="overlay"><img src="images/paperclip_sm.png" id="paperclip" /></div> 
+            <div id="overlay2"><img src="images/paperclip_sm.png" id="paperclip" /></div> 
             <p>
-                <strong>Mobile:</strong> <span class="tel">909-435-6551</span><br />
-               	<strong>Twitter:</strong> <a class="twitter" href="https://twitter.com/iLikCartography" target="_blank">@iLikCartography</a><br />
-                <strong>Email:</strong> <a class="email" href="mailto:cory@corymacvie.com">cory@corymacvie.com</a><br />
+                <strong>Mobile:</strong> <span>909-435-6551</span><br />
+               	<strong>Twitter:</strong> <a href="https://twitter.com/iLikCartography" target="_blank">@iLikCartography</a><br />
+                <strong>Email:</strong> <a href="mailto:cory@corymacvie.com">cory@corymacvie.com</a><br />
                 <strong>Addresses:</strong>
-                <span class="calabasas" onmouseover="map.setView([34.11919, -118.77834],12)">Calabasas, CA</span> &#38; 
-                <span class="kansascity" onmouseover="map.setView([39.02905, -94.74335],12)">Fairway, KS</span><br />
+                <span class="calabasas" onmouseover="map.setView([34.14919, -118.77834],12)">Calabasas, CA</span> &#38; 
+                <span class="kansascity" onmouseover="map.setView([39.02905, -94.79335],12)">Fairway, KS</span><br />
             </p>
         </div>        
         <div id="objective">
@@ -431,7 +471,7 @@ included in all copies or substantial portions of the Software.
                 <ul>
                     <li>Background creating websites for small businesses utilizing Wordpress, Joomla, Wiki, eCommerce, SharePoint, Portfolios and personal promotional sites.</li>
                     <li>Four years of experience in HTML5, CSS3, JavaScript/JQuery</li>
-                    <li>Working knowledge in PHP, Python/Django, MySQL, PostgreSQL, SQL Server, ASP.NET</li>
+                    <li>Working knowledge in PHP, Python/Django, MySQL, PostgreSQL</li>
                 </ul>
                 <!-- 
                 <h2>Public Health</h2>
@@ -448,7 +488,7 @@ included in all copies or substantial portions of the Software.
             <dd>
                 <div class="jobs" onmouseover="map.setView([38.98717,-95.2858],10)">
                     <h2>FEMA Region 7<span>Geospatial Coordinator - Kansas City, MO - 2011-Present</span></h2>
-                    <p>Currently the lead tech for the region in management and development of geospatial systems. Responsible for developing platforms that analysis collected data and give users tools to make better decisions. Provide training to support response operations regarding all geospatial support activities. Responsible for managing the response GIS personnel, handling regional remote sensing capabilities, training regional personal and integrating with State GIS counterparts in the Federal response to disasters and regional projects. Develop operational policies for the geospatial and remote sensing programs of the region. Provide guidance to management in program initiatives such as the All Hazard Plan, program planning and response standard operating procedure manuals.</p>
+                    <p>Currently the lead tech for the region in management and development of geospatial systems. Responsible for developing platforms that analyze collected data and give users tools to make better decisions. Provide training to support response operations regarding all geospatial support activities. Responsible for managing the response GIS personnel, handling regional remote sensing capabilities, training regional personal and integrating with State GIS counterparts in the Federal response to disasters and regional projects. Develop operational policies for the geospatial and remote sensing programs of the region. Provide guidance to management in program initiatives such as the All Hazard Plan, program planning and response standard operating procedure manuals.</p>
                 <div class="details">
                     <a href="http://www.linkedin.com/pub/chris-hartnett/13/ab0/642" title="&#34;His attention to detail and willingness to go above<br /> 
                     and beyond was second to none. His talent and<br />
@@ -473,11 +513,11 @@ included in all copies or substantial portions of the Software.
                             <img src="images/portfolio/capflight_thumb.gif" alt="" class="thumbnail" /></a>
                         <a class="fancybox-effects-c" rel="gallery1" href="images/portfolio/Mantoloking_ScreenShot_ESRI.jpg" data-fancybox-title="The Check Your Home website, designed for the public to view before and after imagery (close-up) of any structure affected by Superstorm Sandy.">
                             <img src="images/portfolio/Mantoloking_ScreenShot_ESRI_thumb.jpg" alt="" class="thumbnail" /></a>
-                        <a class="fancybox-effects-c" rel="gallery1" href="images/portfolio/SeasideHeights_ScreenShot_ESRI.jpg" data-fancybox-title="The Check Your Home website, designed to view before and after imagery of any structure affected by Superstorm Sandy.">
+                        <a class="fancybox-effects-c" rel="gallery1" href="images/portfolio/SeasideHeights_ScreenShot_ESRI.jpg" data-fancybox-title="The Check Your Home website, designed to view before and after imagery of any structure affected by Superstorm Sandy. Site launched four days after landfall.">
                             <img src="images/portfolio/SeasideHeights_ScreenShot_ESRI_thumb.jpg" alt="" class="thumbnail" /></a>
                         <a class="fancybox-effects-c" rel="gallery1" href="images/portfolio/BreezyPoint_ScreenShot_ESRI.jpg" data-fancybox-title="The Check Your Home website. Select any of the 160,000 aerial images collected. Entire site built and deployed in about 24 hours.">
                             <img src="images/portfolio/BreezyPoint_ScreenShot_ESRI_thumb.jpg" alt="" class="thumbnail" /></a>
-                        <a class="fancybox-effects-c" rel="gallery1" href="images/portfolio/Extent_Levee_20110616.jpg" data-fancybox-title="One of hundreds of static products I've created. This one highlights the levee breaching and treatening Hamburg, IA.">
+                        <a class="fancybox-effects-c" rel="gallery1" href="images/portfolio/Extent_Levee_20110616.jpg" data-fancybox-title="One of hundreds of static products I've created. This one highlights the levee breaching and treatening of Hamburg, IA.">
                             <img src="images/portfolio/Extent_Levee_20110616_thumb.jpg" alt="" class="thumbnail" /></a>
                         </a>
                     </div>
@@ -607,7 +647,7 @@ included in all copies or substantial portions of the Software.
                     <h2>Crew Member<span class="date">North/Central America - Jan 2001 – Dec 2001</span></h2>
                         <p>Performed all navigation, mechanical, engineering, and communication responsibilities. Developed written preventative maintenance schedule for future crews. Secured supplies in each port. Fostered partnerships with local community leaders, local governments, and religious institutions. Fund-raised tens of thousands of dollars by speaking at various institutions and churches.</p>   
                     <div class="details">
-                        <a href="www.linkedin.com/in/joeygravell" title="
+                        <a href="http://www.linkedin.com/in/joeygravell" title="
                         &#34;Cory is the epitome of the creative and <br />
                         positive person that makes going to work<br />
                         enjoyable and productive.&#34;<br />
@@ -664,14 +704,16 @@ included in all copies or substantial portions of the Software.
             </dd> 
         <dd class="clear"></dd>
                     <p></p>
-                    <p class="links">
+                    <p class="links1">
+
                     <a id="pdf" href="Resume_CoryMacVie.pdf" target="_blank">Download PDF</a>
                     <a id="vcard" href="images/vCard.vcf" target="_blank">Contact Info</a>
-                    <a id="github" href="http://github.com/Whatsupcory/GeoResume" target="_blank">GitHub</a> 
+                    <a id="github" href="http://github.com/Whatsupcory/GeoResume" target="_blank">GitHub</a>
                     <!--<a id="story" href="story.html" target="_blank">Timeline</a>-->
                     </p>
             </dd>
         <dd class="clear"></dd>
+
     </div> <!-- //page-wrap -->
 </div> <!-- //paper1 -->
 
@@ -686,7 +728,10 @@ included in all copies or substantial portions of the Software.
   ga('send', 'pageview');
 
 </script>
+
+
 <!-- end Google Analytic code -->
+        <div class='shareaholic-canvas' data-app='share_buttons' data-app-id='5478852'></div>
 
 </body>
 </html>
