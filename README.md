@@ -20,7 +20,7 @@ I plan on writing this myself, but if you could teach me a few things or have id
 
 ==============
 
-<h3>SETUP INSTRUCTIONS:</h3> (Instructions are out of date due to updates)
+<h3>SETUP INSTRUCTIONS:  (Instructions are out of date due to updates)</h3> 
 
 Install these files and personalize the information in index.html<br />
 <br />
