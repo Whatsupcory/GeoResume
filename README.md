@@ -7,7 +7,7 @@ Interactive Resume <br />
 Demo at <a href="http://whatsupcory.github.io/GeoResume/" target="_blank">http://whatsupcory.github.io/GeoResume/</a>
 
 <strong>Phase 1</strong> - <em>Completed</em><br />
-Develop a new type of interactive resume. Display a resume on the left hand side hovering over a world map.
+Develop an interactive resume. Display a resume on the left hand side hovering over a world map.
 The world map will have pins that corresponds to job positions.  As a site user scrolls over different job positions in
 the map will zoom to those locations.  The site will also have a way to display portfolio of work from each position. 
 Also there needs to be a pop out business card with vcard capability. 
