@@ -1,27 +1,3 @@
-<!-- =========================================================
-You are welcome to contribute to this "GeoResume" project.  
-Code:  https://github.com/Whatsupcory/GeoResume
-
-Copyright (c) 2014, Cory MacVie, cory@corymacvie.com
-All rights reserved. 
-
-Free to use and abuse under the MIT license. I only ask that you tweet 
-me if you use this code and tell me how it helped you. @iLikCartography
-
-Permission is hereby granted, free of charge, to any person obtaining
-a copy of this software and associated documentation files (the
-"Software"), to deal in the Software without restriction, including
-without limitation the rights to use, copy, modify, merge, publish,
-distribute, sublicense, and/or sell copies of the Software, and to
-permit persons to whom the Software is furnished to do so, subject to
-the following conditions:
-
-The above copyright notice and this permission notice shall be
-included in all copies or substantial portions of the Software.
-============================================================ -->
-
-
-
 <!DOCTYPE html>
 <!--[if lt IE 7 ]> <html dir="ltr" lang="en-US" class="ie6"> <![endif]-->
 <!--[if IE 7 ]> <html dir="ltr" lang="en-US" class="ie7"> <![endif]-->
@@ -55,37 +31,10 @@ included in all copies or substantial portions of the Software.
     <link rel="stylesheet" href="fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
     <script type="text/javascript" src="fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
 
-            <script type="text/javascript">
-    //<![CDATA[
-      (function() {
-        var shr = document.createElement('script');
-        shr.setAttribute('data-cfasync', 'false');
-        shr.src = '//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js';
-        shr.type = 'text/javascript'; shr.async = 'true';
-        shr.onload = shr.onreadystatechange = function() {
-          var rs = this.readyState;
-          if (rs && rs != 'complete' && rs != 'loaded') return;
-          var site_id = 'a74552c037878b73ff8894488fbcb71f';
-          try { Shareaholic.init(site_id); } catch (e) {}
-        };
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(shr, s);
-      })();
-    //]]>
-    </script>
-   
    <!-- Script controls fancybox image expanded box. -->
-<script type="text/javascript"> 
-        $(document).ready(function() {
-            /*
-             *  Simple image gallery. Uses default settings
-             */
-
-            $('.fancybox').fancybox();
-
-            /*
-             *  Different effects
-             */
+<script type="text/javascript">
+        $(document).ready(function() {  // Simple image gallery. Uses default settings
+            $('.fancybox').fancybox(); // Different effects
 
             // Change title type, overlay closing speed
             $(".fancybox-effects-a").fancybox({
@@ -103,7 +52,6 @@ included in all copies or substantial portions of the Software.
             $(".fancybox-effects-b").fancybox({
                 openEffect  : 'none',
                 closeEffect : 'none',
-
                 helpers : {
                     title : {
                         type : 'over'
@@ -115,9 +63,7 @@ included in all copies or substantial portions of the Software.
             $(".fancybox-effects-c").fancybox({
                 wrapCSS    : 'fancybox-custom',
                 closeClick : true,
-
                 openEffect : 'none',
-
                 helpers : {
                     title : {
                         type : 'inside'
@@ -133,15 +79,11 @@ included in all copies or substantial portions of the Software.
             // Remove padding, set opening and closing animations, close if clicked and disable overlay
             $(".fancybox-effects-d").fancybox({
                 padding: 0,
-
                 openEffect : 'elastic',
                 openSpeed  : 150,
-
                 closeEffect : 'elastic',
                 closeSpeed  : 150,
-
                 closeClick : true,
-
                 helpers : {
                     overlay : null
                 }
@@ -154,12 +96,9 @@ included in all copies or substantial portions of the Software.
             $('.fancybox-buttons').fancybox({
                 openEffect  : 'none',
                 closeEffect : 'none',
-
                 prevEffect : 'none',
                 nextEffect : 'none',
-
                 closeBtn  : false,
-
                 helpers : {
                     title : {
                         type : 'inside'
@@ -172,7 +111,6 @@ included in all copies or substantial portions of the Software.
                 }
             });
 
-
             /*
              *  Thumbnail helper. Disable animations, hide close button, arrows and slide to next gallery item if clicked
              */
@@ -180,11 +118,9 @@ included in all copies or substantial portions of the Software.
             $('.fancybox-thumbs').fancybox({
                 prevEffect : 'none',
                 nextEffect : 'none',
-
                 closeBtn  : false,
                 arrows    : false,
                 nextClick : true,
-
                 helpers : {
                     thumbs : {
                         width  : 50,
@@ -203,7 +139,6 @@ included in all copies or substantial portions of the Software.
                     closeEffect : 'none',
                     prevEffect : 'none',
                     nextEffect : 'none',
-
                     arrows : false,
                     helpers : {
                         media : {},
@@ -247,8 +182,6 @@ included in all copies or substantial portions of the Software.
                     }
                 });
             });
-
-
         });
     </script>
     <script>
@@ -265,22 +198,22 @@ included in all copies or substantial portions of the Software.
 </head>
 <body>
 
- <div id="map"> 
+ <div id="map">
 
-   <script type="text/javascript"> 
+   <script type="text/javascript">
     var map = L.mapbox.map('map');
     var mapLayer = L.tileLayer('http://a.tiles.mapbox.com/v3/corymacvie.map-npm45cd5/{z}/{x}/{y}.png', {
-    attribution: '<a href="https://www.mapbox.com/about/maps/">Digital Globe | Mapbox | OpenStreetMap</a> <a href="https://www.mapbox.com/map-feedback/#corymacvie.map-npm45cd5/-92.494/35.228/6">Improve this map</a>' 
-    }).addTo(map); 
+    attribution: '<a href="https://www.mapbox.com/about/maps/">Digital Globe | Mapbox | OpenStreetMap</a> <a href="https://www.mapbox.com/map-feedback/#corymacvie.map-npm45cd5/-92.494/35.228/6">Improve this map</a>'
+    }).addTo(map);
     /* 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.'
-    
+
     OTHER BASE MAP OPTIONS:  (Just change L.tileLayer above. Use proper license label.)
     Stamen Watercolor - http://a.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg
     Stamen Toner - http://a.tile.stamen.com/toner/{z}/{x}/{y}.png
     Stamen Toner Background - http://tile.stamen.com/toner-background/{z}/{x}/{y}.png
     Stamen Toner Lite - http://tile.stamen.com/toner-lite/{z}/{x}/{y}.png
     */
-    
+
 // disable drag and zoom handlers
     map.zoomControl.setPosition('topright');
     map.dragging.enabled();
@@ -289,9 +222,9 @@ included in all copies or substantial portions of the Software.
     map.scrollWheelZoom.disable();
     map.setView([33.87042, -178.59375], 3);  // Default map view.  You need to offset it to fit on the screen. Use the function below to find the center x/y.
 
-// Work Markers 
-    L.mapbox.markerLayer({ type: 'Feature', 
-    geometry: { 'type': 'Point', 'coordinates': [-94.60050908803947, 38.964248024548866] },  //Need to again offset each coordinate to fit with the resume in the window.  
+// Work Markers
+    L.mapbox.markerLayer({ type: 'Feature',
+    geometry: { 'type': 'Point', 'coordinates': [-94.60050908803947, 38.964248024548866] },  //Need to again offset each coordinate to fit with the resume in the window.
     properties: {
         'title': 'Geospatial Coordinator',
         'marker-size': 'large',
@@ -325,8 +258,15 @@ included in all copies or substantial portions of the Software.
         'marker-size': 'large',
         'marker-color': '#f86767', // Red
         'marker-symbol': 'commercial' }}).addTo(map);
+    L.mapbox.markerLayer({ type: 'Feature',
+    geometry: { 'type': 'Point', coordinates: [-82.63798, 27.77077] },
+    properties: {
+            'title': 'Product Manager',
+            'marker-size': 'large',
+            'marker-color': '#f86767', // Red
+            'marker-symbol': 'commercial' }}).addTo(map);
 
-// College Markers 
+// College Markers
     L.mapbox.markerLayer({ type: 'Feature',
     geometry: { 'type': 'Point', coordinates: [-117.26091416622312, 34.05371514158555] },
     properties: {
@@ -337,7 +277,7 @@ included in all copies or substantial portions of the Software.
         'marker-symbol': 'college' }}).addTo(map);
     L.mapbox.markerLayer({
     type: 'Feature',
-    geometry: { 'type': 'Point', coordinates: [-117.42573738098143, 33.92824549720419] }, 
+    geometry: { 'type': 'Point', coordinates: [-117.42573738098143, 33.92824549720419] },
     properties: {
         'title': 'California Baptist University',
         'description': 'Bachelors of Applied Theology',
@@ -355,7 +295,7 @@ included in all copies or substantial portions of the Software.
         'marker-color': '#3ca0d3', // Blue
         'marker-symbol': 'hospital' }}).addTo(map);
     L.mapbox.markerLayer({ type: 'Feature',
-    geometry: { 'type': 'Point', coordinates: [32.650228792987576, -18.987309490031073] }, 
+    geometry: { 'type': 'Point', coordinates: [32.650228792987576, -18.987309490031073] },
     properties: {
         'title': 'Rural Orphanage/Clinic',
         'description': 'Volunteer',
@@ -407,35 +347,27 @@ included in all copies or substantial portions of the Software.
         'description': 'San Francisco',
         'marker-size': 'large',
         'marker-color': '#3ca0d3', // Blue
-        'marker-symbol': 'hospital' }}).addTo(map); 
+        'marker-symbol': 'hospital' }}).addTo(map);
     L.mapbox.markerLayer({ type: 'Feature',
-    geometry: { 'type': 'Point', coordinates: [-94.62833, 39.02559] },
+    geometry: { 'type': 'Point', coordinates: [-82.75452, 28.04138] },
     properties: {
         'title': 'Where I call home',
         'marker-size': 'large',
         'marker-color': '#888', // Blue
-        'marker-symbol': 'building' }}).addTo(map); 
-    L.mapbox.markerLayer({ type: 'Feature',
-    geometry: { 'type': 'Point', coordinates: [-118.61904, 34.14506] },
-    properties: {
-        'title': 'Where I call home',
-        'marker-size': 'large',
-        'marker-color': '#888', // Blue
-        'marker-symbol': 'building' }}).addTo(map); 
+        'marker-symbol': 'building' }}).addTo(map);
 
-  // map.on('click', function(e) {
-  //  alert(e.latlng); // e is an event object (MouseEvent in this case)
-  // });
+ // map.on('click', function(e) {
+ // alert(e.latlng); // e is an event object (MouseEvent in this case)
+ // });
 
-    </script> 
+    </script>
 
 </div >
-<div class="sticky"></div>
 <div id="overlay2"><img src="images/paperclip_sm.png" id="paperclip" /></div>
 <div class="paper3"></div>
 <div class="paper2"></div>
 
-<div class="paper1"> 
+<div class="paper1">
 	<div id="page-wrap">
         <div id="contact-info">
             <h1>Cory Mac Vie</h1>
@@ -443,16 +375,16 @@ included in all copies or substantial portions of the Software.
                 <img src="images/headshot2.png" class="bottom" id="profile" />
                 <img src="images/headshot1.jpg" class="top" />
             </div>
-            <!--Paper Clip Before --> 
+            <!--Paper Clip Before -->
             <p>
-                <strong>Mobile:</strong> <span>909-435-6551</span><br />
+
                	<strong>Twitter:</strong> <a href="https://twitter.com/iLikCartography" target="_blank">@iLikCartography</a><br />
                 <strong>Email:</strong> <a href="mailto:cory@corymacvie.com">cory@corymacvie.com</a><br />
-                <strong>Addresses:</strong>
-                <span class="calabasas" onmouseover="map.setView([34.14919, -118.77834],12)">Calabasas, CA</span> &#38; 
-                <span class="kansascity" onmouseover="map.setView([39.02905, -94.79335],12)">Fairway, KS</span><br />
+                <strong>Address:</strong>
+                <span class="calabasas" onmouseover="map.setView([27.96651, -83.4082],10)">Dunedin, FL</span><br />
+                <strong>Github: </strong><a href="https://github.com/Whatsupcory">whatsupcory</a><br />
             </p>
-        </div>        
+        </div>
         <div id="objective">
             <p>
                 Always seeking opportunities to develop new systems that improve the lives of others. Possess tenacity for solving difficult problems while focusing on quality and service. Strives for the highest level of personal integrity on all jobs. Daily seeks higher levels of understanding in multiple subjects. Live by checklists and calendars, seven days a week.
@@ -474,34 +406,54 @@ included in all copies or substantial portions of the Software.
                 <ul>
                     <li>Background creating websites for small businesses utilizing Wordpress, Joomla, Wiki, eCommerce, SharePoint, Portfolios and personal promotional sites.</li>
                     <li>Four years of experience in HTML5, CSS3, JavaScript/JQuery</li>
-                    <li>Working knowledge in PHP, Python/Django, MySQL, PostgreSQL</li>
+                    <li>Working knowledge in Ruby, Python/Django, MySQL, PostgreSQL</li>
                 </ul>
-                <!-- 
+                <!--
                 <h2>Public Health</h2>
                 <ul>
                     <li>Analyzed the social, political, and economical impacts of tobacco policies for the province of Cavite, Philippines and presented results to the Ministry of Health.</li>
                     <li>Developed a comprehensive analysis of United States’ foreign public health policies influencing the accomplishments of the United Nations Millennium Development Goals.</li>
                     <li>Researched, planned, and distributed an educational and health services directory for several communities in San Bernardino, CA.</li>
                 </ul> -->
-            </dd>     
-            <dd class="clear"></dd>    
+            </dd>
+            <dd class="clear"></dd>
             <dt>Experience<br />
                 <img src="images/work.png" alt="Work Logo" id="icon" />
             </dt>
             <dd>
+              <div class="jobs" onmouseover="map.setView([27.76255, -83.00102],11)">
+                  <a class="orglogo" href="http://www.fulcrumapp.com"><img src="images/fulcrum-logo-notag.png" /></a>
+                  <h3 class="organization">Fulcrum Mobile Solutions</h3>
+                  <h4 class="jobtitle">Product Manager</h4>
+                  <h4 class="timeframe">September 2014 – Present (2 years)</h4>
+                  <p>Provided geospatial support during response and recovery to regional disasters.   Key team member on Debris Basin Project, a map book and an interactive web based project utilizing critical infrastructure and background information for use in maintaining Debris Basins in Los Angeles County. Worked jointly with other FEMA, Cal EMA and LA County Department of Public Works staff to create a reference that will provide a comprehensive, web-accessible basis for planning and hazard risk management. Briefed leadership on status of projects. Monitored and reported wildfires status in CA and NV and provided geographic products for regional tracking. Performed and presented spatial analysis and mapping support to State partners.</p>
+              <div class="details">
+                  <a href="#" title="&#34;Cory's ability to communicate verbally and<br />
+                  in writing proved to be valuable when<br />
+                  presenting his ideas and discussing the<br />
+                  outcomes of his project development.&#34;</strong><br />
+                  &#45; Khaalis Jackson" ><img class="decoded" src="https://cldup.com/pD3kY4F7eL.png"></img></a>
+                  <a href="http://www.linkedin.com/pub/jonathan-colwell/37/22a/751" title="
+                  &#34;He is a quick and competent learner who<br />
+                  finds ways to implement new technologies<br />
+                  and to create a better common operating<br />
+                  picture.&#34;<br />
+                  &#45; Jonathan Colwell" ><img class="decoded" src="http://i.imgur.com/FlPrqvTs.jpg"></img></a></div>
+              </div>
+
                 <div class="jobs" onmouseover="map.setView([38.98717,-95.2858],10)">
                     <a class="orglogo" href="http://www.fema.gov"><img src="images/fema.png" /></a>
                     <h3 class="organization">FEMA Region 7</h3>
                     <h4 class="jobtitle">Geospatial Coordinator</h4>
-                    <h4 class="timeframe">May 2011 – Present (3 years)</h4>
+                    <h4 class="timeframe">May 2011 – September 2014 (3 years 5 months)</h4>
                     <p>Currently the lead tech for the region in management and development of geospatial systems. Responsible for developing platforms that analyze collected data and give users tools to make better decisions. Provide training to support response operations regarding all geospatial support activities. Responsible for managing the response GIS personnel, handling regional remote sensing capabilities, training regional personal and integrating with State GIS counterparts in the Federal response to disasters and regional projects. Develop operational policies for the geospatial and remote sensing programs of the region. Provide guidance to management in program initiatives such as the All Hazard Plan, program planning and response standard operating procedure manuals.</p>
                 <div class="details">
-                    <a href="http://www.linkedin.com/pub/chris-hartnett/13/ab0/642" title="&#34;His attention to detail and willingness to go above<br /> 
+                    <a href="http://www.linkedin.com/pub/chris-hartnett/13/ab0/642" title="&#34;His attention to detail and willingness to go above<br />
                     and beyond was second to none. His talent and<br />
                     understanding of the GIS needs of the State <br />
                     facilitated the development of many viable products<br />
                     still in use today.&#34;<br />
-                    &#45; Chris Hartnett" target="_blank"><img class="decoded" src="http://m.c.lnkd.licdn.com/mpr/mpr/shrink_60_60/p/1/005/007/33c/0abbc66.jpg"></img></a>
+                    &#45; Chris Hartnett" target="_blank"><img class="decoded" src="https://cldup.com/aqkvjv7A8E.png"></img></a>
                     <a href="http://www.linkedin.com/pub/stacy-robarge-silkiner/11/806/2b0" title="&#34;Cory was always willing to try new things and<br />
                     find innovative ideas that would allow the <br />
                     Planning Section to better analyize data and <br />
@@ -511,36 +463,37 @@ included in all copies or substantial portions of the Software.
                     <div class="portfolio">
                         <a class="fancybox-effects-c" rel="gallery1" href="images/portfolio/IMG_0321.jpg" data-fancybox-title="Three days after Superstorm Sandy. Updating Deputy Administrator Serino on aerial imagery collection progress and damage assessment.">
                             <img src="images/portfolio/IMG_0321_thumb.jpg" alt="" class="thumbnail" /></a>
-                        <a class="fancybox-effects-c" rel="gallery1" href="images/portfolio/Joplin_RedCross_DA_11092011.jpg" data-fancybox-title="Red Cross Shelters and Joplin Damage Assessment">
+                            <a class="fancybox-effects-c" rel="gallery1" href="images/portfolio/Joplin_RedCross_DA_11092011.jpg" data-fancybox-title="Red Cross Shelters and Joplin Damage Assessment">
                             <img src="images/portfolio/Joplin_RedCross_DA_11092011_thumb.jpg" alt="" class="thumbnail" /></a>
-                        <a class="fancybox-effects-c" rel="gallery1" href="images/portfolio/GE_Critical_Infrastructure_KC.jpg" data-fancybox-title="A Google Earth viewer built for situational awareness. Incorporates real-time ground and aerial imgery from the field.">
+                            <a class="fancybox-effects-c" rel="gallery1" href="images/portfolio/GE_Critical_Infrastructure_KC.jpg" data-fancybox-title="A Google Earth viewer built for situational awareness. Incorporates real-time ground and aerial imgery from the field.">
                             <img src="images/portfolio/GE_Critical_Infrastructure_KC_thumb.jpg" alt="" class="thumbnail" /></a>
-                        <a class="fancybox-effects-c" rel="gallery1" href="images/portfolio/capflight.jpg" data-fancybox-title="A Google Earth viewer built for situational awareness. Shows daily aerial imgery and flight path. Also shows status of levees affected.">
+                            <a class="fancybox-effects-c" rel="gallery1" href="images/portfolio/capflight.jpg" data-fancybox-title="A Google Earth viewer built for situational awareness. Shows daily aerial imgery and flight path. Also shows status of levees affected.">
                             <img src="images/portfolio/capflight_thumb.gif" alt="" class="thumbnail" /></a>
-                        <a class="fancybox-effects-c" rel="gallery1" href="images/portfolio/Mantoloking_ScreenShot_ESRI.jpg" data-fancybox-title="The Check Your Home website, designed for the public to view before and after imagery (close-up) of any structure affected by Superstorm Sandy.">
+                            <a class="fancybox-effects-c" rel="gallery1" href="images/portfolio/Mantoloking_ScreenShot_ESRI.jpg" data-fancybox-title="The Check Your Home website, designed for the public to view before and after imagery (close-up) of any structure affected by Superstorm Sandy.">
                             <img src="images/portfolio/Mantoloking_ScreenShot_ESRI_thumb.jpg" alt="" class="thumbnail" /></a>
-                        <a class="fancybox-effects-c" rel="gallery1" href="images/portfolio/SeasideHeights_ScreenShot_ESRI.jpg" data-fancybox-title="The Check Your Home website, designed to view before and after imagery of any structure affected by Superstorm Sandy. Site launched four days after landfall.">
+                            <a class="fancybox-effects-c" rel="gallery1" href="images/portfolio/SeasideHeights_ScreenShot_ESRI.jpg" data-fancybox-title="The Check Your Home website, designed to view before and after imagery of any structure affected by Superstorm Sandy. Site launched four days after landfall.">
                             <img src="images/portfolio/SeasideHeights_ScreenShot_ESRI_thumb.jpg" alt="" class="thumbnail" /></a>
-                        <a class="fancybox-effects-c" rel="gallery1" href="images/portfolio/BreezyPoint_ScreenShot_ESRI.jpg" data-fancybox-title="The Check Your Home website. Select any of the 160,000 aerial images collected. Entire site built and deployed in about 24 hours.">
+                            <a class="fancybox-effects-c" rel="gallery1" href="images/portfolio/BreezyPoint_ScreenShot_ESRI.jpg" data-fancybox-title="The Check Your Home website. Select any of the 160,000 aerial images collected. Entire site built and deployed in about 24 hours.">
                             <img src="images/portfolio/BreezyPoint_ScreenShot_ESRI_thumb.jpg" alt="" class="thumbnail" /></a>
-                        <a class="fancybox-effects-c" rel="gallery1" href="images/portfolio/Extent_Levee_20110616.jpg" data-fancybox-title="One of hundreds of static products I've created. This one highlights the levee breaching and treatening of Hamburg, IA.">
+                            <a class="fancybox-effects-c" rel="gallery1" href="images/portfolio/Extent_Levee_20110616.jpg" data-fancybox-title="One of hundreds of static products I've created. This one highlights the levee breaching and treatening of Hamburg, IA.">
                             <img src="images/portfolio/Extent_Levee_20110616_thumb.jpg" alt="" class="thumbnail" /></a>
                         </a>
                     </div>
                 </div>
-            </div>
-                <div class="jobs" onmouseover="map.setView([34.15557, -118.44154],11)"> 
+                </div>
+
+                <div class="jobs" onmouseover="map.setView([34.15557, -118.44154],11)">
                     <a class="orglogo" href="http://www.fema.gov"><img src="images/fema.png" /></a>
                     <h3 class="organization">FEMA Region 9</h3>
                     <h4 class="jobtitle">Geospatial Analyst</h4>
                     <h4 class="timeframe">June 2010 – May 2011 (1 year)</h4>
-                    <p>Provided geospatial support during response and recovery to regional disasters.   Key team member on Debris Basin Project, a map book and an interactive web based project utilizing critical infrastructure and background information for use in maintaining Debris Basins in Los Angeles County. Worked jointly with other FEMA, Cal EMA and LA County Department of Public Works staff to create a reference that will provide a comprehensive, web-accessible basis for planning and hazard risk management. Briefed leadership on status of projects. Monitored and reported wildfires status in CA and NV and provided geographic products for regional tracking. Performed and presented spatial analysis and mapping support to State partners.</p> 
+                    <p>Provided geospatial support during response and recovery to regional disasters.   Key team member on Debris Basin Project, a map book and an interactive web based project utilizing critical infrastructure and background information for use in maintaining Debris Basins in Los Angeles County. Worked jointly with other FEMA, Cal EMA and LA County Department of Public Works staff to create a reference that will provide a comprehensive, web-accessible basis for planning and hazard risk management. Briefed leadership on status of projects. Monitored and reported wildfires status in CA and NV and provided geographic products for regional tracking. Performed and presented spatial analysis and mapping support to State partners.</p>
                 <div class="details">
                     <a href="#" title="&#34;Cory's ability to communicate verbally and<br />
                     in writing proved to be valuable when<br />
                     presenting his ideas and discussing the<br />
                     outcomes of his project development.&#34;</strong><br />
-                    &#45; Khaalis Jackson" ><img class="decoded" src="http://graph.facebook.com/khaalis.jackson/picture"></img></a>
+                    &#45; Khaalis Jackson" ><img class="decoded" src="https://cldup.com/pD3kY4F7eL.png"></img></a>
                     <a href="http://www.linkedin.com/pub/jonathan-colwell/37/22a/751" title="
                     &#34;He is a quick and competent learner who<br />
                     finds ways to implement new technologies<br />
@@ -548,6 +501,7 @@ included in all copies or substantial portions of the Software.
                     picture.&#34;<br />
                     &#45; Jonathan Colwell" ><img class="decoded" src="http://i.imgur.com/FlPrqvTs.jpg"></img></a></div>
                 </div>
+
                 <div class="jobs" onmouseover="map.setView([34.19193, -118.89473],11)">
                     <a class="orglogo" href="http://www.apple.com/topanga"><img src="images/apple.png" /></a>
                     <h3 class="organization">Apple</h3>
@@ -558,13 +512,13 @@ included in all copies or substantial portions of the Software.
                     &#34;Cory is possibly the most intelligent,<br />
                     innovative and motivated person I've<br />
                     ever worked with.&#34;<br />
-                    &#45; Ron Green" ><img class="decoded" src="http://m.c.lnkd.licdn.com/media/p/5/005/039/252/3e50604.jpg"></img></a></div>
+                    &#45; Ron Green" ><img class="decoded" src="https://cldup.com/KGxlgFuvuH.png"></img></a></div>
                 </div>
-                <!-- <div class="jobs" onclick="map.setView([38.92309,-77.64175],10)">     
+                <!-- <div class="jobs" onclick="map.setView([38.92309,-77.64175],10)">
     				<h2>RESULTS Educational Fund<span>Intern - Washington, DC - 2008-2009</span></h2>
                     <p>Educated members of Congress regarding proposed public health legislation resulting in the increased funding of $10.4 billion as part of the Farm Bill, primarily for emergency food assistance, and passage of legislation that will provided $50 billion in funds for AIDS, malaria and TB programs. Established and managed meetings and conference calls with elected officials and staff. Organized and managed diverse groups to achieve mutual goals. Organized and delivered infectious disease educational events throughout the community. Wrote press releases on topics such as infectious diseases, microfinance growth, education, and the Head Start program. Gained media support for public health related legislative issues. Prepared and delivered briefings to national headquarters.</p>
                 </div> -->
-            <dd class="clear"></dd>          
+            <dd class="clear"></dd>
             <dt>Education<br />
                 <img src="images/college.png" alt="Work Logo" id="icon" />
             </dt>
@@ -581,19 +535,19 @@ included in all copies or substantial portions of the Software.
                     <a href="http://www.linkedin.com/pub/donn-gaede-drph-cph/6/3b5/115" title="&#34;He is bright, articulate and creative. He<br />
                         is also very honest and open and will give<br />
                         you a very honest assessment of what he<br />
-                        is willing to take on. I have truly enjoyed <br /> 
+                        is willing to take on. I have truly enjoyed <br />
                         working with him.&#34;<br />
-                        &#45; Donn Gaede, DrPH, CPH" ><img class="decoded" src="http://graph.facebook.com/donn.gaede/picture"></img></a>
+                        &#45; Donn Gaede, DrPH, CPH" ><img class="decoded" src="https://cldup.com/4PsIuVuATL.png"></img></a>
                     <a href="http://www.linkedin.com/pub/yemi-adeoye/4/333/587" title="
                         &#34;Cory is a dynamic, seasoned public health<br />
                         expert who is well rounded in knowledge and<br />
                         works competently in diversified environments.&#34;<br />
-                        &#45; Dr. Yemi Adeoye, MPH" ><img class="decoded" src="http://m.c.lnkd.licdn.com/mpr/mpr/shrink_200_200/p/5/000/1b2/01d/02a03c7.jpg"></img></a>
+                        &#45; Dr. Yemi Adeoye, MPH" ><img class="decoded" src="https://cldup.com/cRV3KhjpdF.png"></img></a>
                     <a href="http://www.linkedin.com/pub/alane-bristow/4/3b4/918" title="
                         &#34;Cory was always an invaluable group member,<br />
                         taking the initiative and showing great leadership<br />
                         and interpersonal skills.&#34;<br />
-                        &#45; Alane Bristow, MPH" ><img class="decoded" src="http://graph.facebook.com/alanebristow/picture"></img></a>
+                        &#45; Alane Bristow, MPH" ><img class="decoded" src="https://cldup.com/qtpR53Wthm.png"></img></a>
                         <div class="portfolio">
                     <a class="fancybox-effects-c" rel="gallery2" href="images/portfolio/MuhammadYunus.jpg" data-fancybox-title="Muhammad Yunus, Father of Microcredit, 2006 Nobel Peace Prize laureate">
                         <img src="images/portfolio/MuhammadYunus_thumb.jpg" alt="" class="thumbnail" /></a>
@@ -614,7 +568,7 @@ included in all copies or substantial portions of the Software.
                         </div>
                     </div>
                 </div>
-            </dd>           
+            </dd>
             <dd class="clear"></dd>
             <dt>Service<br />
                 <img src="images/volunteer.png" id="icon" />
@@ -651,7 +605,7 @@ included in all copies or substantial portions of the Software.
                 <div class="service" onmouseover="map.setView([30.00965, -91.1618],9)">
                     <h3 class="organization">Domestic Service Project Director</h3>
                     <h4 class="timeframe">2003 – 2006</h4>
-                        <p>Organized and managed four spring/winter break service and recovery projects for teams of college students.  Established relationships with local community members, homeowners, voluntary agencies, and local officials.  Coordinated with local government entities and NGOs to identify optimal relief location and distribution sites around the city.  Trained and led dozens of students to post-Katrina New Orleans clean-up; New Orleans Christmas toy-drive and distribution, San Francisco homeless food distribution, and Mexico orphanage volunteering.  Raised funds for each project on average $10,000 for each trip. Produced and distributed post-Katrina documentary.</p> 
+                        <p>Organized and managed four spring/winter break service and recovery projects for teams of college students.  Established relationships with local community members, homeowners, voluntary agencies, and local officials.  Coordinated with local government entities and NGOs to identify optimal relief location and distribution sites around the city.  Trained and led dozens of students to post-Katrina New Orleans clean-up; New Orleans Christmas toy-drive and distribution, San Francisco homeless food distribution, and Mexico orphanage volunteering.  Raised funds for each project on average $10,000 for each trip. Produced and distributed post-Katrina documentary.</p>
                     <div class="details">
                         <img class="decoded" src="images/portfolio/blank.gif"></img>
                         <div class="portfolio">
@@ -665,7 +619,7 @@ included in all copies or substantial portions of the Software.
                 <div class="service" onmouseover="map.setView([9.31899, -88.65967],6)">
                     <h3 class="organization">Crew Member</h3>
                     <h4 class="timeframe">Jan 2001 – Dec 2001</h4>
-                        <p>Performed all navigation, mechanical, engineering, and communication responsibilities. Developed written preventative maintenance schedule for future crews. Secured supplies in each port. Fostered partnerships with local community leaders, local governments, and religious institutions. Fund-raised tens of thousands of dollars by speaking at various institutions and churches.</p>   
+                        <p>Performed all navigation, mechanical, engineering, and communication responsibilities. Developed written preventative maintenance schedule for future crews. Secured supplies in each port. Fostered partnerships with local community leaders, local governments, and religious institutions. Fund-raised tens of thousands of dollars by speaking at various institutions and churches.</p>
                     <div class="details">
                         <a href="http://www.linkedin.com/in/joeygravell" title="
                         &#34;Cory is the epitome of the creative and <br />
@@ -679,7 +633,7 @@ included in all copies or substantial portions of the Software.
                         </div>
                     </div>
                 </div>
-            </dd>     
+            </dd>
         <dd class="clear"></dd>
             <dt>Recently<br/>Read<br /></dt>
             <dd>
@@ -692,28 +646,28 @@ included in all copies or substantial portions of the Software.
                           height: 60px;
                           padding: 5px 6.5px;
                           overflow: hidden;
-                                filter: grayscale(100%); 
-                                -webkit-filter: grayscale(100%); 
-                                -moz-filter: grayscale(100%); 
-                                -ms-filter: grayscale(100%); 
+                                filter: grayscale(100%);
+                                -webkit-filter: grayscale(100%);
+                                -moz-filter: grayscale(100%);
+                                -ms-filter: grayscale(100%);
                                 -o-filter: grayscale(100%);
-                                -webkit-transition: all 0.4s ease; 
+                                -webkit-transition: all 0.4s ease;
                                 -moz-transition: all 0.4s ease;
                                 opacity:0.5;
                                 filter:alpha(opacity=50); }
                         .gr_grid_book_container:hover {
-                                filter: grayscale(0%); 
-                                -webkit-filter: grayscale(0%); 
-                                -moz-filter: grayscale(0%); 
-                                -ms-filter: grayscale(0%); 
+                                filter: grayscale(0%);
+                                -webkit-filter: grayscale(0%);
+                                -moz-filter: grayscale(0%);
+                                -ms-filter: grayscale(0%);
                                 -o-filter: grayscale(0%);
                                 opacity: 1.0;
                                 filter: alpha(opacity=100); }
                 </style>
                     <script src="https://www.goodreads.com/review/grid_widget/6857196.Cory's%20bookshelf:%20read?cover_size=small&hide_link=true&hide_title=true&num_books=36&order=d&shelf=read&sort=date_read&widget_id=1394851349" type="text/javascript" charset="utf-8"></script>
             </div>
-        </dd> 
-        <dd class="clear"></dd>    
+        </dd>
+<!--        <dd class="clear"></dd>
             <dt>Other<br />
             </dt>
             <dd>
@@ -721,18 +675,17 @@ included in all copies or substantial portions of the Software.
                     <div><a href="http://www.esri.com/esri-news/arcnews/spring13articles/providing-information-as-a-resource-responding-to-superstorm-sandy" target="_blank">Providing Information as a Resource - Responding to Superstorm Sandy - <strong>ArcNews</strong></a></div>
                     <div><a href="http://kansascity.startupweekend.org/" target="_blank">Kansas City Startup Weekend Organizer</a></div>
                     <div><a href="http://www.llu.edu/assets/news/today/documents/2012/201206June8TODAY.pdf" target="_blank">Graduate makes maps to help disaster victims recover - <strong>LLU Today</strong></a></div>
-            </dd> 
+            </dd>-->
+          </dd>
+            <dd class="clear"></dd>
+                <dt>GitHub<br /></dt>
+                <dd>
+                <div>
+                  <a href="https://github.com/Whatsupcory"><img class="gh-chart" src="http://ghchart.rshah.org/545454/whatsupcory" alt="2016rshah's Github chart" /></a>
+                </div>
         <dd class="clear"></dd>
-                    <p></p>
-                    <p class="links1">
 
-                    <a id="pdf" href="http://bit.ly/1eemMZT" target="_blank">Download PDF</a>
-                    <a id="vcard" href="images/vCard.vcf" target="_blank">Contact Info</a>
-                    <a id="github" href="http://bit.ly/1h7QTbh" target="_blank">GitHub</a>
-                    <!--<a id="story" href="story.html" target="_blank">Timeline</a>-->
-                    </p>
-            </dd>
-        <dd class="clear"></dd>
+
 
     </div> <!-- //page-wrap -->
 </div> <!-- //paper1 -->
@@ -748,10 +701,7 @@ included in all copies or substantial portions of the Software.
   ga('send', 'pageview');
 
 </script>
-
-
 <!-- end Google Analytic code -->
-        <div class='shareaholic-canvas' data-app='share_buttons' data-app-id='5478852'></div>
 
 </body>
 </html>
