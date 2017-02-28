@@ -4,10 +4,10 @@ GeoResume
 Interactive Resume <br />
 <em>(Original resume format was created by Chris Coyier at <a href="http://css-tricks.com/one-page-resume-site/" target="_blank">CSS-Tricks</a>.)</em>
 
-Demo at <a href="http://www.corymacvie.com" target="_blank">CoryMacVie.com</a>
+Demo at <a href="http://whatsupcory.github.io/GeoResume/" target="_blank">http://whatsupcory.github.io/GeoResume/</a>
 
 <strong>Phase 1</strong> - <em>Completed</em><br />
-Develop a new type of interactive resume. Display a resume on the left hand side hovering over a world map.
+Develop an interactive resume. Display a resume on the left hand side hovering over a world map.
 The world map will have pins that corresponds to job positions.  As a site user scrolls over different job positions in
 the map will zoom to those locations.  The site will also have a way to display portfolio of work from each position. 
 Also there needs to be a pop out business card with vcard capability. 
@@ -16,11 +16,29 @@ Also there needs to be a pop out business card with vcard capability.
 Develop a php backend for the site that allows users to create their own subdomain (different domain) and import their LinkedIn job history information and create their own interactive resume. 
 
 <strong>Notice</strong><br />
-I plan on writing this myself, but if you could teach me a few things or have ideas on how to improve it then you are welcome to help.
+I plan on coding this myself, but if you could teach me a few things or have ideas on how to improve it then you are welcome to contribute.
 
 ==============
 
-<h3>SETUP INSTRUCTIONS:</h3>
+<h3>NOTABLE UPDATES:</h3>
+
+- Quote bubbles for mini references
+- Download PDF & GitHub buttons
+- Added Jquery Fancybox image viewer
+- Optional Basemaps: Mapbox or Stamen
+- VCard/QRcode
+- Shareaholic Sticky Note
+
+<h3>BACKLOG ITEMS:</h3>
+
+- Linkedin integration for easy creation of new resume
+- Slow Map Panning Option
+- Add Foursquare history to the map
+- Cover Page option with private links
+
+==============
+
+<h3>SETUP INSTRUCTIONS:  (Instructions are out of date due to updates)</h3> 
 
 Install these files and personalize the information in index.html<br />
 <br />
@@ -52,17 +70,3 @@ github-logo.png // Please include this link for others. <br />
 - When creating markers on your map, first lay them in mapbox.com to find the lat/long (they are arranged in reverse order long/lat). 
 <br />
 
-==============
-
-<h3>NOTABLE UPDATES:</h3>
-
-- Added quote bubbles to mini references
-- Download PDF, vCard & GitHub buttons
-- Added Jquery Fancybox image viewer
-- Code embeded for Mapbox or Stamen
-
-<h3>ROAD MAP:</h3>
-
-- Linkedin integration for easy creation of new resume
-- Pan Map slower?
-- Add Foursquare history to the map

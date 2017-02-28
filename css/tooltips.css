@@ -8,15 +8,16 @@
   opacity: 0;
   display: inline-block;
   position: absolute;
-  padding: 10px 20px;
+  padding: 10px 15px;
   color: black;
-  border-radius: 20px;
-  margin-top: 20px;
+  border-radius: 5px;
+  margin-top: 10px;
   text-align: left;
   font: 16px 'Open Sans', sans-serif;
   font-stretch: condensed;
   text-decoration: none;
   box-shadow: 0 1px 7px #777;
+  z-index: 15;
 }
 .arrow {
   width: 70px;

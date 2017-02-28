@@ -1,0 +1,33 @@
+<html>
+<head>
+	    <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.js' type="text/javascript"></script>  <!-- Mapbox -->
+	<link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.css' rel='stylesheet' type="text/css" />
+	  <style>  
+      body { margin:0; padding:0; }
+      #map { position:absolute; top:0; position: fixed; bottom:0; width:100%; }
+    </style>
+</head>
+<body>
+
+<div id="map"> 
+
+    <script type="text/javascript"> 
+    var map = L.mapbox.map('map');
+    var mapLayer = L.tileLayer('http://tile.stamen.com/toner-lite/{z}/{x}/{y}.png', {
+    attribution: 'Map tiles by <a href="http://www.mapbox.com">Mapbox</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.'
+
+    //'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.'
+    }).addTo(map); // Unlimited free use base map.  But you can't customize this map like you can mapbox. 
+    
+// disable drag and zoom handlers
+    map.zoomControl.setPosition('topright');
+    map.dragging.disable();
+    map.touchZoom.disable();
+    map.doubleClickZoom.disable();
+    map.scrollWheelZoom.disable();
+    map.setView([39.87042, -100.59375], 4);  // Default map view.  You need to offset it to fit on the screen. Use the function below to find the center x/y.
+    </script>
+
+</div>
+</body>
+</html>
