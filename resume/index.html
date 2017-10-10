@@ -357,10 +357,17 @@
         'marker-size': 'large',
         'marker-color': '#888', // Blue
         'marker-symbol': 'building' }}).addTo(map);
+    L.mapbox.markerLayer({ type: 'Feature',
+    geometry: { 'type': 'Point', coordinates: [-118.61638, 34.14509] },
+    properties: {
+            'title': 'Place I call home',
+            'marker-size': 'large',
+            'marker-color': '#777', // Blue
+            'marker-symbol': 'building' }}).addTo(map);
 
- // map.on('click', function(e) {
- // alert(e.latlng); // e is an event object (MouseEvent in this case)
- // });
+// map.on('click', function(e) {
+// alert(e.latlng); // e is an event object (MouseEvent in this case)
+// });
 
     </script>
 
@@ -383,6 +390,7 @@
                	<strong>Twitter:</strong> <a href="https://twitter.com/corymacvie" target="_blank">@corymacvie</a><br />
                 <strong>Email:</strong> <a href="mailto:cory@corymacvie.com">cory@corymacvie.com</a><br />
                 <strong>Address:</strong>
+                <span class="address" onmouseover="map.setView([34.13795, -118.85696],11)">Calabasas, CA</span> &
                 <span class="address" onmouseover="map.setView([27.96651, -83.4082],10)">Dunedin, FL</span><br />
                 <strong>Github: </strong><a href="https://github.com/Whatsupcory">whatsupcory</a><br />
             </p>
