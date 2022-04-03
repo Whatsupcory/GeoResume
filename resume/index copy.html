@@ -18,8 +18,8 @@
     <meta name="format-detection" content="telephone=yes">
 
     <!-- Mapbox -->
-    <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.js' type="text/javascript"></script>
-    <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.css' rel='stylesheet' type="text/css">
+    <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.js' type="text/javascript"></script>
+    <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.css' rel='stylesheet' type="text/css">
 
     <!-- Mapbox -->
     <link media="all" href='css/style.css' rel='stylesheet'>  <!-- Main Style -->
@@ -197,21 +197,14 @@
 
 </head>
 <body>
-    <div id="map">
+
+   <div id="map">
 
    <script type="text/javascript">
     var map = L.mapbox.map('map');
-    var mapLayer = L.tileLayer('http://tile.stamen.com/toner-lite/{z}/{x}/{y}.png', {
-    attribution: '<a href="https://www.mapbox.com/about/maps/">© Mapbox © OpenStreetMap</a>'
+    var mapLayer = L.tileLayer('https://api.mapbox.com/styles/v1/corymacvie/cl1ei3lh2000514m76cxtk09t.html?title=view&access_token=pk.eyJ1IjoiY29yeW1hY3ZpZSIsImEiOiI2eVBETTQ4In0.QVa9pgYonehQEB99AfJNVA&zoomwheel=true&fresh=true#9.04/37.7922/-122.5703', {
+    attribution: '<a href="https://www.mapbox.com/about/maps/">Digital Globe | Mapbox | OpenStreetMap</a> <a href="https://www.mapbox.com/map-feedback/#corymacvie.map-npm45cd5/-92.494/35.228/6">Improve this map</a>'
     }).addTo(map);
-
-    /* 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.'
-    OTHER BASE MAP OPTIONS:  (Just change L.tileLayer above. Use proper license label.)
-    Stamen Watercolor - http://a.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg
-    Stamen Toner - http://a.tile.stamen.com/toner/{z}/{x}/{y}.png
-    Stamen Toner Background - http://tile.stamen.com/toner-background/{z}/{x}/{y}.png
-    Stamen Toner Lite - http://tile.stamen.com/toner-lite/{z}/{x}/{y}.png
-    */
 
 // disable drag and zoom handlers 
     map.zoomControl.setPosition('topright');
@@ -285,79 +278,86 @@
         'marker-symbol': 'college' }}).addTo(map);
 
 // Volunteer Markers
-    // L.mapbox.markerLayer({ type: 'Feature',
-    // geometry: { 'type': 'Point', coordinates: [-238.9856, 14.56232] },
-    // properties: {
-    //     'title': 'Rural Development Program',
-    //     'description': 'Loma Linda University',
-    //     'marker-size': 'large',
-    //     'marker-color': '#3ca0d3', // Blue
-    //     'marker-symbol': 'hospital' }}).addTo(map);
-    // L.mapbox.markerLayer({ type: 'Feature',
-    // geometry: { 'type': 'Point', coordinates: [32.650228792987576, -18.987309490031073] },
-    // properties: {
-    //     'title': 'Rural Orphanage/Clinic',
-    //     'description': 'Volunteer',
-    //     'marker-size': 'large',
-    //     'marker-color': '#3ca0d3', // Blue
-    //     'marker-symbol': 'hospital' }}).addTo(map);
-    // L.mapbox.markerLayer({ type: 'Feature',
-    // geometry: { 'type': 'Point', coordinates: [-89.9602934107422, 29.942804338982693] },
-    // properties: {
-    //     'title': 'Domestic Service Project - New Orleans',
-    //     'marker-size': 'large',
-    //     'marker-color': '#3ca0d3', // Blue
-    //     'marker-symbol': 'hospital' }}).addTo(map);
-    // L.mapbox.markerLayer({ type: 'Feature',
-    // geometry: { 'type': 'Point', coordinates: [-79.56557381546236, 8.96970416215249] },
-    // properties: {
-    //     'title': 'Crew Staff',
-    //     'marker-size': 'large',
-    //     'marker-color': '#3ca0d3', // Blue
-    //     'marker-symbol': 'hospital' }}).addTo(map);
+    L.mapbox.markerLayer({ type: 'Feature',
+    geometry: { 'type': 'Point', coordinates: [-238.9856, 14.56232] },
+    properties: {
+        'title': 'Rural Development Program',
+        'description': 'Loma Linda University',
+        'marker-size': 'large',
+        'marker-color': '#3ca0d3', // Blue
+        'marker-symbol': 'hospital' }}).addTo(map);
+    L.mapbox.markerLayer({ type: 'Feature',
+    geometry: { 'type': 'Point', coordinates: [32.650228792987576, -18.987309490031073] },
+    properties: {
+        'title': 'Rural Orphanage/Clinic',
+        'description': 'Volunteer',
+        'marker-size': 'large',
+        'marker-color': '#3ca0d3', // Blue
+        'marker-symbol': 'hospital' }}).addTo(map);
+    L.mapbox.markerLayer({ type: 'Feature',
+    geometry: { 'type': 'Point', coordinates: [-89.9602934107422, 29.942804338982693] },
+    properties: {
+        'title': 'Domestic Service Project - New Orleans',
+        'marker-size': 'large',
+        'marker-color': '#3ca0d3', // Blue
+        'marker-symbol': 'hospital' }}).addTo(map);
+    L.mapbox.markerLayer({ type: 'Feature',
+    geometry: { 'type': 'Point', coordinates: [-79.56557381546236, 8.96970416215249] },
+    properties: {
+        'title': 'Crew Staff',
+        'marker-size': 'large',
+        'marker-color': '#3ca0d3', // Blue
+        'marker-symbol': 'hospital' }}).addTo(map);
 
 // Other Markers
-    // L.mapbox.markerLayer({ type: 'Feature',
-    // geometry: { 'type': 'Point', coordinates: [23.724580444335942, 37.98363136718436] },
-    // properties: {
-    //     'title': 'International Service Project',
-    //     'marker-size': 'large',
-    //     'marker-color': '#3ca0d3', // Blue
-    //     'marker-symbol': 'hospital' }}).addTo(map);
-    // L.mapbox.markerLayer({ type: 'Feature',
-    // geometry: { 'type': 'Point', coordinates: [-117.05203555476321, 32.522665809508965] },
-    // properties: {
-    //     'title': 'Domestic Service Project',
-    //     'description': 'Mexico',
-    //     'marker-size': 'large',
-    //     'marker-color': '#3ca0d3', // Blue
-    //     'marker-symbol': 'hospital' }}).addTo(map);
-    // L.mapbox.markerLayer({ type: 'Feature',
-    // geometry: { 'type': 'Point', coordinates: [-122.45902443945312, 37.76959774425483] },
-    // properties: {
-    //     'title': 'Domestic Service Project',
-    //     'description': 'San Francisco',
-    //     'marker-size': 'large',
-    //     'marker-color': '#3ca0d3', // Blue
-    //     'marker-symbol': 'hospital' }}).addTo(map);
-    // L.mapbox.markerLayer({ type: 'Feature',
-    // geometry: { 'type': 'Point', coordinates: [-82.75452, 28.04138] },
-    // properties: {
-    //     'title': 'Where I call home',
-    //     'marker-size': 'large',
-    //     'marker-color': '#888', // Blue
-    //     'marker-symbol': 'building' }}).addTo(map);
     L.mapbox.markerLayer({ type: 'Feature',
-    geometry: { 'type': 'Point', coordinates: [-118.571389, 34.281389] },
+    geometry: { 'type': 'Point', coordinates: [-85.84074862392727, 10.324805855296699] },
+    properties: {
+        'title': 'Surfing Trip',
+        'marker-size': 'large',
+        'marker-color': '#f1f075', // Yellow
+        'marker-symbol': 'pitch' }}).addTo(map);
+    L.mapbox.markerLayer({ type: 'Feature',
+    geometry: { 'type': 'Point', coordinates: [23.724580444335942, 37.98363136718436] },
+    properties: {
+        'title': 'International Service Project',
+        'marker-size': 'large',
+        'marker-color': '#3ca0d3', // Blue
+        'marker-symbol': 'hospital' }}).addTo(map);
+    L.mapbox.markerLayer({ type: 'Feature',
+    geometry: { 'type': 'Point', coordinates: [-117.05203555476321, 32.522665809508965] },
+    properties: {
+        'title': 'Domestic Service Project',
+        'description': 'Mexico',
+        'marker-size': 'large',
+        'marker-color': '#3ca0d3', // Blue
+        'marker-symbol': 'hospital' }}).addTo(map);
+    L.mapbox.markerLayer({ type: 'Feature',
+    geometry: { 'type': 'Point', coordinates: [-122.45902443945312, 37.76959774425483] },
+    properties: {
+        'title': 'Domestic Service Project',
+        'description': 'San Francisco',
+        'marker-size': 'large',
+        'marker-color': '#3ca0d3', // Blue
+        'marker-symbol': 'hospital' }}).addTo(map);
+    L.mapbox.markerLayer({ type: 'Feature',
+    geometry: { 'type': 'Point', coordinates: [-82.75452, 28.04138] },
+    properties: {
+        'title': 'Where I call home',
+        'marker-size': 'large',
+        'marker-color': '#888', // Blue
+        'marker-symbol': 'building' }}).addTo(map);
+    L.mapbox.markerLayer({ type: 'Feature',
+    geometry: { 'type': 'Point', coordinates: [-118.61638, 34.14509] },
     properties: {
             'title': 'Place I call home',
             'marker-size': 'large',
             'marker-color': '#777', // Blue
             'marker-symbol': 'building' }}).addTo(map);
 
-map.on('click', function(e) {
-alert(e.latlng); // e is an event object (MouseEvent in this case)
-});
+// map.on('click', function(e) {
+// alert(e.latlng); // e is an event object (MouseEvent in this case)
+// });
 
     </script>
 
@@ -377,7 +377,7 @@ alert(e.latlng); // e is an event object (MouseEvent in this case)
             <p>
                	<strong>Twitter:</strong> <a href="https://twitter.com/corymacvie" target="_blank">@corymacvie</a><br />
                 <strong>Email:</strong> <a href="mailto:cory@corymacvie.com">cory@corymacvie.com</a><br />
-                <strong>Address:</strong> <span class="address" onmouseover="map.setView([34.30034, -119.23187],10)">Los Angeles, CA</span><br />
+                <strong>Address:</strong><span class="address" onmouseover="map.setView([34.13795, -118.85696],11)"> Los Angeles, CA</span><br />
                 <strong>Github: </strong><a href="https://github.com/Whatsupcory">whatsupcory</a><br />
             </p>
         </div>
@@ -393,23 +393,23 @@ alert(e.latlng); // e is an event object (MouseEvent in this case)
             <dd>
                 <h2>Product Management</h2>
                 <ul>
-                    <li>8+ years of experience leading development teams focused on user-friendly web and mobile software in a SaaS B2B/B2C environment.</li>
+                    <li>7+ years of experience leading development teams focused on user-friendly web and mobile software in a SaaS B2B/B2C environment.</li>
                     <li>Experience working collaboratively with the Product team and others including Engineering, Marketing, Sales, and Customer Success.</li>
-                    <li>Excel in a Agile/Lean development environment.</li>
+                    <li>Thrive in Scrum/Agile development environment.</li>
                 </ul>
                 <h2>UX/UI</h2>
                 <ul>
-                    <li>Developed design concepts, wireframes, prototypes, usage scenarios, detailed specifications, and other UX/UI design deliverables.</li>
-                    <li>Proficient in current cloud based design software.</li>
-                    <li>Experienced in designing for responsive </li>
+                    <li>Developed design concepts, wireframes, prototypes, usage scenarios, specifications, and other UX/UI design deliverables.</li>
+                    <li>Proficient in current design software (Figma, Sketch, Creative Suite, Invision, etc).</li>
+                    <li>Proficient in designing for multiple devices and platforms.</li>
                     <li>CSS, HTML, Javascript, and deep knowledge of how modern web & mobile application are developed and deployed.</li>
-                </ul><!--
+                </ul>
                 <h2>Growth Hacking</h2>
                 <ul>
                     <li>Led the strategy, prioritization, and execution for key product features that drove user conversions across the user-journey.</li>
                     <li>Experienced in performing product-oriented quantitative and qualitative analysis.</li>
                     <li>Experienced designing and executing on A/B and multivariate user tests to make data-driven decisions.</li>
-                </ul>-->
+                </ul>
             </dd>
             <dd class="clear"></dd>
             <dt>Experience<br />
@@ -417,68 +417,37 @@ alert(e.latlng); // e is an event object (MouseEvent in this case)
             </dt>
             <dd>
               <div class="jobs" onmouseover="map.setView([27.76255, -83.00102],11)">
-                  <a class="orglogo" href="http://www.fulcrumapp.com"><img src="images/fulcrum.png" /></a>
+                  <a class="orglogo" href="http://www.fulcrumapp.com"><img src="images/fulcrum-logo-notag.png" /></a>
                   <h3 class="organization">Spatial Networks</h3>
-                  <h4 class="jobtitle">Product Manager | Growth Hacker | Customer Success Manager</h4>
-                  <h4 class="timeframe">September 2014 – Present (7+ years)</h4>
-                  <p>Connected with hundreds of customers to gather feedback that drove our 
-                      product strategy and roadmap. Worked collaboratively with the VP of 
-                      Product and the rest of the team to build a world-class user experience. 
-                      Communicated and fostered alignment for product and growth initiatives 
-                      across the company.  Assisted in the expansion of engineering, product, 
-                      marketing, sales, and customer success teams, while growing the monthly 
-                      recurring revenue by eight percent monthly for five years.  Managed the 
-                      product development cycle of both the core product and marketing website. 
-                      Identified strategic markets and implemented targeted marketing plans to 
-                      expand the product into new industries. Analyzed all business performance 
-                      and production goals and reported on progress to the c-suite. Presented on 
-                      behalf of the company at dozens of events and conferences.</p>
+                  <h4 class="jobtitle">Product Manager</h4>
+                  <h4 class="timeframe">September 2014 – Present</h4>
+                  <p>Connected with hundreds of customers to gather feedback that drove our product strategy and roadmap. Worked collaboratively with the VP of Product and the rest of the team to build a world-class user experience. Communicated and fostered alignment for product and growth initiatives across the company.  Assisted in the expansion of engineering, product, marketing, sales, and customer success teams, while growing the monthly recurring revenue by eight percent monthly for five years.  Managed the product development cycle of both the core product and marketing website. Identified strategic markets and implemented targeted marketing plans to expand the product into new industries. Analyzed all business performance and production goals and reported on progress to the c-suite. Presented on behalf of the company at dozens of events and conferences.</p>
               <div class="details">
-                  <a href="https://www.linkedin.com/in/andrew-segraves-06b07b25/" title="&#34;Cory has the unique combination of high level<br />
-                  communication, technical and discovery skills that<br />
-                  allows him to uncover client’s technical needs and<br />
-                  turn those into valuable deliverables for the product<br />
-                  and engineering teams.&#34;</strong><br />
-                  &#45; Andrew Segraves"><img class="decoded" src="https://p192.p3.n0.cdn.getcloudapp.com/items/rRu1jk6k/b6f2c3de-5348-4f46-a904-ffb85d799954.jpg?v=95c7cfc4af83316055a2d2254f9d3d6a"></img></a>
-                  <a href="https://www.linkedin.com/in/kristen-swan-grashel-88b3aa8/" title="&#34;Cory has the unique combination of high level<br />
-                  communication, technical and discovery skills that<br />
-                  allows him to uncover client’s technical needs and<br />
-                  turn those into valuable deliverables for the product<br />
-                  and engineering teams.&#34;</strong><br />
-                  &#45; Kristen Swan Grashel"><img class="decoded" src="https://p192.p3.n0.cdn.getcloudapp.com/items/RBunl4dW/9dabb208-c13b-42b6-b1e6-dceabf5b7a27.jpeg?v=6f74894550ecb904bbb658bba5f48e75"></img></a>
+                  <a href="#" title="&#34;Cory's ability to communicate verbally and<br />
+                  in writing proved to be valuable when<br />
+                  presenting his ideas and discussing the<br />
+                  outcomes of his project development.&#34;</strong><br />
+                  &#45; Khaalis Jackson" ><img class="decoded" src="https://cldup.com/pD3kY4F7eL.png"></img></a>
+                  <a href="http://www.linkedin.com/pub/jonathan-colwell/37/22a/751" title="
+                  &#34;He is a quick and competent learner who<br />
+                  finds ways to implement new technologies<br />
+                  and to create a better common operating<br />
+                  picture.&#34;<br />
+                  &#45; Jonathan Colwell" ><img class="decoded" src="http://i.imgur.com/FlPrqvTs.jpg"></img></a>
 
                     <div class="portfolio">
-                        <a class="fancybox-effects-c" rel="gallery1" href="images/portfolio/web-website.jpg" data-fancybox-title="Marketing Website">
-                        <img src="images/portfolio/web-website-thumbnail.jpg" alt="" class="thumbnail" /></a>
-                        <a class="fancybox-effects-c" rel="gallery1" href="images/portfolio/web-appbuilder.jpg" data-fancybox-title="App Builder on Web">
-                        <img src="images/portfolio/web-appbuilder-thumbnail.jpg" alt="" class="thumbnail" /></a>
-                        <a class="fancybox-effects-c" rel="gallery1" href="images/portfolio/web-recordeditor.jpg" data-fancybox-title="Record Editor on Web">
-                        <img src="images/portfolio/web-recordeditor-thumbnail.jpg" alt="" class="thumbnail" /></a>
-                        <a class="fancybox-effects-c" rel="gallery1" href="images/portfolio/mobile-apps.PNG" data-fancybox-title="App Dashboard on iOS App">
-                        <img src="images/portfolio/mobile-apps-thumbnail.PNG" alt="" class="thumbnail" /></a>
-                        <a class="fancybox-effects-c" rel="gallery1" href="images/portfolio/mobile-mapview.PNG" data-fancybox-title="Map View on iOS App">
-                        <img src="images/portfolio/mobile-mapview-thumbnail.PNG" alt="" class="thumbnail" /></a>
-                        <a class="fancybox-effects-c" rel="gallery1" href="images/portfolio/mobile-listview.PNG" data-fancybox-title="List View on iOS App">
-                        <img src="images/portfolio/mobile-listview-thumbnail.PNG" alt="" class="thumbnail" /></a>
-                        <a class="fancybox-effects-c" rel="gallery1" href="images/portfolio/mobile-createrecord.PNG" data-fancybox-title="Creating records on iOS App">
-                        <img src="images/portfolio/mobile-createrecord-thumbnail.PNG" alt="" class="thumbnail" /></a>
+                        <a class="fancybox-effects-c" rel="gallery1" href="images/portfolio/IMG_0321.jpg" data-fancybox-title="Three days after Superstorm Sandy. Updating Deputy Administrator Serino on aerial imagery collection progress and damage assessment.">
+                        <img src="images/portfolio/IMG_0321_thumb.jpg" alt="" class="thumbnail" /></a>
                     </div>
                 </div>
                 </div>
+
                 <div class="jobs" onmouseover="map.setView([38.98717,-95.2858],10)">
                     <a class="orglogo" href="http://www.fema.gov"><img src="images/fema.png" /></a>
-                    <h3 class="organization">FEMA Region 9 & 7</h3>
-                    <h4 class="jobtitle">GIS Cooridinator, Remote Sensing Coordinator, Product Manager</h4>
-                    <h4 class="timeframe">June 2010 – September 2014 (4 years 4 months)</h4>
-                    <p>Led technology for the region in the management and development of geospatial 
-                        systems. Responsible for developing platforms that analyze collected data. 
-                        Provided training to support response operations regarding all geospatial 
-                        support activities in and outside the region. Accountable for managing the 
-                        GIS personnel, handling regional remote sensing capabilities, training regional 
-                        personnel, and integrating with State GIS counterparts in the Federal response 
-                        to disasters and regional projects. Develop operational policies for the 
-                        geospatial and remote sensing programs for the region. Provided geospatial 
-                        support during response and recovery to regional disaster.</p>
+                    <h3 class="organization">FEMA Region 7</h3>
+                    <h4 class="jobtitle">Geospatial Coordinator</h4>
+                    <h4 class="timeframe">May 2011 – September 2014 (3 years 5 months)</h4>
+                    <p>Led technology for the region in management and development of geospatial systems. Responsible for developing platforms that analyze collected data and give users tools to make better decisions. Provided training to support response operations regarding all geospatial support activities. Responsible for managing the GIS personnel, handling regional remote sensing capabilities, training regional personal and integrating with State GIS counterparts in the Federal response to disasters and regional projects. Develop operational policies for the geospatial and remote sensing programs of the region. Provide guidance to management in program initiatives such as the All Hazard Plan, program planning and response standard operating procedure manuals.</p>
                 <div class="details">
                     <a href="http://www.linkedin.com/pub/chris-hartnett/13/ab0/642" title="&#34;His attention to detail and willingness to go above<br />
                     and beyond was second to none. His talent and<br />
@@ -492,17 +461,6 @@ alert(e.latlng); // e is an event object (MouseEvent in this case)
                     information. I appreciate Cory's ability to look<br />
                     outside the box for answers to tough questions.&#34;<br />
                     &#45; Stacy Robarge-Silkiner"><img class="decoded" src="images/stacy.jpg"></img></a>
-                    <a href="#" title="&#34;Cory's ability to communicate verbally and<br />
-                    in writing proved to be valuable when<br />
-                    presenting his ideas and discussing the<br />
-                    outcomes of his project development.&#34;</strong><br />
-                    &#45; Khaalis Jackson" ><img class="decoded" src="https://cldup.com/pD3kY4F7eL.png"></img></a>
-                    <a href="http://www.linkedin.com/pub/jonathan-colwell/37/22a/751" title="
-                    &#34;He is a quick and competent learner who<br />
-                    finds ways to implement new technologies<br />
-                    and to create a better common operating<br />
-                    picture.&#34;<br />
-                    &#45; Jonathan Colwell" ><img class="decoded" src="http://i.imgur.com/FlPrqvTs.jpg"></img></a>
                     <div class="portfolio">
                         <a class="fancybox-effects-c" rel="gallery1" href="images/portfolio/IMG_0321.jpg" data-fancybox-title="Three days after Superstorm Sandy. Updating Deputy Administrator Serino on aerial imagery collection progress and damage assessment.">
                         <img src="images/portfolio/IMG_0321_thumb.jpg" alt="" class="thumbnail" /></a>
@@ -523,21 +481,32 @@ alert(e.latlng); // e is an event object (MouseEvent in this case)
                 </div>
                 </div>
 
+                <div class="jobs" onmouseover="map.setView([34.15557, -118.44154],11)">
+                    <a class="orglogo" href="http://www.fema.gov"><img src="images/fema.png" /></a>
+                    <h3 class="organization">FEMA Region 9</h3>
+                    <h4 class="jobtitle">Geospatial Analyst</h4>
+                    <h4 class="timeframe">June 2010 – May 2011 (1 year)</h4>
+                    <p>Provided geospatial support during response and recovery to regional disasters.   Key team member on Debris Basin Project, a map book and an interactive web based project utilizing critical infrastructure and background information for use in maintaining Debris Basins in Los Angeles County. Worked jointly with other FEMA, Cal EMA and LA County Department of Public Works staff to create a reference that will provide a comprehensive, web-accessible basis for planning and hazard risk management. Briefed leadership on status of projects. Monitored and reported wildfires status in CA and NV and provided geographic products for regional tracking. Performed and presented spatial analysis and mapping support to State partners.</p>
+                <div class="details">
+                    <a href="#" title="&#34;Cory's ability to communicate verbally and<br />
+                    in writing proved to be valuable when<br />
+                    presenting his ideas and discussing the<br />
+                    outcomes of his project development.&#34;</strong><br />
+                    &#45; Khaalis Jackson" ><img class="decoded" src="https://cldup.com/pD3kY4F7eL.png"></img></a>
+                    <a href="http://www.linkedin.com/pub/jonathan-colwell/37/22a/751" title="
+                    &#34;He is a quick and competent learner who<br />
+                    finds ways to implement new technologies<br />
+                    and to create a better common operating<br />
+                    picture.&#34;<br />
+                    &#45; Jonathan Colwell" ><img class="decoded" src="http://i.imgur.com/FlPrqvTs.jpg"></img></a></div>
+                </div>
 
                 <div class="jobs" onmouseover="map.setView([34.19193, -118.89473],11)">
                     <a class="orglogo" href="http://www.apple.com/topanga"><img src="images/apple.png" /></a>
                     <h3 class="organization">Apple</h3>
                     <h4 class="jobtitle">Genius (Technician)</h4>
                     <h4 class="timeframe">August 2009 – May 2011 (1 year 10 months)</h4>
-                    <p>Achieved top sales associate for both computers and mobile devices. 
-                        Developed and administered training to a wide diversity of public 
-                        and employees using various education delivery methods, e.g. 
-                        one-on-one, small and large workshops. Prepared written records 
-                        and reports. Specialized in maintaining a calm environment while 
-                        meeting short-term deadlines. Overcame technical challenges with 
-                        short time frames. Recognized for leadership in customer service. 
-                        Exceeded managerial performance goals. Surpassed certifications 
-                        requirements needed for the position.</p>
+                    <p>Achieved top sales associate for both computers and mobile devices. Developed and administered training to a wide diversity of public and employees using various education delivery methods, e.g. one-on-one, small and large workshops. Prepared written records and reports. Specialized in maintaining a calm environment while meeting short-term deadlines. Overcame technical challenges with short time frames. Recognized for leadership in customer service. Exceeded managerial performance goals. Surpassed certifications requirements needed for the position.</p>
                 <div class="details"><a href="http://www.linkedin.com/pub/ron-green/2/9a9/101" title="
                     &#34;Cory is possibly the most intelligent,<br />
                     innovative and motivated person I've<br />

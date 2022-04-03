@@ -304,8 +304,9 @@ a#pdf:hover {
     right: 80px;
 }
 .portfolio {
-    display:inline;
-    position: absolute;
+    display: inline;
+    position: right;
+    float: right;
     right: 80px;
 }
 
