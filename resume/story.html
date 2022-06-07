@@ -2,6 +2,9 @@
 <html>
 <head>
 <meta charset='UTF-8'/>
+<meta name="robots" content="noindex">
+<meta name="googlebot" content="noindex">
+<title>My Journey</title>
 <!--[if lt IE 9]>
 <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
@@ -13,8 +16,14 @@ body {
   margin:0px;
   padding:0px;
   font:normal 15px/20px Arial,sans-serif;
-  background:#fff;
+
   }
+h1 {
+  text-align: center;
+}
+h2 {
+  line-height: 1.4;
+}
 
 article {
   width:33.3333%;
@@ -35,11 +44,13 @@ section,
 section a {
   color:#888;
   color:rgba(128,128,128,0);
+  border-radius: 10px;
   text-decoration:none;
   text-shadow:rgba(64,64,64,1) 0px 0px 4px;
   }
 section.active {
   background:#222;
+  border-radius: 10px;
   color:#eee;
   }
 section.active a { color:#eee; }
@@ -49,6 +60,8 @@ h2 { font-size:1.3333em; }
 h3 { font-size:1em;}
 h1,h2 { margin:0px 0px 10px; }
 p { margin:0px; }
+.date {
+    float: right; }
 
 .scroll {
   position:absolute;
@@ -69,7 +82,7 @@ p { margin:0px; }
   margin:0px auto 20px;
   }
 .cover.active:before { 
-  background:url(images/headshot2.jpg) 0px 0px no-repeat;
+  background:url(images/headshot1bw.jpg) 0px 0px no-repeat;
   width: 90px;
   height: 90px;
   border-radius: 50%;
@@ -92,8 +105,6 @@ p { margin:0px; }
   -webkit-transition:opacity 250ms;
   }
 
-/* Distinguish the "cover page" visually other sections. */
-body.section-0 #map { opacity:0.5; }
 </style>
 </head>
 <body class='section-0'>
@@ -102,64 +113,89 @@ body.section-0 #map { opacity:0.5; }
 
 <article>
   <section id='cover' class='cover active'>
-    <h1>A journey through my career</h1>
-    <p>// a geospatial guide</p>
+    <h1>A Journey Through my Education and Career</h1>
     <small class='scroll'>Scroll ▼</small>
   </section>
+  <section id='scout'>
+  <h2 class="date">1998-1999</h2>
+  <h2>High School and Eagle Scout</h2>
+  <p>I joined Cub Scouts in my youth and went entirely through Scouts to achieve the Eagle Scout Award. It taught me always to be prepared. Give back to others, and always be persistent in whatever I do. Less than 5% of Scouts achieve Eagle. And the most impactful lesson from Scouts was to lead by example.</p>
+</section>
+  </section>
     <section id='ship'>
-    <h2>Ship Life</h2>
-    <h3>Jan 2001 - Nov 2001</h3>
-    <p>Following high school and a few college courses I wanted to get out and see the world.  I joined the twelve member crew of the White Holly and was tasked with bringing a ship from Virginia to the Marshall Islands. It was going to be a medical christian missionary ship for islanders.  The journey taught me leadership, discipline and dedication.</p>
+    <h2 class="date">Jan 2001 - Nov 2001</h2>
+    <h2>Volunteer</h2>
+    <h3>Ship Life</h3>
+    <p>Following high school and a few college courses, I wanted to get out and travel. I joined the twelve-member crew of the White Holly, a 133 ft ex-Coast Guard Buoy Tender, and got tasked with bringing the ship from Virginia to the Marshall Islands. It would be a medical missionary vessel for doctors and dentists to live on while performing operations and diabetes education with islanders. I concluded my journey as a second mate. The trip taught me leadership, discipline, and dedication.</p>
   </section>
   <section id='calbaptist'>
-    <h2>California Baptist University</h2>
-    <h3>2002 - 2006</h3>
-    <p>After a year of extreme discipline I was prepared to get a degree. Now with a new curiosity about religions, I enrolled in seminary.   I felt ministry would be my calling.   After serving in the ministry for a short while I decide the pulpit wasn’t where my interest and talent lay. </p>
+    <h2 class="date">2002 - 2006</h2>
+    <h2>Undergraduate Degree</h2>
+    <h3>California Baptist University</h3>
+    <p>After a year of exercise in leadership and discipline, I prepared to get a degree. Now with a new curiosity about religions, I enrolled in seminary. I felt ministry would be my calling. After serving in the ministry for a short while, I decided the pulpit wasn’t where my interest and talent lay.</p>
   </section>
   <section id='neworleans'>
+    <h2 class="date">2003 - 2006</h2>
     <h2>Domestic Service Projects</h2>
-    <h3>2003 - 2006</h3>
-    <p>While I was in seminary I wanted to do something useful with my spring and winter breaks so I began organizing domestic service trips.  I organized and lead multiple teams of students to different cities to do service for others. One such trip was helping residents rebuild their lives after Hurricane Katrina.</p>
+    <p>While in seminary, I wanted to do something useful with my spring and winter breaks, so I began organizing domestic service trips. I coordinated and led multiple teams of students to different cities to do service for others. One such trip was helping residents rebuild their lives after Hurricane Katrina.</p>
   </section>
   <section id='greece'>
-    <h2>International Service Project</h2>
-    <h3>August 2004</h3>
-    <p>November 1895. London is shrouded in fog and Sherlock Holmes and Watson pass time restlessly awaiting a new case. "The London criminal is certainly a dull fellow," Sherlock bemoans. "There have been numerous petty thefts," Watson offers in response. Just then a telegram arrives from Sherlock's brother Mycroft with a mysterious case.</p>
-  </section>
-  <section id='zimbabwe'>
-    <h2>Rural Orphanage</h2>
-    <h3>June 2007 – Aug 2007</h3>
-    <p>November 1895. London is shrouded in fog and Sherlock Holmes and Watson pass time restlessly awaiting a new case. "The London criminal is certainly a dull fellow," Sherlock bemoans. "There have been numerous petty thefts," Watson offers in response. Just then a telegram arrives from Sherlock's brother Mycroft with a mysterious case.</p>
+    <h2 class="date">August 2004</h2>
+    <h2>Summer Olympics & Painting Business</h2>
+    <p>In 2004, Greece hosted the Athens Summer Olympics, and I was determined to attend. Fifteen classmates and I went to Greece for two weeks. That summer, I started a residential painting business called Tuition Painting which kept me very busy. I hired my friends and painted homes throughout the summer. All my profits went into savings and were used for traveling. I relaunched the business each summer to help pay for living expenses and travel.</p>
   </section>
   <section id='lomalinda'>
-    <h2>Loma Linda University</h2>
-    <h3>2007 - 2009</h3>
-    <p>Arthur Cadogan West was found dead, head crushed in on train tracks at Aldgate Station at.</p>
+    <h2 class="date">2007 - 2009</h2>
+    <h2>Postgraduate Degree</h2>
+    <h3>Loma Linda University</h3>
+    <p>After graduating with a degree in Applied Theology and concluding that ministry was not going to be my career path, I searched for a way to help others. Living with my uncle, a physician, I decided medical school would be a rewarding career path. I got accepted to Loma Linda University School of Public Health to complete my pre-meds and get a master's in health. Within two years, I received my master's in global health and completed my pre-med courses simultaneously.</p>
+  </section>
+  <section id='zimbabwe'>
+    <h2 class="date">June 2007 – July 2007</h2>
+    <h2>Volunteer</h2>
+    <h3>Rural Orphanage</h3>
+    <p>While writing a grant for an orphanage in Zimbabwe, the orphanage owner needed to come to the states for surgery and asked if I wanted to go to Zimbabwe to tend to her affairs. While I was there, the economy crashed, and inflation exceeded 100,000%. Buying supplies for the whole orphanage required a backpack full of cash and hundreds of millions in Zim dollars. While I was there, I transported community members twice a week to the local hospital, an hour away. I drove to the closest hospital an hour away for whoever needed treatments and prescriptions, mainly for HIV and TB. This experience taught me to be grateful for what I have in life and never take the blessings of living in America for granted.</p>
   </section>
   <section id='philippines'>
-    <h2>Rural Development Program</h2>
-    <h3>July 2008 – Aug 2008</h3>
-    <p>Holmes and Watson's investigations take them across London. Sherlock deduces that West was murdered elsewhere, then moved to Aldgate Station to create the illusion that he was crushed on the tracks by a train. On their way to Woolwich Sherlock dispatches a telegram to Mycroft at London Bridge: "Send list of all foreign spies known to be in England, with full address."</p>
+    <h2 class="date">July 2008 – Aug 2008</h2>
+    <h2>Volunteer</h2>
+    <h3>Rural Development Program</h3>
+    <p>While in graduate school, I had the opportunity to travel to the Philipines for two weeks to assist in a nationwide effort to market ways to reduce the smoking prevalence throughout the Philipines. It was an enjoyable experience, but I soon discovered they suffer from widespread corruption. Getting local officials to embrace our anti-smoking program was futile. The experience taught me patience and compassion for others.</p>
   </section>
   <section id='results'>
-    <h2>RESULTS Educational Fund</h2>
-    <h3>2008 - 2009</h3>
-    <p>While investigating at Woolwich Arsenal Sherlock learns that West did not have the three keys&mdash;door, office, and safe&mdash;necessary to steal the papers. The train station clerk mentions seeing an agitated West boarding the 8:15 train to London Bridge. Sherlock suspects West of following someone who had access to the Woolwich chief's keyring with all three keys.</p>
+    <h2 class="date">2008 - 2009</h2>
+    <h2>Internship</h2>
+    <h3>RESULTS Educational Fund</h3>
+    <p>During the last year of graduate school, I read Banker to the Poor by Muhammad Yunus. I applied and was accepted to intern with Muhammad Yunus, father of Microfinance, in Bangladesh for six months. Because my first child would also be born during that same time, I declined the offer. Instead, I interned for RESULTS, a citizen lobbying group fighting poverty. Dr. Yunus credits RESULTS for bringing attention to Microcredit and ultimately helping him earn the Nobel Peace Price in 2006. Working for a citizen lobby taught me the power of advocacy, grassroots organization, and writing campaign programs.</p>
   </section>
   <section id='apple'>
+    <h2 class="date">2009 - 2011</h2>
     <h2>Apple Retail</h2>
-    <h3>2009 - 2011</h3>
-    <p>While investigating at Woolwich Arsenal Sherlock learns that West did not have the three keys&mdash;door, office, and safe&mdash;necessary to steal the papers. The train station clerk mentions seeing an agitated West boarding the 8:15 train to London Bridge. Sherlock suspects West of following someone who had access to the Woolwich chief's keyring with all three keys.</p>
+    <p>Following graduate school, I landed a job at a local Apple store, first in a sales position, then teaching classes on different software, and then fixing phones and computers as a technician. This experience taught me the art of sales, customer service, and public speaking.</p>
   </section>
   <section id='femar9'>
-    <h2>FEMA Region 9</h2>
-    <h3>2010 - 2011</h3>
-    <p>While investigating at Woolwich Arsenal Sherlock learns that West did not have the three keys&mdash;door, office, and safe&mdash;necessary to steal the papers. The train station clerk mentions seeing an agitated West boarding the 8:15 train to London Bridge. Sherlock suspects West of following someone who had access to the Woolwich chief's keyring with all three keys.</p>
+    <h2 class="date">2010 - 2011</h2>
+    <h2>FEMA</h2>
+    <h3>Region 9</h3>
+    <p>A friend asked if I knew GIS software, which I did. She encouraged me to apply for a position with her employer, FEMA; they needed a GIS professional to map local fires and earthquake damage. After serving in a temporary position, I quickly became a full-time employee and was deployed to different disasters around the country to serve as a GIS Manager. The next assignment was the Joplin Tornado and floods in the Midwest. This experience taught me to deliver on short deadlines, work within a complex organization, and give executive presentations.</p>
   </section>
   <section id='femar7'>
-    <h2>FEMA Region 7</h2>
-    <h3>2011 - Present</h3>
-    <p>While investigating at Woolwich Arsenal Sherlock learns that West did not have the three keys&mdash;door, office, and safe&mdash;necessary to steal the papers. The train station clerk mentions seeing an agitated West boarding the 8:15 train to London Bridge. Sherlock suspects West of following someone who had access to the Woolwich chief's keyring with all three keys.</p>
+    <h2 class="date">2011 - 2014</h2>
+    <h2>FEMA</h2>
+    <h3>Region 7</h3>
+    <p>While on a 90-day deployment to Kansas City to support recovery efforts in Joplin, MO, and Flooding on the MO River, Region 7, wanted to keep me. My 90-day assignment turned into a full-time job offer in Kansas City. My job as a GIS Manager took many forms. During disasters, I was the Regional GIS Coordinator deploying GIS personnel and mapping damage assessments and other maps during the response and recovery. During steady state times, I became a Project Manager, building mapping software solutions to aid in the next disaster. This period strengthened my team building across different departments, project management, and executing products from idea to launch. </p>
+  </section>
+  <section id='florida'>
+    <h2 class="date">2014 - 2019</h2>
+    <h2>Spatial Networks</h2>
+    <h3>Fulcrum - Product Manager (In office)</h3>
+    <p>While working for FEMA, I needed a rapidly deployable mobile mapping app in the field. Building in-house was too complex, and I discovered a startup that had just launched a simple app we could use. The Federal bidding process was too much for a small startup, so I wrote the CEO and asked instead to work for them. I became the first product manager for the company. While leading the product management, I also assisted in building out the sales team, executing the marketing strategy, presenting at conferences, and everything else a startup requires. As a bootstrapped product, eventually, the founder sold the company to investors. I moved back to Los Angeles and saw a need to switched roles and build the customer success capabilities within the company.</p>
+  </section>
+  <section id='remote'>
+    <h2 class="date">2019 - Present</h2>
+    <h2>Spatial Networks</h2>
+    <h3>Fulcrum - Customer Success Manager (Remote)</h3>
+    <p>As the company's customer base exceeded two thousand, we needed a customer success team, so I offered to lead it. I spent the next few years onboarding customers, expanding accounts, measuring customer health, reducing churn, managing support personnel, and expanding the Support and CS team. This role has taught me to be a servant leader, manage my time, build strong relationships, and have tenacity. </p>
   </section>
 </article>
 
@@ -167,8 +203,11 @@ body.section-0 #map { opacity:0.5; }
 
 
 var geojson = [
-  { "geometry": { "type": "Point", "coordinates": [-115.56557381546236, 38.96970416215249] },
-    "properties": { "id": "cover", "zoom": 7 } },
+  { "geometry": { "type": "Point", "coordinates": [-96.990472, 40.230522] },
+    "properties": { "id": "cover", "zoom": 4 } },
+
+  { "geometry": { "type": "Point", "coordinates": [-117.176519, 34.059677] },
+    "properties": { "id": "scout", "zoom": 10 } },
 
   { "geometry": { "type": "Point", "coordinates": [-79.56557381546236, 8.96970416215249] },
     "properties": { "id": "ship", "zoom": 7 } },
@@ -183,13 +222,13 @@ var geojson = [
     "properties": { "id": "greece", "zoom": 7 } },
 
   { "geometry": { "type": "Point", "coordinates": [32.650228792987576, -18.987309490031073] },
-    "properties": { "id": "zimbabwe", "zoom": 7 } },  
+    "properties": { "id": "zimbabwe", "zoom": 6 } },  
 
   { "geometry": { "type": "Point", "coordinates": [-117.26091416622312, 34.05371514158555] },
-    "properties": { "id": "lomalinda", "zoom": 7 } },
+    "properties": { "id": "lomalinda", "zoom": 5 } },
 
   { "geometry": { "type": "Point", "coordinates": [-77.03838555077661, 38.906047471474984] },
-    "properties": { "id": "results", "zoom": 7 } },
+    "properties": { "id": "results", "zoom": 8 } },
 
   { "geometry": { "type": "Point", "coordinates": [-238.9856, 14.56232] },
     "properties": { "id": "philippines", "zoom": 7 } },
@@ -201,11 +240,17 @@ var geojson = [
     "properties": { "id": "femar9", "zoom": 7 } },
 
   { "geometry": { "type": "Point", "coordinates": [-94.60050908803947, 38.964248024548866] },
-    "properties": { "id": "femar7", "zoom": 7 } }
+    "properties": { "id": "femar7", "zoom": 7 } },
+
+  { "geometry": { "type": "Point", "coordinates": [-82.641786, 27.762238] },
+    "properties": { "id": "florida", "zoom": 10 } },
+
+  { "geometry": { "type": "Point", "coordinates": [-118.247178, 34.072050] },
+    "properties": { "id": "remote", "zoom": 10 } }
 ];
 
 var tiles = mapbox.layer().tilejson({
-  tiles: [ "http://a.tile.stamen.com/toner/{z}/{x}/{y}.png" ]
+  tiles: [ "http://tile.stamen.com/toner-lite/{z}/{x}/{y}.png" ]
 });
 var spots = mapbox.markers.layer()
   // Load up markers from geojson data.
